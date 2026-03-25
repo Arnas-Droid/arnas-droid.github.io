@@ -75,9 +75,9 @@ title: Home
   <!-- Arcade -->
   <div class="project-container">
     <a href="{{ '/2005/01/01/arcade.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games" style="width:800px;height:300px;">
       </a>
-    <div class="overlay">Bespoke Platform</div>
+    <div class="overlay">Arcade</div>
   </div>
 
   <!-- Bespoke -->
