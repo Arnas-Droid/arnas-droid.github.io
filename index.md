@@ -5,6 +5,7 @@ title: Home
 
 <html> 
 <body>
+  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
 <h1 style="text-align:center;">Introduction</h1>
 </body> 
 </html> 
