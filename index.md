@@ -83,7 +83,7 @@ title: Home
   <!-- Bespoke -->
   <div class="project-container">
     <a href="{{ '/2005/01/01/bespoke.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/BespokePlatform.png' | relative_url }}" alt="Bespoke Platform" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/Bespoke/BespokeWindowsLevel1.png' | relative_url }}" alt="Bespoke Platform" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Bespoke Platform</div>
   </div>
