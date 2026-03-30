@@ -9,41 +9,34 @@
 </head>
 <body>
 
-  <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
-        <section id="downloads">
-          <a href="{{ '/' | relative_url }}" class="btn">Home</a>
-
-          {% if site.github.is_project_page %}
-            <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View GitHub</a>
-          {% endif %}
-        </section>
-  </div>
-
-  <!-- Buttons -->
-  <!-- Home Button -->
-  <header class="page-header">
-    <section id="top-button">
-      <a href="{{ site.baseurl }}/" class="btn btn-home">Home</a>
-    </section>
-    <h1>{{ page.title }}</h1>
-  </header>
-
-  <!-- Header -->
   <header>
-    <h1>{{ page.title }}</h1>
-    <!-- No metadata (date, tags, author) will be displayed here -->
+    <div class="container">
+      <a id="a-title" href="{{ '/' | relative_url }}">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+      </a>
+      <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
+      <section id="downloads">
+        <a href="{{ '/' | relative_url }}" class="btn">Home</a>
+        
+        {% if site.github.is_project_page %}
+          <a href="{{ site.github.repository_url }}" class="btn btn-github">
+            <span class="icon"></span>View on GitHub
+          </a>
+        {% endif %}
+      </section>
+    </div>
   </header>
 
-  
-  <!-- Main Content -->
-  <main>
-    {{ content }}
-  </main>
+  <div class="container">
+    <section id="main_content">
+      {% if page.title %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      
+      {{ content }}
+    </section>
+  </div>
 
 </body>
 </html>
