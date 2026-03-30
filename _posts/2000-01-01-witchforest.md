@@ -98,8 +98,8 @@ title: "The Witch Forest"
     <p>My biggest challenge came when I was working on the scene graph hierarchy. I struggled with the idea of using functions to access different files. Although it worked when created in the main function, it felt a bit messy and harder to follow from an external viewpoint. Ultimately, I managed to build it, but there were issues I would approach differently in future projects. It's currently my favorite piece of work.</p>
   </section>
 
-  <section class="project-content">
-    <h3>Technical Breakdown</h3>
+  <section class="tech-section">
+    <h2 class="tech-title">Technical Breakdown</h2>
 
   <!-- Card 2 -->
   <div class="tech-card">
@@ -132,7 +132,7 @@ title: "The Witch Forest"
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Temp">
+      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
     </div>
   </div>
 
