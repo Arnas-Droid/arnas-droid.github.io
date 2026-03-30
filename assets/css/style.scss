@@ -187,6 +187,7 @@ p.view, small, .tags, .date{
   align-items: center;
   gap: 40px;
   margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
 .tech-card:nth-child(even) {
@@ -194,6 +195,10 @@ p.view, small, .tags, .date{
 }
 
 /* Tech Cards Text */
+.tech-text {
+  flex: 1 1 400px;
+}
+
 .tech-text h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
@@ -207,7 +212,7 @@ p.view, small, .tags, .date{
 
 /* Tech Cards Image */
 .tech-image {
-  flex: 1;
+  flex: 1 1 400px;
 }
 
 .tech-image img {
