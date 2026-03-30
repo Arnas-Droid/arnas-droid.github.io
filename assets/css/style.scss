@@ -11,6 +11,7 @@
 } // Check if used
 
 @media (max-width: 768px) {
+  /* 
   .tech-card {
     flex-direction: column;
     align-items: flex-start;
@@ -23,6 +24,24 @@
 
   .tech-title {
     font-size: 2rem;
+  }
+  */
+
+  .tech-card {
+    display: block;       /* NOT flex anymore on narrow screens */
+    margin-bottom: 60px;  /* tighten spacing between cards */
+  }
+
+  .tech-image,
+  .tech-text {
+    width: 100%;          /* full width each */
+    margin-bottom: 20px;  /* small gap between image/text */
+  }
+
+  .tech-image img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -226,7 +245,7 @@ p.view, small, .tags, .date{
   opacity: 0.85;
 }
 
-/* Tech Cards Image 
+/* Tech Cards Image */
 .tech-image {
   flex: 1 1 400px;
 }
@@ -235,15 +254,4 @@ p.view, small, .tags, .date{
   width: 100%;
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;;
-}
-*/
-.tech-image {
-  width: 100%; /* full width when stacked */
-  max-width: 500px; /* optional, limits size on large screens */
-}
-
-.tech-image img {
-  width: 100%; 
-  height: auto; /* maintain aspect ratio */
-  border-radius: 12px;
 }
