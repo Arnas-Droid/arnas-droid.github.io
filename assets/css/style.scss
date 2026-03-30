@@ -213,13 +213,13 @@ p.view, small, .tags, .date{
 /* Tech Cards Text */
 .tech-text {
   flex: 1 1 60%;
-  max-width: calc(60% - 20px);
+  max-width: 60%;
 }
 
 /* Tech Cards Image */
 .tech-image {
   flex: 1 1 40%;
-  max-width: calc(40% - 20px);
+  max-width: 40%;
 }
 
 .tech-image img {
