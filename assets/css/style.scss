@@ -4,13 +4,21 @@
 @import "{{ site.theme }}";
 
 /* Media */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .content-row {
     flex-direction: column;
   }
-} // Check if used
+  
+  .tech-card {
+    flex-direction: column;
+    gap: 20px; 
+  }
 
-
+  .tech-text, .tech-image {
+    flex: 1 1 100%;        
+    max-width: 100%;
+  }
+}
 
 /* Global Overrides */
 p.view, small, .tags, .date{
@@ -202,6 +210,8 @@ p.view, small, .tags, .date{
   max-width: calc(60% - 20px);
 }
 
+/*
+
 .tech-text h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
@@ -212,6 +222,8 @@ p.view, small, .tags, .date{
   line-height: 1.6;
   opacity: 0.85;
 }
+
+*/
 
 /* Tech Cards Image */
 .tech-image {
@@ -224,16 +236,4 @@ p.view, small, .tags, .date{
   height: auto;
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;;
-}
-
-@media (max-width: 768px) {
-  .tech-card {
-    flex-direction: column;
-    gap: 20px; 
-  }
-
-  .tech-text, .tech-image {
-    flex: 1 1 100%;        
-    max-width: 100%;
-  }
 }
