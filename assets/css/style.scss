@@ -252,11 +252,10 @@ p.view, small, .tags, .date{
   background-color: #1e1e1e;
   color: #b5e853;
   padding: 12px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: none;
+  border-radius: 2px;
   font-family: monospace;
   margin-bottom: 10px;
   white-space: pre; 
+  word-wrap: break-word;
   overflow: inherit;
 }
