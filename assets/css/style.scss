@@ -261,15 +261,15 @@ p.view, small, .tags, .date{
   overflow: inherit; 
 }
 
-/* Buttons */
+/* Top Buttons */
 .project-buttons {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
-.button {
+.btn.home-button {
   text-decoration: none;
   background-color: #b5e853;
   color: #151515;
@@ -277,4 +277,8 @@ p.view, small, .tags, .date{
   border-radius: 6px;
   font-weight: bold;
   transition: 0.2s;
+}
+
+.btn.home-button:hover {
+  background-color: #99d23c;
 }
