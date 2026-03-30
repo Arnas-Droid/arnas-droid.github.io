@@ -224,14 +224,14 @@ p.view, small, .tags, .date{
 
 /* Tech Cards Text */
 .tech-text {
-  flex: 0 0 60%;
-  //min-width: 0; 
+  flex: 1 1 60%;
+  min-width: 0; 
 }
 
 /* Tech Cards Image */
 .tech-image {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 1 1 40%;
+  min-width: 0; 
 }
 
 .tech-image img {
