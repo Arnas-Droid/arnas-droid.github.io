@@ -132,7 +132,7 @@ title: "The Witch Forest"
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
+      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Lighting JSON">
     </div>
   </div>
 
