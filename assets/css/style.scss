@@ -28,14 +28,14 @@
   */
 
   .tech-card {
-    display: block;       /* NOT flex anymore on narrow screens */
-    margin-bottom: 60px;  /* tighten spacing between cards */
+    display: block;      
+    margin-bottom: 60px;  
   }
 
   .tech-image,
   .tech-text {
-    width: 100%;          /* full width each */
-    margin-bottom: 0px;  /* small gap between image/text */
+    width: 100%;       
+    margin-bottom: 0px; 
   }
 
   .tech-image img {

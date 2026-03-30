@@ -106,7 +106,7 @@ title: "The Witch Forest"
     <div class="tech-text">
       <h3>DirectX 11</h3>
       <p>
-      This was where my foundational knowledge was learnt.
+      This was where my foundational knowledge was of DirectX 11 was learnt.
       </p>
     </div>
     <div class="tech-image">
