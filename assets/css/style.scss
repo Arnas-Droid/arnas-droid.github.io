@@ -15,13 +15,18 @@
   }
   
   .tech-card {
+    display: flex; 
     flex-direction: column;
     gap: 20px; 
+    width: 100%;
+    max-width: 100%;
     align-items: stretch;
   }
 
   .tech-text, .tech-image {
-    flex: 1 1 100%;       
+    //flex: 1 1 100%;     
+    flex: none; 
+    width: 100%;   
     max-width: 100%;  
   }
 }

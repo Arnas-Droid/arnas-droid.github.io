@@ -122,7 +122,12 @@ title: "The Witch Forest"
       <p>
       This system was built for rendering game objects, applying their textures, applying their transforms and drawing meshes recursively through a hiearchical scene graph structure.
       </p>
-
+      ```c++
+      {
+        XMMATRIX newChild = _GameObjects[i]->_transform * base;
+        _GameObjects[i]->DrawGameObjects(_immediateContext, newChild, cbdata, constantbuffer, mappedSubresource);
+      }
+      ```
       <p>
       The code show the example of the recursive nature where it would take the previous base transform and the one of the current game objects.
       </p>
@@ -145,13 +150,6 @@ title: "The Witch Forest"
     </div>
   </div>
   </section>
-
-      ```c++
-      {
-        XMMATRIX newChild = _GameObjects[i]->_transform * base;
-        _GameObjects[i]->DrawGameObjects(_immediateContext, newChild, cbdata, constantbuffer, mappedSubresource);
-      }
-      ```
 
 <script>
   let slideIndex = 1;
