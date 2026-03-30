@@ -99,7 +99,7 @@ title: "The Witch Forest"
   </section>
 
   <!-- Technical Breakdown -->
-  <section class="project-content">
+  <section class="tech-section">
     <h2 class="tech-title">Technical Breakdown</h2>
 
   <!-- Card 1 -->
