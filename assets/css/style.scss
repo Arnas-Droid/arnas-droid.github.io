@@ -245,15 +245,18 @@ p.view, small, .tags, .date{
 .tech-code {
   width: 100%; 
   overflow-x: auto; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .tech-code pre {
-  background-color: #1e1e1e; 
-  color: #b5e853;       
+  background-color: #1e1e1e;
+  color: #b5e853;
   padding: 12px;
-  border-radius: 8px; 
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
   font-family: monospace;
   margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre; 
+  overflow: inherit;
 }
