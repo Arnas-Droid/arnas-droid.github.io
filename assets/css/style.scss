@@ -55,7 +55,8 @@ p.view, small, .tags, .date{
 .project-container img {
   border: 5px solid #555555;
   display: block;
-  width: 100%;
+  //width: 100%;
+  width: auto;
   height: auto;  
   transition: transform 0.3s ease, border-radius 0.3s ease;
   box-sizing: border-box;
