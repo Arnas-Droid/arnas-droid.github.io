@@ -23,11 +23,18 @@
     align-items: stretch;
   }
 
-  .tech-text, .tech-image {
+  .tech-text, 
+  .tech-image {
     //flex: 1 1 100%;     
     flex: none; 
     width: 100%;   
     max-width: 100%;  
+  }
+
+  .tech-image img {
+    width: 100%;          
+    height: auto;         
+    display: block;     
   }
 }
 
