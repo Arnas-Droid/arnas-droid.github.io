@@ -200,12 +200,12 @@ p.view, small, .tags, .date{
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;;
 }
-
+/*
 .tech-card:hover img {
   transform: scale(1.03);
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
-
+*/
 @media (max-width: 768px) {
   .tech-card {
     flex-direction: column;
