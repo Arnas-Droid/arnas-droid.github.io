@@ -105,9 +105,7 @@ title: "The Witch Forest"
   <div class="tech-card">
     <div class="tech-text">
       <h3>DirectX 11</h3>
-      <p>
-      This was where my foundational knowledge was of DirectX 11 was learnt.
-      </p>
+      <p>This was where my foundational knowledge of DirectX 11 was learnt.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.jpeg" alt="DirectX">
@@ -118,9 +116,7 @@ title: "The Witch Forest"
   <div class="tech-card">
     <div class="tech-text">
       <h3>Scene Heirachy</h3>
-      <p>
-      This system was built for rendering game objects, applying their textures, applying their transforms and drawing meshes recursively through a hiearchical scene graph structure.
-      </p>
+      <p>This system was built for rendering game objects, applying their textures, applying their transforms and drawing meshes recursively through a hierarchical scene graph structure.</p>
       <div class="tech-code">
         <pre><code>
         {
@@ -129,9 +125,7 @@ title: "The Witch Forest"
         }
         </code></pre>
       </div>
-      <p>
-      The code show the example of the recursive nature where it would take the previous base transform and the one of the current game objects.
-      </p>
+      <p>The code shows the example of the recursive nature where it would take the previous base transform and one of the current game objects.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Scene">
@@ -142,9 +136,7 @@ title: "The Witch Forest"
   <div class="tech-card">
     <div class="tech-text">
       <h3>JSON Breakdown</h3>
-      <p>
-      The image shows the example of what the JSON will be reading. Using JSON I would put all the data into a lighting struct, which would then get passed along to the constant buffer data to be used for the shader.
-      </p>
+      <p>The image shows the example of what the JSON will be reading. Using JSON, I would put all the data into a lighting struct, which would then get passed along to the constant buffer data to be used for the shader.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Lighting JSON">
