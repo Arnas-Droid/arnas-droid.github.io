@@ -225,7 +225,7 @@ p.view, small, .tags, .date{
 /* Tech Cards Text */
 .tech-text {
   flex: 0 0 60%;
-  //max-width: 60%;
+  //min-width: 0; 
 }
 
 /* Tech Cards Image */
@@ -243,8 +243,7 @@ p.view, small, .tags, .date{
 
 /* For Code */
 .tech-code {
-  flex: 0 0 60%;
-  //width: 100%; 
+  width: 100%; 
   overflow-x: auto; 
 }
 
@@ -255,4 +254,6 @@ p.view, small, .tags, .date{
   border-radius: 8px; 
   font-family: monospace;
   margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
