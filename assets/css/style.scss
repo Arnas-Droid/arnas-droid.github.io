@@ -10,16 +10,7 @@
   }
 } // Check if used
 
-@media (max-width: 768px) {
-  .tech-card {
-    flex-direction: column;
-    gap: 20px; 
-  }
 
-  .tech-text, .tech-image {
-    flex: 1 1 100%;        
-  }
-}
 
 /* Global Overrides */
 p.view, small, .tags, .date{
@@ -208,6 +199,7 @@ p.view, small, .tags, .date{
 /* Tech Cards Text */
 .tech-text {
   flex: 1 1 60%;
+  max-width: calc(60% - 20px);
 }
 
 .tech-text h3 {
@@ -224,6 +216,7 @@ p.view, small, .tags, .date{
 /* Tech Cards Image */
 .tech-image {
   flex: 1 1 40%;
+  max-width: calc(40% - 20px);
 }
 
 .tech-image img {
@@ -231,4 +224,16 @@ p.view, small, .tags, .date{
   height: auto;
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;;
+}
+
+@media (max-width: 768px) {
+  .tech-card {
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+  .tech-text, .tech-image {
+    flex: 1 1 100%;        
+    max-width: 100%;
+  }
 }
