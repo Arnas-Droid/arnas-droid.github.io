@@ -111,7 +111,7 @@ title: "The Witch Forest"
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.png" alt="DirectX">
+      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.jpeg" alt="DirectX">
     </div>
   </div>
 
