@@ -101,12 +101,21 @@ title: "The Witch Forest"
   <section class="project-content">
     <h3>Technical Breakdown</h3>
 
-  <!-- Card 1 -->
+  <!-- Card 2 -->
   <div class="tech-card">
     <div class="tech-text">
-      <h3>Scene Breakdown</h3>
+      <h3>Scene Heirachy</h3>
       <p>
-      Some text.
+      This system was built for rendering game objects, applying their textures, applying their transforms and drawing meshes recursively through a hiearchical scene graph structure.
+      </p>
+      ```c++
+      {
+        XMMATRIX newChild = _GameObjects[i]->_transform * base;
+        _GameObjects[i]->DrawGameObjects(_immediateContext, newChild, cbdata, constantbuffer, mappedSubresource);
+      }
+      ```
+      <p>
+      The code show the example of the recursive nature where it would take the previous base transform and the one of the current game objects.
       </p>
     </div>
     <div class="tech-image">
@@ -114,16 +123,16 @@ title: "The Witch Forest"
     </div>
   </div>
 
-  <!-- Card 2 -->
+  <!-- Card 3 -->
   <div class="tech-card">
     <div class="tech-text">
-      <h3>Systems Breakdown</h3>
+      <h3>JSON Breakdown</h3>
       <p>
-      Some text.
+      The image shows the example of what the JSON will be reading. Using JSON I would put all the data into a lighting struct, which would then get passed along to the constant buffer data to be used for the shader.
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
+      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Temp">
     </div>
   </div>
 
