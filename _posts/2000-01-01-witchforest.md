@@ -111,7 +111,7 @@ title: "The Witch Forest"
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Lighting JSON">
+      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.png" alt="DirectX">
     </div>
   </div>
 
@@ -133,7 +133,7 @@ title: "The Witch Forest"
       </p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
+      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Scene">
     </div>
   </div>
 
