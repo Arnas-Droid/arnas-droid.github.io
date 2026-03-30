@@ -247,7 +247,7 @@ p.view, small, .tags, .date{
   overflow-x: auto; 
   -webkit-overflow-scrolling: touch;
 }
-
+/* 
 .tech-code pre {
   background-color: #1e1e1e;
   color: #b5e853;
@@ -258,6 +258,21 @@ p.view, small, .tags, .date{
   white-space: pre-wrap; 
   word-wrap: break-word;
   overflow: inherit;
+}
+*/
+
+.tech-code pre {
+  background-color: #1e1e1e;
+  color: #b5e853;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  font-family: monospace;
+  margin-bottom: 10px;
+
+  white-space: pre;     /* keep lines unwrapped for scroll */
+  overflow: inherit;    /* inherit scroll from parent */
 }
 
 /* Buttons */
