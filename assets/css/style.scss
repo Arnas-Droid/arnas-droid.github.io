@@ -262,21 +262,10 @@ p.view, small, .tags, .date{
 }
 
 /* Top Buttons */
-.project-buttons {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 20px;
-    
-  position: sticky;  /* Keeps the button visible when scrolling */
-  top: 0;
-  background-color: #fff; /* Optional: prevents overlap with content */
-  padding: 10px 20px;
-  z-index: 1000;
-  border-bottom: 1px solid #ddd; /* subtle separation from header */
-}
-
 .btn.home-button {
+  position: fixed;    /* Stays at top on all pages */
+  top: 20px;          /* Distance from top of viewport */
+  left: 20px;         /* Distance from left edge */
   text-decoration: none;
   background-color: #b5e853;
   color: #151515;
@@ -284,6 +273,7 @@ p.view, small, .tags, .date{
   border-radius: 6px;
   font-weight: bold;
   transition: 0.2s;
+  z-index: 1000;      /* Makes sure it stays above everything */
 }
 
 .btn.home-button:hover {
