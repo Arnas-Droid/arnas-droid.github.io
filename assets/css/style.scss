@@ -242,12 +242,16 @@ p.view, small, .tags, .date{
 }
 
 /* For Code */
+.tech-code {
+  width: 100%; 
+  overflow-x: auto; 
+}
+
 .tech-code pre {
   background-color: #1e1e1e; 
   color: #b5e853;       
   padding: 12px;
-  border-radius: 8px;
-  overflow-x: auto;          
+  border-radius: 8px; 
   font-family: monospace;
   margin-bottom: 10px;
 }
