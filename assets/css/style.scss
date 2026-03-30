@@ -262,13 +262,14 @@ p.view, small, .tags, .date{
 }
 
 /* Top Buttons */
-.project-buttons {
+.page-header {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  align-items: center;
+  gap: 20px; /* space between button and title */
   margin: 20px;
 }
 
+/* Home button */
 .btn.home-button {
   text-decoration: none;
   background-color: #b5e853;
