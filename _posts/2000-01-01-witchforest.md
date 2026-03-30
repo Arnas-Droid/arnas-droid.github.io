@@ -2,11 +2,6 @@
 layout: post
 title: "The Witch Forest"
 ---
-
-<div class="project-buttons">
-  <a href="{{ site.baseurl }}/" class="btn home-button">Home</a>
-</div>
-
 <body>
   <!-- Gallery Section -->
   <section class="project-gallery">

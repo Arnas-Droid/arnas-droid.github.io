@@ -262,14 +262,7 @@ p.view, small, .tags, .date{
 }
 
 /* Top Buttons */
-.project-buttons {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 20px;
-}
-
-.btn.home-button {
+#top-button .btn-home {
   text-decoration: none;
   background-color: #b5e853;
   color: #151515;
@@ -279,6 +272,6 @@ p.view, small, .tags, .date{
   transition: 0.2s;
 }
 
-.btn.home-button:hover {
+#top-button .btn-home:hover {
   background-color: #99d23c;
 }
