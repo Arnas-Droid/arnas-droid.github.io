@@ -91,12 +91,45 @@ title: "The Witch Forest"
     <p>- Used JSON to load and access external files like lighting.</p>
   </section>
 
-  <!-- Description -->
+  <!-- Overview -->
   <section class="project-content">
-    <h3>Description</h3>
+    <h3>Overview</h3>
     <p>Using DirectX 11, I learned more about graphic pipelines and how to create a 3D environment that utilized the pipeline for rendering lighting and shading models. Drawing inspiration from my heritage, I created the <strong>Witch Forest</strong> scene.</p>
     <p>My biggest challenge came when I was working on the scene graph hierarchy. I struggled with the idea of using functions to access different files. Although it worked when created in the main function, it felt a bit messy and harder to follow from an external viewpoint. Ultimately, I managed to build it, but there were issues I would approach differently in future projects. It's currently my favorite piece of work.</p>
   </section>
+
+  <section class="project-content">
+    <h3>Technical Breakdown</h3>
+
+  <!-- Card 1 -->
+  <div class="tech-card">
+    <div class="tech-text">
+      <h3>Scene Breakdown</h3>
+      <p>
+      Some text.
+      </p>
+    </div>
+    <div class="tech-image">
+      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="tech-card">
+    <div class="tech-text">
+      <h3>Systems Breakdown</h3>
+      <p>
+      Some text.
+      </p>
+    </div>
+    <div class="tech-image">
+      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Temp">
+    </div>
+  </div>
+
+
+  </section>
+
 
 <script>
   let slideIndex = 1;
