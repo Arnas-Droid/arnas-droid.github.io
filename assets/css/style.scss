@@ -17,11 +17,12 @@
   .tech-card {
     flex-direction: column;
     gap: 20px; 
+    align-items: stretch;
   }
 
   .tech-text, .tech-image {
-    flex: 1 1 100%;        
-    max-width: none;
+    flex: 1 1 100%;       
+    max-width: 100%;  
   }
 }
 
@@ -203,7 +204,7 @@ p.view, small, .tags, .date{
   align-items: center;
   gap: 40px;
   margin-bottom: 80px;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 }
 
 .tech-card:nth-child(even) {
@@ -212,13 +213,13 @@ p.view, small, .tags, .date{
 
 /* Tech Cards Text */
 .tech-text {
-  flex: 1 1 60%;
+  flex: 0 0 60%;
   max-width: 60%;
 }
 
 /* Tech Cards Image */
 .tech-image {
-  flex: 1 1 40%;
+  flex: 0 0 40%;
   max-width: 40%;
 }
 
