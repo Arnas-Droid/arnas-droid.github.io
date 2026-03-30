@@ -255,7 +255,9 @@ p.view, small, .tags, .date{
   border-radius: 2px;
   font-family: monospace;
   margin-bottom: 10px;
-  white-space: pre; 
+  white-space: pre-wrap; 
   word-wrap: break-word;
   overflow: inherit;
 }
+
+/* Buttons */
