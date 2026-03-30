@@ -267,6 +267,13 @@ p.view, small, .tags, .date{
   justify-content: flex-start;
   gap: 10px;
   margin: 20px;
+    
+  position: sticky;  /* Keeps the button visible when scrolling */
+  top: 0;
+  background-color: #fff; /* Optional: prevents overlap with content */
+  padding: 10px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd; /* subtle separation from header */
 }
 
 .btn.home-button {
