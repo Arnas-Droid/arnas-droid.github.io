@@ -15,7 +15,7 @@
   }
   
   .tech-card {
-    display: flex; 
+    //display: flex; 
     flex-direction: column;
     gap: 20px; 
     width: 100%;
@@ -24,8 +24,7 @@
   }
 
   .tech-text, 
-  .tech-image {
-    //flex: 1 1 100%;     
+  .tech-image {   
     flex: none; 
     width: 100%;   
     max-width: 100%;  
