@@ -5,6 +5,11 @@
 
 /* Media */
 @media (max-width: 768px) {
+  .project-content {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
   .content-row {
     flex-direction: column;
   }
@@ -29,7 +34,7 @@ p.view, small, .tags, .date{
 .project-container {
   position: relative;
   width: 100%; 
-  max-width: 800px; 
+  max-width: 1100px;
   margin: 20px auto;  
   overflow: hidden; 
   padding: 5px;
@@ -66,7 +71,8 @@ p.view, small, .tags, .date{
 
 /* Project Pay Layout */
 .project-content {
-  margin-top: 10px;
+  margin-top: 40px; 
+  margin-bottom: 60px;
   padding: 0 20px;
   text-align: justify;
 }
@@ -209,21 +215,6 @@ p.view, small, .tags, .date{
   flex: 1 1 60%;
   max-width: calc(60% - 20px);
 }
-
-/*
-
-.tech-text h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-}
-
-.tech-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-*/
 
 /* Tech Cards Image */
 .tech-image {
