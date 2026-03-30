@@ -276,3 +276,19 @@ p.view, small, .tags, .date{
 }
 
 /* Buttons */
+.project-buttons {
+  display: flex;
+  justify-content: flex-end; /* or center */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #b5e853;
+  color: #151515;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
