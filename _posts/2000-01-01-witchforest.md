@@ -150,7 +150,7 @@ title: "The Witch Forest"
       <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Lighting JSON">
     </div>
   </div>
-  </section>
+</section>
 
 <script>
   let slideIndex = 1;
