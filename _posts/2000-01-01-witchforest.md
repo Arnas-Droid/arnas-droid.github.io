@@ -101,6 +101,19 @@ title: "The Witch Forest"
   <section class="tech-section">
     <h2 class="tech-title">Technical Breakdown</h2>
 
+  <!-- Card 1 -->
+  <div class="tech-card">
+    <div class="tech-text">
+      <h3>DirectX 11</h3>
+      <p>
+      This was where my foundational knowledge was learnt.
+      </p>
+    </div>
+    <div class="tech-image">
+      <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Lighting JSON">
+    </div>
+  </div>
+
   <!-- Card 2 -->
   <div class="tech-card">
     <div class="tech-text">
