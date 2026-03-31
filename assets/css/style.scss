@@ -229,6 +229,13 @@ p.view, small, .tags, .date{
   min-width: 0; 
 }
 
+.tech-text p {
+  text-align: left;
+  line-height: 1.6;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
 /* Tech Cards Image */
 .tech-image {
   flex: 1 1 40%;
