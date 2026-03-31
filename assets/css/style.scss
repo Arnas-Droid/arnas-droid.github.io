@@ -236,6 +236,12 @@ p.view, small, .tags, .date{
   margin: 0;
 }
 
+.tech-code pre code {
+  padding: 0;       
+  margin: 0;       
+  display: block;     
+}
+
 /* Top Buttons */
 #top-button .btn-home {
   text-decoration: none;
