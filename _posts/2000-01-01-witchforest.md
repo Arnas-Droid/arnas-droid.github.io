@@ -124,7 +124,7 @@ title: "The Witch Forest"
         </code></pre>
       </div>
       <p>The code shows the example of the recursive nature where it would take the previous base transform and one of the current game objects.</p>
-      <p>To improve this</p>
+      <p>To improve this, a good approach would be, instead of sending the data to the constant buffer for every object, to have all of the objects' world matrices sent off at once. There are also a lot of hard-coded conditions for specific game objects where it would get the specific index instead of checking if it is transparent, as an example. Lastly, due to it only worrying about traversing a big hierarchy from the base, it doesn't really account for having multiple child objects.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Scene">
