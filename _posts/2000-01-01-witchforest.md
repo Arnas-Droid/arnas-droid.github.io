@@ -115,7 +115,7 @@ title: "The Witch Forest"
   <!-- Card 2 -->
   <div class="tech-card">
     <div class="tech-text">
-      <h3>Scene Heirachy</h3>
+      <h3>Scene Hierarchy</h3>
       <p>This system was built for rendering game objects, applying their textures, applying their transforms and drawing meshes recursively through a hierarchical scene graph structure.</p>
       <div class="tech-code">
         <pre><code>
@@ -123,8 +123,16 @@ title: "The Witch Forest"
         _GameObjects[i]->DrawGameObjects(_immediateContext, newChild, cbdata, constantbuffer, mappedSubresource);
         </code></pre>
       </div>
-      <p>The code shows the example of the recursive nature where it would take the previous base transform and one of the current game objects.</p>
-      <p>To improve this, a good approach would be, instead of sending the data to the constant buffer for every object, to have all of the objects' world matrices sent off at once. There are also a lot of hard-coded conditions for specific game objects where it would get the specific index instead of checking if it is transparent, as an example. Lastly, due to it only worrying about traversing a big hierarchy from the base, it doesn't really account for having multiple child objects.</p>
+      <p>The code above shows the example of the recursive nature where it would multiply the parent's transform (base) with the current child's transform (game objects).</p>
+      <div class="tech-code">
+        <pre><code>
+        _immediateContext->IASetVertexBuffers(0, 1, &GetMeshData()->VertexBuffer, &GetMeshData()->VBStride, &GetMeshData()->VBOffset);
+        _immediateContext->IASetIndexBuffer(GetMeshData()->IndexBuffer, DXGI_FORMAT_R16_UINT, 0);
+        _immediateContext->DrawIndexed(GetMeshData()->IndexCount, 0, 0);
+        </code></pre>
+      </div>
+      <p>The code above shows how the vertex and index buffers are set, with this being crucial when it comes to drawing the object.</p>
+      <p>Lastly, to improve the system, instead of sending data to the constant buffer for each object, it would be better to send it all at once. Then there are specific hard-coded conditions like checking the object index, which could be removed and added as a check. The last concern is the fact the hierarchy only cares about the parent object, which is blank and nothing else due to its nature. This could be improved to add children objects and add the associated logic with that.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Scene">
