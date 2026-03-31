@@ -264,11 +264,15 @@ p.view, small, .tags, .date{
   
   .tech-card {
     display: flex; 
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 20px; 
     width: 100%;
     max-width: 100%;
     align-items: stretch;
+  }
+
+  .about-card {
+    flex-direction: column; 
   }
 
   .tech-text, 
