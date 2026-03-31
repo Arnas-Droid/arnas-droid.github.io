@@ -217,7 +217,7 @@ p.view, small, .tags, .date{
 /* Tech Cards */
 .tech-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   margin-bottom: 80px;
   //flex-wrap: wrap;
