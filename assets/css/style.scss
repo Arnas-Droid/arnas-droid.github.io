@@ -218,7 +218,9 @@ p.view, small, .tags, .date{
 /* For Code */
 .tech-code {
   width: 100%; 
+  max-height: 250px;
   overflow-x: auto; 
+  overflow-y: auto; 
   -webkit-overflow-scrolling: touch;
 }
 
