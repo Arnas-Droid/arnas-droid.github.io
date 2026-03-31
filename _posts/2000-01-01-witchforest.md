@@ -124,6 +124,7 @@ title: "The Witch Forest"
         </code></pre>
       </div>
       <p>The code shows the example of the recursive nature where it would take the previous base transform and one of the current game objects.</p>
+      <p>To improve this</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png" alt="Scene">
@@ -153,7 +154,8 @@ title: "The Witch Forest"
           }
         </code></pre>
       </div>
-      <p>Doing parsing from the code sample above into a lighting struct that matches the JSON namesense. This is then sent to the GPU via a constant buffer using similar logic without the need to parse, of course. When the constant buffer is set, the shader can use the data from the lighting parameters during rendering. Using JSON files is a good way to manage lighting parameters that can be modified quickly. To accomplish the task, it used the nlohmann version of JSON, and while there were other options like YAML, I felt at the time JSON was the easiest to implement. Lastly, ways to improve this would be moving the logic out of the game object class and having a separate class manage data like this. As a safety measure, there should also be error handling in case of unseen errors.</p>
+      <p>Doing parsing from the code sample above into a lighting struct that matches the structure of JSON keys. This is then sent to the GPU via a constant buffer using similar logic without the need to parse, of course. When the constant buffer is set, the shader can use the data from the lighting parameters during rendering. Using JSON files is a good way to manage lighting parameters that can be modified quickly.</p>
+      <p>To accomplish the task, it used the nlohmann version of JSON, and while there were other options like YAML, I felt at the time JSON was the easiest to implement. Lastly, ways to improve this would be moving the logic out of the game object class and having a separate class manage data like this. As a safety measure, adding error handling, e.g., file existing, fallbacks, etc., would help catch anything wrong without picking apart the code for hours.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Lighting JSON">
