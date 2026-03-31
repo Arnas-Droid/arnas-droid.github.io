@@ -270,6 +270,15 @@ p.view, small, .tags, .date{
     margin-bottom: 40px;
   }
 
+  .slide {
+    margin-bottom: 10px;
+  }
+
+  .slide img,
+  .slide iframe {
+    margin-bottom: 10px;
+  }
+  
   .content-row {
     flex-direction: column;
   }
