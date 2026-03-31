@@ -35,6 +35,10 @@
     height: auto;         
     display: block;     
   }
+
+  .tech-card:nth-child(even) {
+    flex-direction: column;
+  }
 }
 
 /* Global Overrides */
