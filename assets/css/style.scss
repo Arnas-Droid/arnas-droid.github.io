@@ -59,23 +59,23 @@ p.view, small, .tags, .date{
 /* Project Gallery Slides */
 .project-gallery {
   position: relative;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.project-gallery img {
-  margin-bottom: 10px;
-}
-
-.project-gallery img:hover {
-  transform: none;
+.project-gallery img,
+.project-gallery iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  object-fit: cover;
 }
 
 .project-gallery iframe {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
   aspect-ratio: 16/9;
-  display: block;
-  margin: 0 auto 20px;
+  max-width: 100%;
 }
 
 .slide {
@@ -261,6 +261,10 @@ p.view, small, .tags, .date{
 
 /* Media */
 @media (max-width: 768px) {
+  .project-gallery {
+    padding: 0 5px;
+  }
+  
   .project-content {
     margin-top: 30px;
     margin-bottom: 40px;
