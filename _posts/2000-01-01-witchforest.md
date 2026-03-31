@@ -136,7 +136,26 @@ title: "The Witch Forest"
   <div class="tech-card">
     <div class="tech-text">
       <h3>JSON Breakdown</h3>
-      <p>The image shows the example of what the JSON will be reading. Using JSON, I would put all the data into a lighting struct, which would then get passed along to the constant buffer data to be used for the shader.</p>
+      <p>The image shows an example of JSON data that will be parsed at runtime. This specific file houses lighting parameters, which are used for the lighting in the artefact.</p> 
+      <div class="tech-code">
+        <pre><code>
+          json jFile;
+          std::ifstream fileOpen("JSON/LightingFormat.json");
+          jFile = json::parse(fileOpen);
+          json& objects = jFile["Lighting"]; //Gets an array
+          int size = objects.size(); //Size of array
+          for (unsigned int i = 0; i < size; i++)
+          {
+            LightingStruct g;
+            json& objectDesc = objects.at(i);
+            g.DiffuseLight.x = objectDesc["DiffuseLight"][0];
+            g.DiffuseLight.y = objectDesc["DiffuseLight"][1];
+            g.DiffuseLight.z = objectDesc["DiffuseLight"][2];
+            g.DiffuseLight.w = objectDesc["DiffuseLight"][3];
+          }
+        </code></pre>
+      </div>
+      <p>Doing parsing from the code sample above into a lighting struct that matches the JSON namesense. This is then sent to the GPU via a constant buffer using similar logic without the need to parse, of course. When the constant buffer is set, the shader can use the data from the lighting parameters during rendering. Using JSON files is a good way to manage lighting parameters that can be modified quickly. To accomplish the task, it used the nlohmann version of JSON, and while there were other options like YAML, I felt at the time JSON was the easiest to implement. Lastly, ways to improve this would be moving the logic out of the game object class and having a separate class manage data like this. As a safety measure, there should also be error handling in case of unseen errors.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestJSON.png" alt="Lighting JSON">
