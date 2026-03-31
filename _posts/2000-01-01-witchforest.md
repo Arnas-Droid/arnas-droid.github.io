@@ -105,10 +105,13 @@ title: "The Witch Forest"
   <div class="tech-card">
     <div class="tech-text">
       <h3>DirectX 11</h3>
-      <p>This was where my foundational knowledge of DirectX 11 was learnt.</p>
+      <h4>Graphics Pipeline</h4>
+      <p>While not a feature/system of the artefact, this project is where I learnt a lot of fundamental knowledge for DirectX 11. Started with learning the theoretical knowledge of the graphics pipeline and worked with the input assembler to feed data through. Vertex shader for transforming the geometry and the pixel shader for texturing and colouring.</p>
+      <h4>Buffers and Resources</h4>
+      <p>Used vertex buffers to store the positions, normals, and texture coordinates of the object. While an index buffer was used to define how the triangle would use the same vertices for efficiency. Lastly, a constant buffer for storing the transform matrices, the lighting data, and camera properties.</p>
     </div>
     <div class="tech-image">
-      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.jpeg" alt="DirectX">
+      <img src="{{ site.baseurl }}/assets/Witch/Technical/WitchForestDirectX.png" alt="DirectX">
     </div>
   </div>
 
