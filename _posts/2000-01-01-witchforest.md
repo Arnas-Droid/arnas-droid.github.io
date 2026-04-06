@@ -85,16 +85,17 @@ title: "The Witch Forest"
   <!-- Project Highlights -->
   <section class="project-content">
     <h3>Project Highlights</h3>
-    <p>- Build a 3D environment using DirectX 11.</p>
-    <p>- Implemented a scene graph hierarchy to manage object parent and child transformations.</p>
-    <p>- Used JSON to load and access external files like lighting.</p>
+    <p>- Implemented a DirectX 11 custom vertex and pixel shaders for the rendering pipeline to handle world transformations, lighting models and texture mapping.</p>
+    <p>- Built a real-time 3D witch forest scene with multiple object transformations, lighting models and transparency rendering.</p>
+    <p>- Designed a recursive scene graph to handle hierarchical transformations and parent-child relationships.</p>
+    <p>- Developed a JSON system to configure lighting parameters, which are parsed on the CPU and sent to the GPU through constant buffers.</p>
   </section>
 
   <!-- Overview -->
   <section class="project-content">
     <h3>Overview</h3>
-    <p>Using DirectX 11, I learned more about graphic pipelines and how to create a 3D environment that utilized the pipeline for rendering lighting and shading models. Drawing inspiration from my heritage, I created the <strong>Witch Forest</strong> scene.</p>
-    <p>My biggest challenge came when I was working on the scene graph hierarchy. I struggled with the idea of using functions to access different files. Although it worked when created in the main function, it felt a bit messy and harder to follow from an external viewpoint. Ultimately, I managed to build it, but there were issues I would approach differently in future projects. It's currently my favorite piece of work.</p>
+    <p>The project aimed at creating a real-time 3D environment using DirectX 11, implementing custom vertex and pixel shaders for the rendering pipeline to manage object transformations, lighting models and shading. Drawing inspiration from my heritage, I created the <strong>Witch Forest</strong> to demonstrate technical graphic skills.</p>
+    <p>A key challenge was designing a hierarchical scene graph to manage an object's transformation and relationship to other objects. While the system was successful in doing both to an extent and highlighted initial design flaws from the beginning. This ultimately still had problems with struggling to maintain child-parent relationships with more than 1 parent. Even with that, this remains to still be one of my favourite projects since it showed me what graphic programming is capable of.</p>
   </section>
 
   <!-- Technical Breakdown -->
