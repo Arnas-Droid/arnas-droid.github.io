@@ -201,6 +201,14 @@ p.view, small, .tags, .date{
   letter-spacing: normal;
 }
 
+.tech-text iframe {
+  flex: 1 1 40%;
+  min-width: 0; 
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+
 /* Tech Cards Image */
 .tech-image {
   flex: 1 1 40%;
@@ -209,6 +217,21 @@ p.view, small, .tags, .date{
 }
 
 .tech-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;;
+}
+
+.tech-video {
+  flex: 1 1 40%;
+  min-width: 0; 
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+
+.tech-video iframe {
   width: 100%;
   height: auto;
   border-radius: 12px;
