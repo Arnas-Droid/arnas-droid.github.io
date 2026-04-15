@@ -207,6 +207,10 @@ p.view, small, .tags, .date{
   display: flex;
   justify-content: center; 
   text-align: center;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;;
 }
 
 /* Tech Cards Image */
