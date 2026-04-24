@@ -10,7 +10,7 @@ title: "Advanced Graphics"
   <div class="slide" style="text-align: center;">
     <iframe
       src="https://www.youtube.com/embed/hXlKtwVcpxY"
-      title="Witch Forest Trailer"
+      title="Demo Trailer"
       frameborder="0"
       allowfullscreen>
     </iframe>
@@ -63,21 +63,21 @@ title: "Advanced Graphics"
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
           onclick="currentSlide(2)"
-          alt="Close up perspective">
+          alt="Standard Shader">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
           onclick="currentSlide(3)"
-          alt="Side profile">
+          alt="Normals Shader">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsBoxBlur.png"
           onclick="currentSlide(4)"
-          alt="Far away">
+          alt="Box Blur Shader (Post Processing)">
       </div>
     </div>
   </section>
