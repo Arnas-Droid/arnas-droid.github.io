@@ -19,7 +19,7 @@ title: "Advanced Graphics"
   <!-- Slide 2 (Standard Shader) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedStandard.png"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
       alt="Standard Shader"
       class="slide-img">
   </div>
@@ -27,7 +27,7 @@ title: "Advanced Graphics"
   <!-- Slide 3 (Normals Shader) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedNormals.png"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
       alt="Normals Shader"
       class="slide-img">
   </div>
@@ -35,7 +35,7 @@ title: "Advanced Graphics"
   <!-- Slide 4 (Box Blur Shader (Post Processing)) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedBoxBlur.png"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsBoxBlur.png"
       alt="Box Blur Shader (Post Processing)"
       class="slide-img">
   </div>
@@ -54,28 +54,28 @@ title: "Advanced Graphics"
       <div class="thumbnail-column video-thumb">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsDeferred.png"
           onclick="currentSlide(1)"
           alt="Demo Trailer">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
           onclick="currentSlide(2)"
           alt="Close up perspective">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Witch/WitchForestSide.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
           onclick="currentSlide(3)"
           alt="Side profile">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Witch/WitchForestFar.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsBoxBlur.png"
           onclick="currentSlide(4)"
           alt="Far away">
       </div>
