@@ -40,7 +40,7 @@ title: Home
 <div style="display: flex; justify-content: center; gap: 20px;">
   <!-- Echoes -->
   <div class="project-container">
-    <a href="{{ '/2002/01/01/echoes.html' | relative_url }}">
+    <a href="{{ '/advancedGraphics.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Echoes Of Imagination</div>
@@ -64,6 +64,14 @@ title: Home
 </div>
 
 <div style="display: flex; justify-content: center; gap: 20px;">
+  <!-- Smile Engine -->
+  <div class="project-container">
+    <a href="{{ '/smileEngine.html' | relative_url }}">
+      <img class="enlarge-onhover" src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
+      </a>
+    <div class="overlay">Low Level Optimisation</div>
+  </div>
+
   <!-- Low Level -->
   <div class="project-container">
     <a href="{{ '/2004/01/01/lowLevel.html' | relative_url }}">
@@ -72,20 +80,30 @@ title: Home
     <div class="overlay">Low Level Optimisation</div>
   </div>
 
-  <!-- Arcade -->
-  <div class="project-container">
-    <a href="{{ '/2001/01/01/arcade.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games" style="width:800px;height:300px;">
-      </a>
-    <div class="overlay">Arcade Games</div>
-  </div>
-
   <!-- Bespoke -->
   <div class="project-container">
     <a href="{{ '/2005/01/01/bespoke.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/Bespoke/BespokeWindowsLevel1.png' | relative_url }}" alt="Bespoke Platform" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Bespoke Platform</div>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <!-- Junior Collab (Echoes) -->
+  <div class="project-container">
+    <a href="{{ '/2002/01/01/echoes.html' | relative_url }}">
+      <img class="enlarge-onhover" src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu" style="width:800px;height:300px;">
+      </a>
+    <div class="overlay">Echoes Of Imagination</div>
+  </div>
+
+  <!-- Arcade -->
+  <div class="project-container">
+    <a href="{{ '/2001/01/01/arcade.html' | relative_url }}">
+      <img class="enlarge-onhover" src="{{ '/assets/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games" style="width:800px;height:300px;">
+      </a>
+    <div class="overlay">Arcade Games</div>
   </div>
 </div>
 
