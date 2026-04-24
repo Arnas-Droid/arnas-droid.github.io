@@ -41,7 +41,7 @@ title: Home
   <!-- Advanced Graphics -->
   <div class="project-container">
     <a href="{{ '/2006/01/01/advancedGraphics.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/AdvacnedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Advanced Graphics</div>
   </div>
