@@ -9,26 +9,26 @@ title: "Advanced Graphics"
   <!-- Slide 1 (Video) -->
   <div class="slide" style="text-align: center;">
     <iframe
-      src="https://www.youtube.com/embed/hXlKtwVcpxY"
+      src="https://www.youtube.com/embed/YlJKgl5t5rQ"
       title="Demo Trailer"
       frameborder="0"
       allowfullscreen>
     </iframe>
   </div>
 
-  <!-- Slide 2 (Standard Shader) -->
-  <div class="slide">
-    <img
-      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
-      alt="Standard Shader"
-      class="slide-img">
-  </div>
-
-  <!-- Slide 3 (Normals Shader) -->
+  <!-- Slide 2 (Normals Shader) -->
   <div class="slide">
     <img
       src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
       alt="Normals Shader"
+      class="slide-img">
+  </div>
+
+  <!-- Slide 3 (Deferred Shader) -->
+  <div class="slide">
+    <img
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsDeferred.png"
+      alt="Deferred Shader"
       class="slide-img">
   </div>
 
@@ -54,23 +54,23 @@ title: "Advanced Graphics"
       <div class="thumbnail-column video-thumb">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsDeferred.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
           onclick="currentSlide(1)"
           alt="Demo Trailer">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
           onclick="currentSlide(2)"
-          alt="Standard Shader">
+          alt="Normals Shader">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsNormals.png"
+          src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsDeferred.png"
           onclick="currentSlide(3)"
-          alt="Normals Shader">
+          alt="Deferred Shader">
       </div>
       <div class="thumbnail-column">
         <img
