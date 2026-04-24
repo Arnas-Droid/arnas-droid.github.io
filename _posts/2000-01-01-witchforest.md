@@ -130,9 +130,9 @@ title: "The Witch Forest"
       <p>The code above shows the example of the recursive nature where it would multiply the parent's transform (base) with the current child's transform (game objects).</p>
       <div class="tech-code">
         <pre><code>
-        _immediateContext->IASetVertexBuffers(0, 1, &GetMeshData()->VertexBuffer, &GetMeshData()->VBStride, &GetMeshData()->VBOffset);
-        _immediateContext->IASetIndexBuffer(GetMeshData()->IndexBuffer, DXGI_FORMAT_R16_UINT, 0);
-        _immediateContext->DrawIndexed(GetMeshData()->IndexCount, 0, 0);
+_immediateContext->IASetVertexBuffers(0, 1, &GetMeshData()->VertexBuffer, &GetMeshData()->VBStride, &GetMeshData()->VBOffset);
+_immediateContext->IASetIndexBuffer(GetMeshData()->IndexBuffer, DXGI_FORMAT_R16_UINT, 0);
+_immediateContext->DrawIndexed(GetMeshData()->IndexCount, 0, 0);
         </code></pre>
       </div>
       <p>The code above shows how the vertex and index buffers are set, with this being crucial when it comes to drawing the object.</p>
@@ -150,20 +150,20 @@ title: "The Witch Forest"
       <p>The image shows an example of JSON data that will be parsed at runtime. This specific file houses lighting parameters, which are used for the lighting in the artefact.</p> 
       <div class="tech-code">
         <pre><code>
-          json jFile;
-          std::ifstream fileOpen("JSON/LightingFormat.json");
-          jFile = json::parse(fileOpen);
-          json& objects = jFile["Lighting"]; //Gets an array
-          int size = objects.size(); //Size of array
-          for (unsigned int i = 0; i < size; i++)
-          {
-            LightingStruct g;
-            json& objectDesc = objects.at(i);
-            g.DiffuseLight.x = objectDesc["DiffuseLight"][0];
-            g.DiffuseLight.y = objectDesc["DiffuseLight"][1];
-            g.DiffuseLight.z = objectDesc["DiffuseLight"][2];
-            g.DiffuseLight.w = objectDesc["DiffuseLight"][3];
-          }
+json jFile;
+std::ifstream fileOpen("JSON/LightingFormat.json");
+jFile = json::parse(fileOpen);
+json& objects = jFile["Lighting"]; //Gets an array
+int size = objects.size(); //Size of array
+for (unsigned int i = 0; i < size; i++)
+{
+  LightingStruct g;
+  json& objectDesc = objects.at(i);
+  g.DiffuseLight.x = objectDesc["DiffuseLight"][0];
+  g.DiffuseLight.y = objectDesc["DiffuseLight"][1];
+  g.DiffuseLight.z = objectDesc["DiffuseLight"][2];
+  g.DiffuseLight.w = objectDesc["DiffuseLight"][3];
+}
         </code></pre>
       </div>
       <p>Doing parsing from the code sample above into a lighting struct that matches the structure of JSON keys. This is then sent to the GPU via a constant buffer using similar logic without the need to parse, of course. When the constant buffer is set, the shader can use the data from the lighting parameters during rendering. Using JSON files is a good way to manage lighting parameters that can be modified quickly.</p>
