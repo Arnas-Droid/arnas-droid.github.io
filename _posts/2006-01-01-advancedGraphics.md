@@ -87,13 +87,13 @@ title: "Advanced Graphics"
     <h3>Project Highlights</h3>
     <p>- Aimed to create an interactive program through ImGui. Using it for ease of accessing lights and objects through managers.</p>
     <p>- Implemented multiple shaders like standard, normals, deferred, hull and post-processing to handle varying logic from how the object interacts with the world to screen passing for post-processing.</p>
-    <p>- Using graphic profilers like RenderDoc to debug rendering passes. One instance of this was for the gbuffer for the deferred shader.</p>
+    <p>- Using graphic profilers like RenderDoc to debug rendering passes. One instance of this was for the G-buffer for the deferred shader.</p>
   </section>
 
   <!-- Overview -->
   <section class="project-content">
     <h3>Overview</h3>
-    <p></p>
+    <p>Through this project, I explored different 3D rendering techniques, created different shaders, used graphic profiling, and used ImGui to display change settings at runtime.</p>
   </section>
 
   <!-- Technical Breakdown -->
