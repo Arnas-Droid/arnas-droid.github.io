@@ -41,7 +41,7 @@ title: Home
   <!-- Advanced Graphics -->
   <div class="project-container">
     <a href="{{ '/2006/01/01/advancedGraphics.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/AdvacnedGraphics/AdvancedGraphicsDeferred.png' | relative_url }}" alt="Advanced Graphics" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Advanced Graphics</div>
   </div>
@@ -67,7 +67,7 @@ title: Home
   <!-- Smile Engine -->
   <div class="project-container">
     <a href="{{ '/2008/01/01/smileEngine.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Smile Engine" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Smile Engine (Temp Name + Currently worked on)</div>
   </div>
