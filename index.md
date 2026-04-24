@@ -40,10 +40,10 @@ title: Home
 <div style="display: flex; justify-content: center; gap: 20px;">
   <!-- Echoes -->
   <div class="project-container">
-    <a href="{{ '/advancedGraphics.html' | relative_url }}">
+    <a href="{{ '/2006/01/01/advancedGraphics.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu" style="width:800px;height:300px;">
       </a>
-    <div class="overlay">Echoes Of Imagination</div>
+    <div class="overlay">Advanced Graphics</div>
   </div>
 
   <!-- Real Time -->
@@ -66,10 +66,10 @@ title: Home
 <div style="display: flex; justify-content: center; gap: 20px;">
   <!-- Smile Engine -->
   <div class="project-container">
-    <a href="{{ '/smileEngine.html' | relative_url }}">
+    <a href="{{ '/2008/01/01/smileEngine.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
       </a>
-    <div class="overlay">Low Level Optimisation</div>
+    <div class="overlay">Smile Engine (Temp Name + Currently worked on)</div>
   </div>
 
   <!-- Low Level -->
