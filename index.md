@@ -67,7 +67,7 @@ title: Home
   <!-- Smile Engine -->
   <div class="project-container">
     <a href="{{ '/2008/01/01/smileEngine.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
+      <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Smile Engine (Temp Name + Currently worked on)</div>
   </div>
