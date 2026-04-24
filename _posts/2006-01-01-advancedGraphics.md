@@ -16,27 +16,27 @@ title: "Advanced Graphics"
     </iframe>
   </div>
 
-  <!-- Slide 2 (Close up) -->
+  <!-- Slide 2 (Standard Shader) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/Witch/WitchForestMain.png"
-      alt="Witch Forest Screenshot"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedStandard.png"
+      alt="Standard Shader"
       class="slide-img">
   </div>
 
-  <!-- Slide 3 (Side Profile) -->
+  <!-- Slide 3 (Normals Shader) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/Witch/WitchForestSide.png"
-      alt="Witch Forest Screenshot"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedNormals.png"
+      alt="Normals Shader"
       class="slide-img">
   </div>
 
-  <!-- Slide 4 (Far Away) -->
+  <!-- Slide 4 (Box Blur Shader (Post Processing)) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/Witch/WitchForestFar.png"
-      alt="Witch Forest Screenshot"
+      src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedBoxBlur.png"
+      alt="Box Blur Shader (Post Processing)"
       class="slide-img">
   </div>
 
