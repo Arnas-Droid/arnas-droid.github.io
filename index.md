@@ -38,7 +38,7 @@ title: Home
 <h1 style="text-align:center;">Projects</h1>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <!-- Echoes -->
+  <!-- Advanced Graphics -->
   <div class="project-container">
     <a href="{{ '/2006/01/01/advancedGraphics.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu" style="width:800px;height:300px;">
