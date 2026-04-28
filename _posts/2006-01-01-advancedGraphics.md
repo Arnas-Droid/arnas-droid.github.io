@@ -93,7 +93,7 @@ title: "Advanced Graphics"
   <!-- Overview -->
   <section class="project-content">
     <h3>Overview</h3>
-    <p>Through this project, I explored different 3D rendering techniques, created different shaders, used graphic profiling, and used ImGui to display change settings at runtime.</p>
+    <p>In this project I explored different 3D rendering techniques like Render to Target (RTT), created different shaders like normals, used graphic profiling to debug my graphics pipeline, and used ImGui to change settings at runtime.</p>
   </section>
 
   <!-- Technical Breakdown -->
@@ -104,7 +104,7 @@ title: "Advanced Graphics"
   <div class="tech-card">
     <div class="tech-text">
       <h3>Scene Manipulation</h3>
-      <p></p>
+      <p>The scene manipulation in this had light, which would allow the user to manipulate its parameters that change the ID, position, colour, materials colours and more. While the object had parameters that changed where it was, the texture was applied at runtime, and it had a spline camera. There were other variables that could be set at runtime, like the shader, post processing effects and minor other visuals. For improvements, this could have pickable objects with a mouse and more visual aid, like where the light positions are with a gizmo.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsStandard.png" alt="Scene Manipulation">
@@ -115,7 +115,7 @@ title: "Advanced Graphics"
   <div class="tech-card">
     <div class="tech-text">
       <h3>Shaders</h3>
-      <p></p>
+      <p>For the purposes of this project, I created different shaders to do different logic. First I had a shader, which only put it correctly into world space, and then applied the texture to the cube with lighting. Then for the normal shader instead of passing normals to the light like the standard shader, I would pass in a bump map, but this wouldn't be enough since it needs tangent space for the normals to interact with the surface. There were also shaders for post-processing, which would do different visual effects over screen space. Something extra I did was doing tessellation through a hull and domain shader, which created extra triangles through the shader. This would add detail and not be as computational heavy when doing higher definition models. Lastly, a major shader was deferred, which would create a g-buffer to store three sets of textures of the scene. One for ambient, normal and world space. It is common to have depth or maybe even specular, but it depends on the needs of it.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsDeferred.png" alt="Shaders">
@@ -126,7 +126,16 @@ title: "Advanced Graphics"
   <div class="tech-card">
     <div class="tech-text">
       <h3>Post Processing</h3>
-      <p></p>
+      <p>For post-processing I did Render to Target (RTT) to get a texture from the render pass of the scene. This would get applied to a cube at first, but later on for a fullscreen pass, I did a quad across the screen that got the texture. For an upgrade, this could've been one big triangle since that would be more optimised, and while I didn't encounter it, doing two triangles tends to give a seam line where they are crossing. For the first texture applications to the screen, I did a greyscale across:</p>
+      <div class="tech-code">
+        <pre><code>
+float4 vColor = txDiffuse.Sample(samLinear, IN.Tex);
+float gray = dot(vColor.rgb, float3(0.299, 0.587, 0.114));
+vColor.rgb = gray;
+return vColor;
+        </code></pre>
+      </div>
+      <p>To show other functionality of this, I created a box blur, which would offset the texture pixels by a minor degree, and then did a depth blur, which depending on distance, would be more clear or not.</p>
     </div>
     <div class="tech-image">
       <img src="{{ site.baseurl }}/assets/AdvancedGraphics/AdvancedGraphicsBoxBlur.png" alt="Post Processing">
