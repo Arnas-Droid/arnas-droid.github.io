@@ -66,7 +66,7 @@ title: Home
 <div style="display: flex; justify-content: center; gap: 20px;">
   <!-- Gelos Engine -->
   <div class="project-container">
-    <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}">
+    <a href="{{ '/GelosEngine/index.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Gelos Engine (Currently worked on)</div>
