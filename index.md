@@ -64,12 +64,12 @@ title: Home
 </div>
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <!-- Smile Engine -->
+  <!-- Gelos Engine -->
   <div class="project-container">
-    <a href="{{ '/2008/01/01/smileEngine.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Smile Engine" style="width:800px;height:300px;">
+    <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}">
+      <img class="enlarge-onhover" src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine" style="width:800px;height:300px;">
       </a>
-    <div class="overlay">Smile Engine (Temp Name + Currently worked on)</div>
+    <div class="overlay">Gelos Engine (Currently worked on)</div>
   </div>
 
   <!-- Low Level -->
