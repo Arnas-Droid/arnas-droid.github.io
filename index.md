@@ -7,6 +7,7 @@ title: Home
 
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
+  <!-- Real-time Graphics -->  
   <!-- Image -->
   <a class="project-image" href="{{ '/pages/witchforest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
 
@@ -19,6 +20,41 @@ title: Home
       <span>DirectX 11</span>
       <span>Graphics Programming</span>
       <span>Visual Studio</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-grid">
+  <!-- Gelos Engine -->
+  <div class="project-card">
+    <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
+    <div class="project-info">
+      <h2>Gelos Engine</h2>
+      <p>Page in development.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>PS5 Graphics</span>
+        <span>OpenGL</span>
+        <span>Graphics Programming</span>
+        <span>Engine Programming</span>
+        <span>Visual Studio</span>
+      </div>
+    </div>
+  </div>
+  <!-- Advanced Graphics -->
+  <div class="project-card">
+    <a href="{{ '/2006/01/01/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
+    <div class="project-info">
+      <h2>Advanced Graphics</h2>
+      <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom shaders, and graphics pipeline profiling.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>ImGui</span>
+        <span>RenderDoc</span>
+        <span>Visual Studio</span>
+      </div>
     </div>
   </div>
 </div>
