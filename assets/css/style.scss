@@ -43,8 +43,7 @@ p.view, small, .tags, .date{
 .project-row {
   display: flex;
   gap: 40px;
-  align-items: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: center;
   max-width: 1300px;
   margin: 60px auto;
@@ -66,6 +65,7 @@ p.view, small, .tags, .date{
 /* Right side text */
 .project-info {
   flex: 1;
+  background: rgba(255,255,255,0.03);
   color: white;
   min-width: 350px; 
   max-width: 500px; 
