@@ -27,10 +27,11 @@ title: Home
   <div class="project-card">
     <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
     <div class="project-info">
-      <h2>Gelos Engine</h2>
-      <p>Page in development.</p>
+      <h2>Gelos Engine (Page in development)</h2>
+      <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
       <div class="project-tags">
         <span>C++</span>
+        <span>Team Project</span>
         <span>DirectX 11</span>
         <span>OpenGL</span>
         <span>PS5 Port</span>
@@ -60,7 +61,7 @@ title: Home
     <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level"></a>
     <div class="project-info">
       <h2>Low Level Optimisation (Page in development)</h2>
-      <p></p>
+      <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
       <div class="project-tags">
         <span>C++</span>
         <span>DirectX 11</span>
@@ -75,7 +76,7 @@ title: Home
     <a href="{{ '/pages/echoes.html' | relative_url }}"><img src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu"></a>
     <div class="project-info">
       <h2>Echoes Of Imagination</h2>
-      <p></p>
+      <p>A tile-based puzzle game with a multidisciplinary team that focused on gameplay programming.</p>
       <div class="project-tags">
         <span>Blueprints</span>
         <span>Team Project</span>
@@ -89,7 +90,7 @@ title: Home
     <a href="{{ '/pages/bespoke.html' | relative_url }}"><img src="{{ '/assets/Bespoke/BespokeEvercadeMainMenu.png' | relative_url }}" alt="Bespoke Platform"></a>
     <div class="project-info">
       <h2>Bespoke (Evercade)</h2>
-      <p></p>
+      <p>A project that focused on end-to-end production, like designing, implementing and porting to Evercade.</p>
       <div class="project-tags">
         <span>C++</span>
         <span>Evercade</span>
@@ -103,7 +104,7 @@ title: Home
     <a href="{{ '/pages/glut.html' | relative_url }}"><img src="{{ '/assets/GLUT/GLUTMainImage.png' | relative_url }}" alt="glut"></a>
     <div class="project-info">
       <h2>Glut</h2>
-      <p></p>
+      <p>An OpenGL graphics programming project that focused on implementing basic rendering, camera movement and input handling.</p>
       <div class="project-tags">
         <span>C++</span>
         <span>OpenGL</span>
@@ -112,12 +113,12 @@ title: Home
       </div>
     </div>
   </div>
-        <!-- Arcade -->
+      <!-- Arcade -->
   <div class="project-card">
     <a href="{{ '/pages/arcade.html' | relative_url }}"><img src="{{ '/assets/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games"></a>
     <div class="project-info">
       <h2>Arcade Games</h2>
-      <p></p>
+      <p>A prototype project focused on mobile development that would have ad-free gameplay.</p>
       <div class="project-tags">
         <span>C#</span>
         <span>Mobile Port</span>
