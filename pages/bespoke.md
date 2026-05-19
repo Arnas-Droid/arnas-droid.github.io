@@ -94,8 +94,8 @@ title: "Bespoke Platform Devlopment"
   <!-- Project Highlights -->
   <section class="project-content">
     <h3>Project Highlights</h3>
-    <p>- Designing and creating a game loop.</p>
-    <p>- Ported over to evercade through linux.</p>
+    <p>- Developed a full game that followed a full production pipeline including research, development, and porting to Evercade.</p>
+    <p>- Created a custom porting cheat sheet to complete the Evercade porting process successfully each time.</p>
   </section>
 
 <script>
