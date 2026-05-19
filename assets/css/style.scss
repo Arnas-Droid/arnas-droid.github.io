@@ -51,11 +51,14 @@ p.view, small, .tags, .date{
   background: rgba(255,255,255,0.03);
   border: 1px solid #333;
   border-radius: 16px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 /* Left side image */
 .project-image {
-  flex: 0 0 60%; 
+  flex: 0 1 60%; 
+  min-width: 300px;
 }
 
 .project-image img {
@@ -69,8 +72,9 @@ p.view, small, .tags, .date{
 .project-info {
   flex: 1;
   color: white;
-  min-width: 350px; 
-  max-width: 500px; 
+  min-width: 280px;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 .project-info h2 {
@@ -83,6 +87,8 @@ p.view, small, .tags, .date{
   line-height: 1.6;
   color: #cccccc;
   margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Tags */
