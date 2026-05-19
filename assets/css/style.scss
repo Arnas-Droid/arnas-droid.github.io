@@ -44,15 +44,20 @@ p.view, small, .tags, .date{
   display: flex;
   gap: 40px;
   align-items: center;
+  align-items: flex-start; 
   justify-content: center;
-
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 /* Left side image */
+.project-image {
+  flex: 0 0 60%; 
+}
+
 .project-image img {
-  width: 700px;
+  width: 100%;
   height: auto;
   border: 4px solid #555;
   display: block;
@@ -62,6 +67,8 @@ p.view, small, .tags, .date{
 .project-info {
   flex: 1;
   color: white;
+  min-width: 350px; 
+  max-width: 500px; 
 }
 
 .project-info h2 {

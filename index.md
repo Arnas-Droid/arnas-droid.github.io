@@ -4,33 +4,6 @@ title: Home
 ---
  
 <body>
-<h1 style="text-align:center;">Best Project</h1>
-
-<div style="text-align:center;">
-  <div class="project-container">
-    <a href="{{ '/2000/01/01/witchforest.html' | relative_url }}">
-      <img
-        src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}"
-        alt="Witch Forest"
-        style="width:800px;height:300px;"
-      >
-    </a>
-    <div class="overlay">
-        <div class="overlay-title">
-          Witch Forest
-        </div>
-      </div>
-      <div class="overlay-description">
-        Created a real-time witch forest that showcased real-time rendering techniques.
-      </div>
-      <div class="overlay-tags">
-        <span>C++</span>
-        <span>Graphics</span>
-        <span>Visual Studio</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
@@ -40,10 +13,11 @@ title: Home
   <!-- Info -->
   <div class="project-info">
     <h2>Witch Forest</h2>
-    <p>Created a real-time witch forest that showcased real-time rendering techniques.</p>
+    <p>A real-time DirectX 11 graphics project that focused on custom shaders, lighting and a scene graph hierarchy for transforms.</p>
     <div class="project-tags">
       <span>C++</span>
-      <span>Graphics</span>
+      <span>DirectX 11</span>
+      <span>Graphics Programming</span>
       <span>Visual Studio</span>
     </div>
   </div>
