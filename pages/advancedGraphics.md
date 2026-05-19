@@ -81,6 +81,12 @@ title: "Advanced Graphics"
       </div>
     </div>
   </section>
+  
+  <!-- Overview -->
+  <section class="project-content">
+    <h3>Overview</h3>
+    <p>In this project I explored different 3D rendering techniques like Render to Target (RTT), created different shaders like normals, used graphic profiling to debug my graphics pipeline, and used ImGui to change settings at runtime.</p>
+  </section>
 
   <!-- Project Highlights -->
   <section class="project-content">
@@ -88,12 +94,6 @@ title: "Advanced Graphics"
     <p>- Aimed to create an interactive program through ImGui. Using it for ease of accessing lights and objects through managers.</p>
     <p>- Implemented multiple shaders like standard, normals, deferred, hull and post-processing to handle varying logic from how the object interacts with the world to screen passing for post-processing.</p>
     <p>- Using graphic profilers like RenderDoc to debug rendering passes. One instance of this was for the G-buffer for the deferred shader.</p>
-  </section>
-
-  <!-- Overview -->
-  <section class="project-content">
-    <h3>Overview</h3>
-    <p>In this project I explored different 3D rendering techniques like Render to Target (RTT), created different shaders like normals, used graphic profiling to debug my graphics pipeline, and used ImGui to change settings at runtime.</p>
   </section>
 
   <!-- Technical Breakdown -->

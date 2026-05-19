@@ -83,18 +83,18 @@ title: "Arcade"
     </div>
   </section>
 
+  <!-- Overview -->
+  <section class="project-content">
+    <h3>Overview</h3>
+    <p>Started a project to make little games for my phone. Mostly to make and then play games that look intresting without ads.</p>
+  </section>
+
   <!-- Project Highlights -->
   <section class="project-content">
     <h3>Project Highlights</h3>
     <p>- Worked on a unity project outside of university.</p>
     <p>- Started on creating a game for mobile.</p>
     <p>- Refresher to C# skills.</p>
-  </section>
-
-  <!-- Overview -->
-  <section class="project-content">
-    <h3>Overview</h3>
-    <p>Started a project to make little games for my phone. Mostly to make and then play games that look intresting without ads.</p>
   </section>
 
 <script>

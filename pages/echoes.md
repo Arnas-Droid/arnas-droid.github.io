@@ -83,19 +83,19 @@ title: "Junior Collaborative Development"
     </div>
   </section>
 
+  <!-- Overview -->
+  <section class="project-content">
+    <h3>Overview</h3>
+    <p>This project focused on developing a shippable game within an industry setting. This was done by collaborating within a multidisciplinary team across Stoke-on-Trent and London to develop <strong>Echoes of Imagination</strong>, a tile-based puzzle game. My role was gameplay programmer, and I was tasked with implementing core mechanics using Unreal Engine 5 Blueprints.</p>
+    <p>Using the mechanics designed by the design team, I developed them into fundamental gameplay systems, including tile-based movement with grid-based positioning and turn-based mechanics with turn handling, as well as additional mechanics and bug fixes. I also worked closely with the team to make sure the design and project goals were met.</p>
+  </section>
+
   <!-- Project Highlights -->
   <section class="project-content">
     <h3>Project Highlights</h3>
     <p>- Collaborated within a multidisciplinary team of 15+ members, contributing as one of the few programmers on gameplay systems.</p>
     <p>- Developed gameplay mechanics using Unreal Engine 5 Blueprints (visual scripting).</p>
     <p>- Implemented tile-based, turn-based movement systems, including grid-based positioning and turn logic.</p>
-  </section>
-
-  <!-- Overview -->
-  <section class="project-content">
-    <h3>Overview</h3>
-    <p>This project focused on developing a shippable game within an industry setting. This was done by collaborating within a multidisciplinary team across Stoke-on-Trent and London to develop <strong>Echoes of Imagination</strong>, a tile-based puzzle game. My role was gameplay programmer, and I was tasked with implementing core mechanics using Unreal Engine 5 Blueprints.</p>
-    <p>Using the mechanics designed by the design team, I developed them into fundamental gameplay systems, including tile-based movement with grid-based positioning and turn-based mechanics with turn handling, as well as additional mechanics and bug fixes. I also worked closely with the team to make sure the design and project goals were met.</p>
   </section>
 
 <!-- Technical Breakdown -->

@@ -83,18 +83,18 @@ title: "Introduction to Graphics Programming"
     </div>
   </section>
 
+  <!-- Overview -->
+  <section class="project-content">
+    <h3>Overview</h3>
+    <p>During this project I got introduced to graphics programming through OpenGL and didn’t really speak to me due to struggles with rendering from file. While it was working for the most part there was parts that were missing when rendering to screen. Other than that, though this project at a very basic level showed how to work with OpenGL and I created movement, camera system, and more inner workings.</p>
+  </section>
+
   <!-- Project Highlights -->
   <section class="project-content">
     <h3>Project Highlights</h3>
     <p>- Loading and rendering multiple objects through the GLUT pipeline.</p>
     <p>- Applying different formats of texturing like .raw and .tga.</p>
     <p>- Parsing .obj format files to load objects like the teapot and sword.</p>
-  </section>
-
-  <!-- Overview -->
-  <section class="project-content">
-    <h3>Overview</h3>
-    <p>During this project I got introduced to graphics programming through OpenGL and didn’t really speak to me due to struggles with rendering from file. While it was working for the most part there was parts that were missing when rendering to screen. Other than that, though this project at a very basic level showed how to work with OpenGL and I created movement, camera system, and more inner workings.</p>
   </section>
 
 <!-- Technical Breakdown -->

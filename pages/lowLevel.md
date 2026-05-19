@@ -83,26 +83,19 @@ title: "Low-Level Platform Optimisation"
     </div>
   </section>
 
-  <!-- Project Highlights -->
-  <section class="project-content">
-    <h3>Project Highlights</h3>
-    <p>- Porting over to Playstation 5.</p>
-    <p>- Creating memory management systems.</p>
-    <p>- Using timing optimisations to improve performance.</p>
-  </section>
-
   <!-- Overview -->
   <section class="project-content">
     <h3>Overview</h3>
-    <p>During the project learned a lot about memory management, timing optimisations, and porting to PS5.</p>
-    <p></p>
-    <p>Memory Managemnet - For memory management I gave it serveral capabilities for it to track memory allocations correctly:</p>
-    <p> Tracker - This was done to track any memory given or removed from the program.</p>
-    <p> Objects Creation and Destruction - To track memory management I needed a way to create the objects and destroy them at any point in the program.</p>
-    <p> Memory Pool - A memory pool was created for any objects created. This way instead of creating new memory for each object it would instead assign it.</p>
-    <p>Timing Optimisations - There were serveral optimisations done to the program to run at max capacity.</p>
-    <p> Spatial Partitioning - Seperating the area on the screen into regions allowed for quicker the collisions to calculate quicker.</p>
-    <p> Spatial Partitioning Threads - This was later improved with threads since the threads could calcuate a given region at the same time.</p>
+    <p>This project looked at low-level optimisation techniques such as memory management, timing optimisations and porting over to PS5. A custom memory manager system was implemented to track memory allocations, this included an allocation tracker, object creation and destruction, and a memory pool to reduce allocation overhead by reusing pre-allocated memory. Performance improvements were achieved through spatial partitioning, which split the scene and reduced collision checks. Finally, a multithreaded system was applied to this that allowed the regions of the scene to be checked at the same time.</p>
+  </section>
+
+  <!-- Project Highlights -->
+  <section class="project-content">
+    <h3>Project Highlights</h3>
+    <p>- Created a custom memory management system that had memory allocation tracking, object lifecycle control, and memory pooling to reduce allocation overhead.</p>
+    <p>- Improved performance through spatial partitioning, which reduced the number of collision checks by dividing the scene into regions.</p>
+    <p>- Implemented multithreading to process the multiple created spatial regions at the same time.</p>
+    <p>- Explored low-level optimisation techniques for the PS5.</p>
   </section>
 
 <script>
