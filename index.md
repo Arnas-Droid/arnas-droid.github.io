@@ -5,14 +5,32 @@ title: Home
  
 <body>
 <h1 style="text-align:center;">Best Project</h1>
-  <div style="text-align:center;">
-    <div class="project-container">
-      <a href="{{ '/2000/01/01/witchforest.html' | relative_url }}">
-        <img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest" style="width:800px;height:300px;">
-      </a>
-      <div class="overlay">Witch Forest</div>
+
+<div style="text-align:center;">
+  <div class="project-container">
+    <a href="{{ '/2000/01/01/witchforest.html' | relative_url }}">
+      <img
+        src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}"
+        alt="Witch Forest"
+        style="width:800px;height:300px;"
+      >
+    </a>
+    <div class="overlay">
+        <div class="overlay-title">
+          Witch Forest
+        </div>
+      </div>
+      <div class="overlay-description">
+        Created a real-time witch forest that showcased real-time rendering techniques.
+      </div>
+      <div class="overlay-tags">
+        <span>C++</span>
+        <span>Graphics</span>
+        <span>Visual Studio</span>
+      </div>
     </div>
   </div>
+</div>
 
 <h1 style="text-align:center;">Projects</h1>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
@@ -73,6 +91,6 @@ title: Home
       <div class="overlay">Arcade Games</div>
     </div>
   </div>
-  
+
 </div>
 </body> 
