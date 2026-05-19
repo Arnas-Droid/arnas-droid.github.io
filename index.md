@@ -86,7 +86,7 @@ title: Home
   </div>
     <!-- Bespoke (Evercade) -->
   <div class="project-card">
-    <a href="{{ '/pages/bespoke.html' | relative_url }}"><img src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Bespoke Platform"></a>
+    <a href="{{ '/pages/bespoke.html' | relative_url }}"><img src="{{ '/assets/Bespoke/BespokeEvercadeMainMenu.png' | relative_url }}" alt="Bespoke Platform"></a>
     <div class="project-info">
       <h2>Bespoke (Evercade)</h2>
       <p></p>
