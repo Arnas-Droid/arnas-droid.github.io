@@ -9,7 +9,7 @@ title: Home
 <div class="project-row">
   <!-- Real-time Graphics -->  
   <!-- Image -->
-  <a class="project-image" href="{{ '/pages/witchforest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+  <a class="project-image" href="{{ '/pages/witchForest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
 
   <!-- Info -->
   <div class="project-info">
