@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
  
-<body>
 <h1 style="text-align:center;">Best Project</h1>
   <div style="text-align:center;">
     <div class="project-container">
@@ -73,5 +72,3 @@ title: Home
       <div class="overlay">Arcade Games</div>
     </div>
 </div>
-
-</body> 
