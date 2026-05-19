@@ -31,12 +31,14 @@ title: Home
       <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>Team Project</span>
         <span>DirectX 11</span>
         <span>OpenGL</span>
-        <span>PS5 Port</span>
-        <span>Graphics Programming</span>
+        <span>PS5 Shader Language</span>
         <span>Engine Programming</span>
+        <span>Graphics Programming</span>
+        <span>PS5 Port</span>
+        <span>Web Port</span>
+        <span>Team Project</span>
         <span>Visual Studio</span>
       </div>
     </div>
@@ -49,8 +51,8 @@ title: Home
       <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom shaders, and graphics pipeline profiling.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>Graphics Programming</span>
         <span>DirectX 11</span>
+        <span>Graphics Programming</span>
         <span>ImGui</span>
         <span>RenderDoc</span>
         <span>Visual Studio</span>
@@ -80,8 +82,8 @@ title: Home
       <p>A tile-based puzzle game with a multidisciplinary team that focused on gameplay programming.</p>
       <div class="project-tags">
         <span>Blueprints</span>
-        <span>Team Project</span>
         <span>Gameplay Programming</span>
+        <span>Team Project</span>
         <span>Unreal Engine 5</span>
       </div>
     </div>
@@ -94,8 +96,7 @@ title: Home
       <p>A project that focused on end-to-end production, like designing, implementing and porting to Evercade.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>Evercade</span>
-        <span>Porting</span>
+        <span>Evercade Port</span>
         <span>Visual Studio</span>
       </div>
     </div>
@@ -122,7 +123,6 @@ title: Home
       <p>A prototype project focused on mobile development that would have ad-free gameplay.</p>
       <div class="project-tags">
         <span>C#</span>
-        <span>Mobile Port</span>
         <span>Unity</span>
       </div>
     </div>
