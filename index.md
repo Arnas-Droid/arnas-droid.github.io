@@ -8,7 +8,7 @@ title: Home
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
   <!-- Image -->
-  <a class="project-image" href="{{ '/2000/01/01/witchforest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+  <a class="project-image" href="{{ '/pages/witchforest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
 
   <!-- Info -->
   <div class="project-info">

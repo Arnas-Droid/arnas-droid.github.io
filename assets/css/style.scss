@@ -48,6 +48,9 @@ p.view, small, .tags, .date{
   max-width: 1300px;
   margin: 60px auto;
   padding: 0 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #333;
+  border-radius: 16px;
 }
 
 /* Left side image */
@@ -65,7 +68,6 @@ p.view, small, .tags, .date{
 /* Right side text */
 .project-info {
   flex: 1;
-  background: rgba(255,255,255,0.03);
   color: white;
   min-width: 350px; 
   max-width: 500px; 
