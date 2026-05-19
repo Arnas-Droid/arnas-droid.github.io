@@ -14,14 +14,6 @@ title: Home
     </div>
   </div>
 
-  <!-- Real Time -->
-  <div class="project-container">
-    <a href="{{ '/2000/01/01/witchforest.html' | relative_url }}">
-      <img class="enlarge-onhover" src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest" style="width:800px;height:300px;">
-      </a>
-    <div class="overlay">Witch Forest</div>
-  </div>
-
 <h1 style="text-align:center;">Projects</h1>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
   <div style="display: flex; justify-content: center; gap: 20px;">
