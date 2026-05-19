@@ -74,7 +74,7 @@ title: Home
 
   <!-- Low Level -->
   <div class="project-container">
-    <a href="{{ '/2004/01/01/lowLevel.html' | relative_url }}">
+    <a href="{{ '/lowLevel.html' | relative_url }}">
       <img class="enlarge-onhover" src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level" style="width:800px;height:300px;">
       </a>
     <div class="overlay">Low Level Optimisation</div>
