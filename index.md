@@ -32,6 +32,23 @@ title: Home
   </div>
 </div>
 
+<h1 style="text-align:center;">Best Project</h1>
+<div class="project-row">
+  <!-- Image -->
+  <a class="project-image" href="{{ '/2000/01/01/witchforest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+
+  <!-- Info -->
+  <div class="project-info">
+    <h2>Witch Forest</h2>
+    <p>Created a real-time witch forest that showcased real-time rendering techniques.</p>
+    <div class="project-tags">
+      <span>C++</span>
+      <span>Graphics</span>
+      <span>Visual Studio</span>
+    </div>
+  </div>
+</div>
+
 <h1 style="text-align:center;">Projects</h1>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
   <div style="display: flex; justify-content: center; gap: 20px;">

@@ -40,49 +40,54 @@ p.view, small, .tags, .date{
   text-align: center;
 }
 
-/* Project Header */
-.overlay-header {
+.project-row {
   display: flex;
+  gap: 40px;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-/* Small Icon/Image */
-.overlay-icon {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-
-  border-radius: 8px;
-  border: 2px solid #888;
+/* Left side image */
+.project-image img {
+  width: 700px;
+  height: auto;
+  border: 4px solid #555;
+  display: block;
 }
 
-/* Project Title */
-.overlay-title {
-  font-size: 24px;
-  font-weight: bold;
+/* Right side text */
+.project-info {
+  flex: 1;
+  color: white;
 }
 
-/* Small Description */
-.overlay-description {
-  font-size: 15px;
-  color: #dddddd;
-  line-height: 1.4;
+.project-info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-/* Tech Tags */
-.overlay-tags {
+.project-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* Tags */
+.project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
-.overlay-tags span {
+.project-tags span {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.15);
 
-  padding: 4px 10px;
-
+  padding: 5px 12px;
   border-radius: 20px;
 
   font-size: 13px;
