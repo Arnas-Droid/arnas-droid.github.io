@@ -49,6 +49,7 @@ title: Home
       <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom shaders, and graphics pipeline profiling.</p>
       <div class="project-tags">
         <span>C++</span>
+        <span>Graphics Programming</span>
         <span>DirectX 11</span>
         <span>ImGui</span>
         <span>RenderDoc</span>
