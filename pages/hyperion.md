@@ -92,7 +92,7 @@ title: "Let There Be Light"
   </section>
 
 <h2 class="tech-title">Documentation</h2>
-  <a href="{{ '/assets/Hyperion/Documentation.html' | relative_url }}" class="btn">📋 Documentation</a>
+  <a href="{{ '/assets/Hyperion/Documentation/Overview.html' | relative_url }}" class="btn">📋 Documentation</a>
 
 <script>
   let slideIndex = 1;
