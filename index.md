@@ -8,7 +8,7 @@ title: Home
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
     <!-- Hyperion -->  
-  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}"><img src="{{ '/assets/Hyperion/WitchForestMain.png' | relative_url }}" alt="Hyperion"></a>
+  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}"><img src="{{ '/assets/Hyperion/HyperionShowroom.png' | relative_url }}" alt="Hyperion"></a>
   <div class="project-info">
     <h2>Hyperion</h2>
     <p>A real-time Volumetric Lighting project.</p>

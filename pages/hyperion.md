@@ -59,28 +59,28 @@ title: "Let There Be Light"
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
           onclick="currentSlide(1)"
-          alt="Main Video">
+          alt="Showroom Video">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroomVolumetric.png"
           onclick="currentSlide(2)"
-          alt="Main Image">
+          alt="Showroom (Volumetric Pass) Video">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
           onclick="currentSlide(3)"
-          alt="Bouncing">
+          alt="Showroom Image">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroomVolumetric.png"
           onclick="currentSlide(4)"
-          alt="Many Objects">
+          alt="Showroom (Volumetric Pass) Image">
       </div>
     </div>
   </section>
@@ -92,7 +92,7 @@ title: "Let There Be Light"
   </section>
 
 <h2 class="tech-title">Documentation</h2>
-  <a href="{{ '/assets/Hyperion/Documentation.html' | relative_url }}" class="btn">👤 Documentation</a>
+  <a href="{{ '/assets/Hyperion/Documentation.html' | relative_url }}" class="btn">📋 Documentation</a>
 
 <script>
   let slideIndex = 1;
