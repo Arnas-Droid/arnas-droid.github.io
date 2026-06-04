@@ -61,7 +61,7 @@ title: "Let There Be Light"
           onclick="currentSlide(1)"
           alt="Showroom Video">
       </div>
-      <div class="thumbnail-column">
+      <div class="thumbnail-column video-thumb">
         <img
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroomVolumetric.png"
