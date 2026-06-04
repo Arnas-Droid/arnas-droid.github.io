@@ -90,7 +90,7 @@ p.view, small, .tags, .date{
   font-size: 16px;
   line-height: 1.6;
   color: #cccccc;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -100,6 +100,7 @@ p.view, small, .tags, .date{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding-bottom: 5px;
 }
 
 .project-tags span {
