@@ -7,14 +7,15 @@ title: Home
 
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
-    <!-- Real-time Graphics -->  
-  <a class="project-image" href="{{ '/pages/witchForest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+    <!-- Hyperion -->  
+  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}"><img src="{{ '/assets/Hyperion/WitchForestMain.png' | relative_url }}" alt="Hyperion"></a>
   <div class="project-info">
-    <h2>Witch Forest</h2>
-    <p>A real-time DirectX 11 graphics project that focused on custom shaders, lighting and a scene graph hierarchy for transforms.</p>
+    <h2>Hyperion</h2>
+    <p>A real-time Volumetric Lighting project.</p>
     <div class="project-tags">
       <span>C++</span>
       <span>DirectX 11</span>
+      <span>DirectX 12</span>
       <span>Graphics Programming</span>
       <span>Visual Studio</span>
     </div>
@@ -85,6 +86,20 @@ title: Home
         <span>Gameplay Programming</span>
         <span>Team Project</span>
         <span>Unreal Engine 5</span>
+      </div>
+    </div>
+  </div>
+    <!-- Real-time Graphics --> 
+  <div class="project-card">
+    <a href="{{ '/pages/witchForest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+    <div class="project-info">
+      <h2>Witch Forest</h2>
+      <p>A real-time DirectX 11 graphics project that focused on custom shaders, lighting and a scene graph hierarchy for transforms.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>Graphics Programming</span>
+        <span>Visual Studio</span>
       </div>
     </div>
   </div>
