@@ -444,7 +444,7 @@ html {
 
 .sidebar {
   position: fixed;
-  top: 0px;
+  top: 140px;
   left: 40px;
 
   display: flex;
@@ -466,14 +466,4 @@ html {
 
 .sidebar a:hover {
   color: white;
-}
-
-.content {
-  margin-left: 240px;
-  width: 100%;
-}
-
-section {
-  min-height: 100vh;
-  padding: 50px;
 }
