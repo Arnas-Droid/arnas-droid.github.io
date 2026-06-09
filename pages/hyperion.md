@@ -57,7 +57,7 @@ title: "Let There Be Light"
       <div class="thumbnail-column video-thumb">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
+          src="{{ site.baseurl }}/assets/Hyperion/HyperionVolumetricFog.png"
           onclick="currentSlide(1)"
           alt="City Volumetric Fog Video">
       </div>
