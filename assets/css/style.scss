@@ -444,19 +444,30 @@ html {
 
 .sidebar {
   position: fixed;
-  left: 30px;
-  top: 120px;
-  width: 180px;
+  top: 140px;
+  left: 40px;
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+
+  padding: 16px;
+  border-radius: 12px;
+
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .sidebar a {
+  color: #bbb;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar a:hover {
   color: white;
 }
+
 .content {
   margin-left: 240px;
   width: 100%;
