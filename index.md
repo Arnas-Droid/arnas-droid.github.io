@@ -151,7 +151,7 @@ title: Home
     <a href="{{ '/pages/gameJams.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Arcade Games"></a>
     <div class="project-info">
       <h2>Endless Dodge</h2>
-      <p>This was a game developed for gamebridge 2026 game jam, which was a top down arcade survival game where enemies lock onto to your position, and attack.</p>
+      <p>This was a game developed for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack.</p>
       <div class="project-tags">
         <span>C#</span>
         <span>Unity</span>
