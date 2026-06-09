@@ -29,6 +29,7 @@ title: Home
     </div>
   </div>
 </div>
+</section>
 
 <section id="Projects">
 <h1 style="text-align:center;">Projects</h1>
@@ -152,6 +153,7 @@ title: Home
     </div>
   </div>
 </div>
+</section>
 
 <section id="GameJams">
 <h1 style="text-align:center;">Game Jams</h1>
@@ -168,6 +170,8 @@ title: Home
       </div>
     </div>
   </div>
+</div>
+</section>
 </div>
 
 </body> 
