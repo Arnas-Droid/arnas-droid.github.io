@@ -10,7 +10,7 @@ title: "Let There Be Light"
   <!-- Slide 1 (Video) -->
   <div class="slide" style="text-align: center;">
     <iframe
-      src="https://www.youtube.com/embed/5bgFFMmbUfE"
+      src="https://www.youtube.com/embed/T4ldQ39IFHo"
       title=""
       frameborder="0"
       allowfullscreen>
@@ -20,17 +20,17 @@ title: "Let There Be Light"
   <!-- Slide 2 (Video) -->
   <div class="slide" style="text-align: center;">
     <iframe
-      src="https://www.youtube.com/embed/MvODGZ8OJsA"
+      src="https://www.youtube.com/embed/5bgFFMmbUfE"
       title=""
       frameborder="0"
       allowfullscreen>
     </iframe>
   </div>
 
-  <!-- Slide 3 (Showroom) -->
+  <!-- Slide 3 (City Fog) -->
   <div class="slide">
     <img
-      src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
+      src="{{ site.baseurl }}/assets/Hyperion/HyperionVolumetricFog.png"
       alt="Showroom"
       class="slide-img">
   </div>
@@ -59,21 +59,21 @@ title: "Let There Be Light"
           class="demo cursor thumb-img"
           src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
           onclick="currentSlide(1)"
-          alt="Showroom Video">
+          alt="City Volumetric Fog Video">
       </div>
       <div class="thumbnail-column video-thumb">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroomVolumetric.png"
+          src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
           onclick="currentSlide(2)"
-          alt="Showroom (Volumetric Pass) Video">
+          alt="Showroom Video">
       </div>
       <div class="thumbnail-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ site.baseurl }}/assets/Hyperion/HyperionShowroom.png"
+          src="{{ site.baseurl }}/assets/Hyperion/HyperionVolumetricFog.png"
           onclick="currentSlide(3)"
-          alt="Showroom Image">
+          alt="Volumetric Fog Image">
       </div>
       <div class="thumbnail-column">
         <img
