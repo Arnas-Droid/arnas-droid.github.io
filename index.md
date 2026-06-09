@@ -5,6 +5,14 @@ title: Home
  
 <body>
 
+<div class="container">
+  <nav class="sidebar">
+    <a href="#BestProject">Best Project</a>
+    <a href="#Projects">Projects</a>
+    <a href="#GameJams">Game Jam</a>
+  </nav>
+
+<section id="BestProject">
 <h1 style="text-align:center;">Best Project</h1>
 <div class="project-row">
     <!-- Hyperion -->  
@@ -22,6 +30,7 @@ title: Home
   </div>
 </div>
 
+<section id="Projects">
 <h1 style="text-align:center;">Projects</h1>
 <div class="project-grid">
     <!-- Gelos Engine -->
@@ -144,6 +153,7 @@ title: Home
   </div>
 </div>
 
+<section id="Game Jam">
 <h1 style="text-align:center;">Game Jam</h1>
 <div class="project-grid">
       <!-- Endless Dodge -->
@@ -159,5 +169,7 @@ title: Home
     </div>
   </div>
 </div>
+</div>
+
 
 </body> 

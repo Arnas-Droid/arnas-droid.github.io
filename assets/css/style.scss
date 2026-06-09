@@ -436,3 +436,40 @@ p.view, small, .tags, .date{
     flex-direction: column;
   }
 }
+
+/* Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.content {
+  margin-left: 240px;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  padding: 50px;
+}
