@@ -9,7 +9,7 @@ title: Home
   <nav class="sidebar">
     <a href="#BestProject">Best Project</a>
     <a href="#Projects">Projects</a>
-    <a href="#GameJams">Game Jam</a>
+    <a href="#GameJams">Game Jams</a>
   </nav>
 
 <section id="BestProject">
@@ -153,8 +153,8 @@ title: Home
   </div>
 </div>
 
-<section id="Game Jam">
-<h1 style="text-align:center;">Game Jam</h1>
+<section id="GameJams">
+<h1 style="text-align:center;">Game Jams</h1>
 <div class="project-grid">
       <!-- Endless Dodge -->
   <div class="project-card">
@@ -169,7 +169,5 @@ title: Home
     </div>
   </div>
 </div>
-</div>
-
 
 </body> 
