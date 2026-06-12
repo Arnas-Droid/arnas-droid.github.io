@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Let There Be Light"
+title: "Hyperion"
 ---
 
 <body>
