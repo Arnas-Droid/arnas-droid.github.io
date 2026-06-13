@@ -13,20 +13,19 @@ title: Home
   </nav>
 
 <section id="BestProject">
-<h1 style="text-align:center;">Best Project</h1>
+
 <div class="hero-card">
-  <!-- background image -->
+  <!-- Background image -->
   <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
-    <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion">
+    <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion Fog">
   </a>
-  <!-- overlay content -->
+  <!-- Overlay -->
   <div class="hero-overlay">
     <div class="hero-badge">BEST PROJECT</div>
     <h2 class="hero-title">Hyperion</h2>
     <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-    <p class="hero-desc">
-      A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.
-    </p>
+    <p class="hero-desc">A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.</p>
+    <p class="hero-desc">A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.</p>
     <div class="hero-tags">
       <span>C++</span>
       <span>DirectX 11</span>
@@ -39,6 +38,7 @@ title: Home
     </a>
   </div>
 </div>
+
 </section>
 
 <section id="Projects">

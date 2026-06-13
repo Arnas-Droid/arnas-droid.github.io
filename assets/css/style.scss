@@ -454,6 +454,18 @@ html {
 }
 
 .hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.55) 45%,
+    rgba(0,0,0,0.2) 100%
+  );
+
+  z-index: 1;
   pointer-events: none;
 }
 
