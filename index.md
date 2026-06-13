@@ -16,7 +16,7 @@ title: Home
       <div class="hero-badge">⭐ BEST PROJECT</div>
       <h2 class="hero-title">Hyperion</h2>
       <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-      <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound lighting for light scattering effects like volumetric fog.</p>
+      <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound volumetric lighting for light scattering effects like volumetric fog.</p>
       <div class="hero-tags">
         <span>C++</span>
         <span>DirectX 11 / 12</span>
