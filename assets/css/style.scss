@@ -527,9 +527,11 @@ html {
 }
 
 .hero-content {
+  position: absolute;
+  left: clamp(24px, 6vw, 120px);
+  top: 50%;
+  transform: translateY(-50%);
   width: min(650px, 90vw);
-  margin-left: clamp(24px, 6vw, 120px);
-  margin-right: auto;
   text-align: left;
   color: white;
 }
