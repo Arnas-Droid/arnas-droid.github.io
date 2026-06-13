@@ -24,8 +24,7 @@ title: Home
     <div class="hero-badge">BEST PROJECT</div>
     <h2 class="hero-title">Hyperion</h2>
     <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-    <p class="hero-desc">A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.</p>
-    <p class="hero-desc">A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.</p>
+    <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound lighting for light scattering effects like volumetric fog.</p>
     <div class="hero-tags">
       <span>C++</span>
       <span>DirectX 11</span>
@@ -33,9 +32,7 @@ title: Home
       <span>Graphics Programming</span>
       <span>Visual Studio</span>
     </div>
-    <a class="hero-button" href="{{ '/pages/hyperion.html' | relative_url }}">
-      View Project
-    </a>
+    <a class="hero-button" href="{{ '/pages/hyperion.html' | relative_url }}">View Project</a>
   </div>
 </div>
 
