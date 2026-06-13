@@ -460,7 +460,7 @@ p.view, small, .tags, .date{
 
 .hero-content {
   width: min(650px, 90vw);
-  margin-left: clamp(20px, 6vw, 120px);
+  margin-left: 20px;
   margin-right: 20px;
   display: flex;
   flex-direction: column;
