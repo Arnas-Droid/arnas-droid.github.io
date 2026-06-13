@@ -36,7 +36,7 @@ title: Home
         <!-- Title -->
     <h1 class="section-title">Featured Projects</h1>
         <!-- Button -->
-      <a href="{{ '/pages/projects.html' | relative_url }}" class="featured-cta-button">View all projects -></a>
+      <a href="{{ '/pages/projects.html' | relative_url }}" class="hero-button">View all projects -></a>
   </div>
   <div class="project-grid featured-grid">
       <!-- Gelos Engine -->
