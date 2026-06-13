@@ -43,18 +43,19 @@ p.view, small, .tags, .date{
 .project-row {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: space-between;
+
   max-width: 1300px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 30px;
+
   background: rgba(255,255,255,0.03);
   border: 1px solid #333;
   border-radius: 16px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-}
 
+  box-sizing: border-box;
+}
 /* Left side image */
 .project-image {
   flex: 1.2;
@@ -74,18 +75,41 @@ p.view, small, .tags, .date{
   display: block;
 }
 
+.project-button {
+  display: inline-block;
+  margin-top: 25px;
+
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+
+  width: fit-content;
+  transition: 0.2s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+  background: #eaeaea;
+}
+
 /* Right side text */
 .project-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+
   color: white;
   min-width: 280px;
-  max-width: 500px;
-  box-sizing: border-box;
+
   padding: 20px;
 }
 
 .project-info h2 {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 15px;
 }
 
@@ -94,8 +118,6 @@ p.view, small, .tags, .date{
   line-height: 1.6;
   color: #cccccc;
   margin-bottom: 15px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 /* Tags */
@@ -103,16 +125,14 @@ p.view, small, .tags, .date{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding-bottom: 5px;
+  margin-bottom: auto;
 }
 
 .project-tags span {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.15);
-
   padding: 5px 12px;
   border-radius: 20px;
-
   font-size: 13px;
 }
 
