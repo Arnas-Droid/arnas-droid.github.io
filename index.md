@@ -34,29 +34,27 @@ title: Home
 </div>
 </section>
 
-
-<div class="project-row">
-  <!-- Content -->
-  <div class="project-info">
-    <h2>Hyperion</h2>
-    <p>
-      A real-time Volumetric Lighting project.
+<div class="project-card">
+  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}">
+    <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion">
+  </a>
+  <div class="project-overlay">
+    <div class="project-badge">BEST PROJECT</div>
+    <h2 class="project-title">Hyperion</h2>
+    <h3 class="project-subtitle">Real-time Volumetric Lighting System</h3>
+    <p class="project-desc">
+      A real-time rendering project focused on physically-based volumetric lighting using DirectX 11/12.
     </p>
     <div class="project-tags">
       <span>C++</span>
       <span>DirectX 11</span>
       <span>DirectX 12</span>
       <span>Graphics Programming</span>
-      <span>Visual Studio</span>
     </div>
     <a class="project-button" href="{{ '/pages/hyperion.html' | relative_url }}">
       View Project
     </a>
   </div>
-  <!-- Image -->
-  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}">
-    <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion">
-  </a>
 </div>
 
 <section id="Projects">
