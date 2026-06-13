@@ -29,8 +29,7 @@ title: Home
   </div>
 </div>
 
-  <h1 style="text-align:center;">Featured Projects</h1>
-  <div class="project-grid featured-grid">
+<div class="project-grid featured-grid">
     <!-- Gelos Engine -->
   <div class="project-card">
     <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
@@ -84,10 +83,10 @@ title: Home
   </div>
   <!-- Button -->
   <div class="projects-cta">
-    <a class="view-all-button" href="#all-projects">
+    <a class="view-all-button" href="/pages/projects.html">
       View All Projects
     </a>
-  </div>
+</div>
 
 <h1 style="text-align:center;">Projects</h1>
 <div class="project-grid">
