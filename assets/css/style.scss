@@ -525,17 +525,21 @@ p.view, small, .tags, .date{
   text-align: left;
   font-size: 42px;
   margin-bottom: 30px;
-  color: greenyellow;
+  color: #b5e853;
 }
 
 .featured-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1300px; 
   margin: 0 auto 30px auto;
   padding: 0 20px;
+}
+
+.featured-header .featured-cta-button {
+  margin-left: auto;
 }
 
 .featured-grid {
