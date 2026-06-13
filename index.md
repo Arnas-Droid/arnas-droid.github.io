@@ -13,28 +13,6 @@ title: Home
   </nav>
 
 <section id="BestProject">
-
-
-
-<h1 style="text-align:center;">Best Project</h1>
-<div class="project-row">
-    <!-- Hyperion -->  
-  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}"><img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion"></a>
-  <div class="project-info">
-    <h2>Hyperion</h2>
-    <p>A real-time Volumetric Lighting project.</p>
-    <div class="project-tags">
-      <span>C++</span>
-      <span>DirectX 11</span>
-      <span>DirectX 12</span>
-      <span>Graphics Programming</span>
-      <span>Visual Studio</span>
-    </div>
-  </div>
-</div>
-</section>
-
-<section id="BestProject">
 <h1 style="text-align:center;">Best Project</h1>
 <div class="hero-card">
   <!-- background image -->
