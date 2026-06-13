@@ -555,28 +555,11 @@ html {
 /* Hero card */
 .hero-card {
   position: relative;
-  width: 100%;
-  max-width: 1300px;
-  height: 520px;
-
-  margin: 60px auto;
-  border-radius: 16px;
   overflow: hidden;
-
-  font-family: 'Oswald', sans-serif;
 }
 
 .hero-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 45%,
-    rgba(0,0,0,0.2) 100%
-  );
+  pointer-events: none;
 }
 
 .hero-image {
