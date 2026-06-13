@@ -447,7 +447,6 @@ p.view, small, .tags, .date{
   }
 
   .hero-card::after {
-    /* stronger vertical readability instead of horizontal fade */
     background: linear-gradient(
       to top,
       rgba(0,0,0,0.85) 0%,
