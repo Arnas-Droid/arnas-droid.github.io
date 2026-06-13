@@ -61,7 +61,7 @@ title: Home
     </div>
       <!-- Advanced Graphics -->
    <div class="project-card">
-      <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.  png' | relative_url }}" alt="Advanced Graphics"></a>
+      <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
       <div class="project-info">
         <h2>Advanced Graphics</h2>
         <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom   shaders, and graphics pipeline profiling.</p>
