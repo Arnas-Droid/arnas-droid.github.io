@@ -418,7 +418,7 @@ p.view, small, .tags, .date{
 /* Hero card */
 .hero-card {
   position: relative;
-  overflow: hidden;
+  overflow: visible; 
   height: 520px;
 }
 
@@ -451,18 +451,20 @@ p.view, small, .tags, .date{
 .hero-overlay {
   position: relative;
   z-index: 2;
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
+  padding: clamp(30px, 6vw, 80px) 0;
+  box-sizing: border-box;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column; 
   width: min(650px, 90vw);
-  margin-left: clamp(24px, 6vw, 120px);
-  color: white;
+  margin-left: clamp(20px, 6vw, 120px);
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 80px;
 }
 
 .hero-badge {
