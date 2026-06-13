@@ -530,12 +530,10 @@ p.view, small, .tags, .date{
 
 .featured-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
-  width: 100%;
-  max-width: 1300px; 
-  margin: 0 auto 30px auto;
-  padding: 0 20px;
+  margin-bottom: 30px;
 }
 
 .featured-header .featured-cta-button {
@@ -543,7 +541,7 @@ p.view, small, .tags, .date{
 }
 
 .featured-grid {
-  margin-bottom: 30px;
+  margin: 0;
 }
 
 .featured-cta-bar {
