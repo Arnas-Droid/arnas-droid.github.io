@@ -528,6 +528,16 @@ p.view, small, .tags, .date{
   color: greenyellow;
 }
 
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1300px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
 .featured-grid {
   margin-bottom: 30px;
 }
