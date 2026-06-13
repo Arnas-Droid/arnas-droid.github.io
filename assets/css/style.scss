@@ -418,8 +418,10 @@ p.view, small, .tags, .date{
 /* Hero card */
 .hero-card {
   position: relative;
-  overflow: visible; 
+  overflow: hidden;
   height: auto; 
+  width: 100%;
+  border-radius: 16px;
   min-height: 0; 
 }
 
