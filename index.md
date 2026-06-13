@@ -5,15 +5,6 @@ title: Home
  
 <body>
 
-<div class="container">
-  <nav class="sidebar">
-    <a href="#BestProject">Best Project</a>
-    <a href="#Projects">Projects</a>
-    <a href="#GameJams">Game Jams</a>
-  </nav>
-
-<section id="BestProject">
-
 <div class="hero-card">
   <!-- Background image -->
   <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
@@ -38,9 +29,6 @@ title: Home
   </div>
 </div>
 
-</section>
-
-<section id="Projects">
 <h1 style="text-align:center;">Projects</h1>
 <div class="project-grid">
     <!-- Gelos Engine -->
@@ -162,9 +150,7 @@ title: Home
     </div>
   </div>
 </div>
-</section>
 
-<section id="GameJams">
 <h1 style="text-align:center;">Game Jams</h1>
 <div class="project-grid">
       <!-- Endless Dodge -->
@@ -179,8 +165,6 @@ title: Home
       </div>
     </div>
   </div>
-</div>
-</section>
 </div>
 
 </body> 
