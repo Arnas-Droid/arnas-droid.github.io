@@ -21,18 +21,20 @@ title: Home
   </a>
   <!-- Overlay -->
   <div class="hero-overlay">
-    <div class="hero-badge">BEST PROJECT</div>
-    <h2 class="hero-title">Hyperion</h2>
-    <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-    <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound lighting for light scattering effects like volumetric fog.</p>
-    <div class="hero-tags">
-      <span>C++</span>
-      <span>DirectX 11 / 12</span>
-      <span>Rendering Engine</span>
-      <span>Real-time graphics</span>
-      <span>Performance Optimisation</span>
+    <div class="hero-content">
+      <div class="hero-badge">BEST PROJECT</div>
+      <h2 class="hero-title">Hyperion</h2>
+      <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
+      <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound lighting for light scattering effects like volumetric fog.</p>
+      <div class="hero-tags">
+        <span>C++</span>
+        <span>DirectX 11 / 12</span>
+        <span>Rendering Engine</span>
+        <span>Real-time graphics</span>
+        <span>Performance Optimisation</span>
+      </div>
+      <a class="hero-button" href="{{ '/pages/hyperion.html' |  relative_url }}">View Project</a>
     </div>
-    <a class="hero-button" href="{{ '/pages/hyperion.html' | relative_url }}">View Project</a>
   </div>
 </div>
 
