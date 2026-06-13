@@ -43,20 +43,15 @@ title: Home
     <div class="project-card">
       <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
       <div class="project-info">
-        <h2>Gelos Engine (Page in development)</h2>
-        <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
+        <h2>Gelos Engine</h2>
+        <p>A custom engine project built around game engine architecture, porting to other platforms, and low-level rendering systems.</p>
         <div class="project-tags">
           <span>C++</span>
-          <span>DirectX 11</span>
-          <span>OpenGL</span>
-          <span>PS5 Shader Language</span>
           <span>Engine Programming</span>
-          <span>Graphics Programming</span>
-          <span>PS5 Port</span>
-          <span>Web Port</span>
+          <span>Porting</span>
           <span>Team Project</span>
-          <span>Visual Studio</span>
         </div>
+        <a class="hero-button" href="{{ '/pages/gelosEngine.html' |  relative_url }}">View Project</a>
       </div>
     </div>
       <!-- Advanced Graphics -->
@@ -64,15 +59,14 @@ title: Home
       <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
       <div class="project-info">
         <h2>Advanced Graphics</h2>
-        <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom   shaders, and graphics pipeline profiling.</p>
+        <p>A real-time DirectX 11 graphics project explores real-time rendering techniques like render-to-texture (RTT), custom shader workflows, and pipeline optimisation.</p>
         <div class="project-tags">
           <span>C++</span>
-          <span>DirectX 11</span>
           <span>Graphics Programming</span>
-          <span>ImGui</span>
+          <span>DirectX 11</span>
           <span>RenderDoc</span>
-          <span>Visual Studio</span>
         </div>
+        <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
       </div>
     </div>
       <!-- Low Level Optimisation  -->
@@ -80,14 +74,14 @@ title: Home
       <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
       <div class="project-info">
         <h2>Low Level Optimisation (Page in development)</h2>
-        <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and   multithreading.</p>
+        <p>A performance-focused project looking at low-level optimisations like memory management, multithreading and spatial partitioning.</p>
         <div class="project-tags">
           <span>C++</span>
-          <span>DirectX 11</span>
-          <span>OpenGL</span>
-          <span>PS5 Port</span>
-          <span>Visual Studio</span>
+          <span>Performance</span>
+          <span>Multithreading</span>
+          <span>Optimisation</span>
         </div>
+        <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
       </div>
     </div>
   </div>
