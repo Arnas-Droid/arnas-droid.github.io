@@ -527,12 +527,14 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .hero-content {
-  max-width: 650px;
-  margin-left: clamp(20px, 6vw, 120px);
+  width: min(650px, 90vw);
+  margin-left: clamp(24px, 6vw, 120px);
   margin-right: auto;
+  text-align: left;
   color: white;
 }
 
