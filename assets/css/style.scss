@@ -415,13 +415,12 @@ p.view, small, .tags, .date{
   }
 
   .hero-card {
+    min-height: unset;
     height: auto;
-    min-height: 0;
   }
 
   .hero-overlay {
-    display: block;
-    padding: 20px;
+    padding-bottom: 30px;
   }
 
   .hero-content {
