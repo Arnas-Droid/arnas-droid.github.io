@@ -419,7 +419,8 @@ p.view, small, .tags, .date{
 .hero-card {
   position: relative;
   overflow: visible; 
-  height: 520px;
+  height: auto; 
+  min-height: 0; 
 }
 
 .hero-card::after {
