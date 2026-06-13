@@ -122,6 +122,18 @@ title: "Projects"
       </div>
     </div>
   </div>
+      <!-- Endless Dodge -->
+  <div class="project-card">
+    <a href="{{ '/pages/GameJams/endlessDodge.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
+    <div class="project-info">
+      <h2>Endless Dodge</h2>
+      <p>This was a game developed for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack.</p>
+      <div class="project-tags">
+        <span>C#</span>
+        <span>Unity</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body> 
