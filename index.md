@@ -85,13 +85,14 @@ title: Home
       </div>
     </div>
   </div>
+  </div>
   <!-- Button -->
   <div class="featured-cta-bar">
     <a href="{{ '/pages/projects.html' | relative_url }}" class="featured-cta-button">
       View All Projects
     </a>
   </div>
-</div>
+
 </div>
 
 <!-- Other Projects -->
