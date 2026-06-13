@@ -413,6 +413,48 @@ p.view, small, .tags, .date{
   .tech-card:nth-child(even) {
     flex-direction: column;
   }
+
+  .hero-card {
+    height: auto;
+    min-height: 520px;
+  }
+
+  .hero-overlay {
+    padding: 25px;
+    justify-content: flex-end;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .hero-tags {
+    margin-bottom: 15px;
+  }
+
+  .hero-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-card::after {
+    /* stronger vertical readability instead of horizontal fade */
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.4) 60%,
+      rgba(0,0,0,0.1) 100%
+    );
+  }
 }
 
 /* Scroll */
