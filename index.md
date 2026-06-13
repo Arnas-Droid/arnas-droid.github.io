@@ -5,6 +5,7 @@ title: Home
  
 <body>
 
+<!-- Hero Project -->
 <div class="hero-card">
   <!-- Background image -->
   <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
@@ -29,6 +30,9 @@ title: Home
   </div>
 </div>
 
+<!-- Featured Projects -->
+<div class="featured-section">
+<h1 class="section-title">Featured Projects</h1>
 <div class="project-grid featured-grid">
     <!-- Gelos Engine -->
   <div class="project-card">
@@ -82,11 +86,15 @@ title: Home
     </div>
   </div>
   <!-- Button -->
-  <div class="projects-cta">
-    <a class="view-all-button" href="/pages/projects.html">
+  <div class="featured-cta-bar">
+    <a href="{{ '/pages/projects.html' | relative_url }}" class="featured-cta-button">
       View All Projects
     </a>
+  </div>
 </div>
+</div>
+
+<!-- Other Projects -->
 
 <h1 style="text-align:center;">Projects</h1>
 <div class="project-grid">
