@@ -34,28 +34,34 @@ title: Home
 </div>
 </section>
 
-<div class="project-card">
-  <a class="project-image" href="{{ '/pages/hyperion.html' | relative_url }}">
+<section id="BestProject">
+<h1 style="text-align:center;">Best Project</h1>
+<div class="hero-card">
+  <!-- background image -->
+  <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
     <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion">
   </a>
-  <div class="project-overlay">
-    <div class="project-badge">BEST PROJECT</div>
-    <h2 class="project-title">Hyperion</h2>
-    <h3 class="project-subtitle">Real-time Volumetric Lighting System</h3>
-    <p class="project-desc">
-      A real-time rendering project focused on physically-based volumetric lighting using DirectX 11/12.
+  <!-- overlay content -->
+  <div class="hero-overlay">
+    <div class="hero-badge">BEST PROJECT</div>
+    <h2 class="hero-title">Hyperion</h2>
+    <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
+    <p class="hero-desc">
+      A real-time rendering project focused on physically-based volumetric lighting using DirectX 11 and DirectX 12. Built as a custom graphics pipeline exploration project.
     </p>
-    <div class="project-tags">
+    <div class="hero-tags">
       <span>C++</span>
       <span>DirectX 11</span>
       <span>DirectX 12</span>
       <span>Graphics Programming</span>
+      <span>Visual Studio</span>
     </div>
-    <a class="project-button" href="{{ '/pages/hyperion.html' | relative_url }}">
+    <a class="hero-button" href="{{ '/pages/hyperion.html' | relative_url }}">
       View Project
     </a>
   </div>
 </div>
+</section>
 
 <section id="Projects">
 <h1 style="text-align:center;">Projects</h1>
