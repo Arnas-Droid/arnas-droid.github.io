@@ -30,24 +30,20 @@ title: Home
   </div>
 </div>
 
-<!-- Featured Projects -->
+  <!-- Featured Projects -->
 <div class="featured-section">
-<div class="featured-header">
-  <h1 class="section-title">Featured Projects</h1>
-      <!-- Button -->
-    <div class="featured-cta-bar">
-      <a href="{{ '/pages/projects.html' | relative_url }}" class="featured-cta-button">
-        View All Projects
-      </a>
-    </div>
-    </div>
+  <div class="featured-header">
+    <h1 class="section-title">Featured Projects</h1>
+        <!-- Button -->
+      <div class="featured-cta-bar"><a href="{{ '/pages/projects.html' | relative_url }}" class="featured-cta-button">View all projects -></a></div>
+  </div>
   <div class="project-grid featured-grid">
       <!-- Gelos Engine -->
     <div class="project-card">
       <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
       <div class="project-info">
         <h2>Gelos Engine (Page in development)</h2>
-        <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.  </p>
+        <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
         <div class="project-tags">
           <span>C++</span>
           <span>DirectX 11</span>
