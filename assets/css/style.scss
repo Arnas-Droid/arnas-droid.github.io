@@ -9,24 +9,6 @@ p.view, small, .tags, .date{
   display: none;
 }
 
-/* Home page */
-.project-row {
-  display: flex;
-  gap: 40px;
-  align-items: stretch;
-  justify-content: space-between;
-
-  max-width: 1300px;
-  margin: 60px auto;
-  padding: 30px;
-
-  background: rgba(255,255,255,0.03);
-  border: 1px solid #333;
-  border-radius: 16px;
-
-  box-sizing: border-box;
-}
-
 /* Left side image */
 .project-image {
   position: absolute;
@@ -529,6 +511,31 @@ p.view, small, .tags, .date{
 }
 
 .hero-button:hover {
+  transform: translateY(-2px);
+  background: #eaeaea;
+}
+
+.featured-grid {
+  margin-bottom: 20px;
+}
+
+.projects-cta {
+  text-align: center;
+  margin: 40px 0 80px;
+}
+
+.view-all-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.view-all-button:hover {
   transform: translateY(-2px);
   background: #eaeaea;
 }

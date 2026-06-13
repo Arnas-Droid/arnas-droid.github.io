@@ -29,6 +29,66 @@ title: Home
   </div>
 </div>
 
+  <h1 style="text-align:center;">Featured Projects</h1>
+  <div class="project-grid featured-grid">
+    <!-- Gelos Engine -->
+  <div class="project-card">
+    <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
+    <div class="project-info">
+      <h2>Gelos Engine (Page in development)</h2>
+      <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>OpenGL</span>
+        <span>PS5 Shader Language</span>
+        <span>Engine Programming</span>
+        <span>Graphics Programming</span>
+        <span>PS5 Port</span>
+        <span>Web Port</span>
+        <span>Team Project</span>
+        <span>Visual Studio</span>
+      </div>
+    </div>
+  </div>
+    <!-- Advanced Graphics -->
+ <div class="project-card">
+    <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
+    <div class="project-info">
+      <h2>Advanced Graphics</h2>
+      <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom shaders, and graphics pipeline profiling.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>Graphics Programming</span>
+        <span>ImGui</span>
+        <span>RenderDoc</span>
+        <span>Visual Studio</span>
+      </div>
+    </div>
+  </div>
+    <!-- Low Level Optimisation  -->
+<div class="project-card">
+    <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level"></a>
+    <div class="project-info">
+      <h2>Low Level Optimisation (Page in development)</h2>
+      <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>DirectX 11</span>
+        <span>OpenGL</span>
+        <span>PS5 Port</span>
+        <span>Visual Studio</span>
+      </div>
+    </div>
+  </div>
+  <!-- Button -->
+  <div class="projects-cta">
+    <a class="view-all-button" href="#all-projects">
+      View All Projects
+    </a>
+  </div>
+
 <h1 style="text-align:center;">Projects</h1>
 <div class="project-grid">
     <!-- Gelos Engine -->
