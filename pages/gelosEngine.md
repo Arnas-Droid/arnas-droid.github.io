@@ -88,7 +88,7 @@ title: "Gelos Engine"
 
   <section class="project-content">
     <h3>Web Port Verison</h3>
-    <h5>This doesn't represent the newest state of the engine or what capabilities it has. This was an attempt at porting it over for the web within a limited time.</h5>
+    <h5>Note: This doesn't represent the newest state of the engine or what capabilities it has. This was an attempt at porting it over for the web within a limited time.</h5>
     <a href="{{ '/GelosEngine/index.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Launch Web Port</a>
 </section>
 
