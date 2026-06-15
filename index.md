@@ -41,7 +41,7 @@ title: Home
   <div class="project-grid featured-grid">
       <!-- Gelos Engine -->
     <div class="project-card">
-      <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
+      <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
       <div class="project-info">
         <h2>Gelos Engine</h2>
         <p>A custom engine project built around game engine architecture, porting to other platforms, and low-level rendering systems.</p>
