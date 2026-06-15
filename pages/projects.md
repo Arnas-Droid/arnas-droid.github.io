@@ -6,7 +6,7 @@ title: "Projects"
 <div class="project-grid">
     <!-- Gelos Engine -->
   <div class="project-card">
-    <a href="{{ '/2008/01/01/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
+    <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
     <div class="project-info">
       <h2>Gelos Engine (Page in development)</h2>
       <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
@@ -138,6 +138,6 @@ title: "Projects"
       <a class="hero-button" href="{{ '/pages/GameJams/endlessDodge.html' |  relative_url }}">View Project</a>
     </div>
   </div>
-</div>
+
 
 </body> 
