@@ -108,7 +108,7 @@ title: Home
           <span>Endless</span>
           <span>Unity</span>
         </div>
-        <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
+        <a class="hero-button" href="{{ '/pages/GameJams/endlessDodge.html' |  relative_url }}">View Project</a>
       </div>
     </div>
   </div>
