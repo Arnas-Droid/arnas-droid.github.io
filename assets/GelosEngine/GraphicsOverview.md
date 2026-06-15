@@ -1,7 +1,5 @@
 # Graphics Overview
 **Author:** Arnas
-## Introduction 
-This documentation goes over the overview of the architecture, rendering systems, and platform-specific implementation developed for the engine. The documents are separated into their areas to better explain their reasoning, implementation details and technical limitations of each system.
 
 ## Engine Architecture and Design
 [Game Engine Architecture](Documentation/GameEngineArchitecture.md) - Looks over the scope of the engine, including abstraction between engine systems and game logic.
