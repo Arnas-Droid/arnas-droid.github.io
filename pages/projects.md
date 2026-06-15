@@ -12,16 +12,11 @@ title: "Projects"
       <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>DirectX 11</span>
-        <span>OpenGL</span>
-        <span>PS5 Shader Language</span>
         <span>Engine Programming</span>
-        <span>Graphics Programming</span>
-        <span>PS5 Port</span>
-        <span>Web Port</span>
+        <span>Porting</span>
         <span>Team Project</span>
-        <span>Visual Studio</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/gelosEngine.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Advanced Graphics -->
@@ -32,12 +27,11 @@ title: "Projects"
       <p>A real-time DirectX 11 graphics project that focused on 3D rendering techniques like render-to-texture (RTT), custom shaders, and graphics pipeline profiling.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>DirectX 11</span>
         <span>Graphics Programming</span>
-        <span>ImGui</span>
+        <span>DirectX 11</span>
         <span>RenderDoc</span>
-        <span>Visual Studio</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Low Level Optimisation -->
@@ -48,11 +42,11 @@ title: "Projects"
       <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>DirectX 11</span>
-        <span>OpenGL</span>
-        <span>PS5 Port</span>
-        <span>Visual Studio</span>
+        <span>Performance</span>
+        <span>Multithreading</span>
+        <span>Optimisation</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Junior Collab (Echoes) -->
@@ -62,11 +56,12 @@ title: "Projects"
       <h2>Echoes Of Imagination</h2>
       <p>A tile-based puzzle game with a multidisciplinary team that focused on gameplay programming.</p>
       <div class="project-tags">
+        <span>Unreal Engine 5</span>
         <span>Blueprints</span>
         <span>Gameplay Programming</span>
         <span>Team Project</span>
-        <span>Unreal Engine 5</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/echoes.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Real-time Graphics --> 
@@ -79,8 +74,9 @@ title: "Projects"
         <span>C++</span>
         <span>DirectX 11</span>
         <span>Graphics Programming</span>
-        <span>Visual Studio</span>
+        <span>Shaders</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/witchForest.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Bespoke (Evercade) -->
@@ -91,9 +87,11 @@ title: "Projects"
       <p>A project that focused on end-to-end production, like designing, implementing and porting to Evercade.</p>
       <div class="project-tags">
         <span>C++</span>
-        <span>Evercade Port</span>
+        <span>Evercade</span>
+        <span>Porting</span>
         <span>Visual Studio</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/bespoke.html' |  relative_url }}">View Project</a>
     </div>
   </div>
       <!-- Glut -->
@@ -108,6 +106,7 @@ title: "Projects"
         <span>Graphics Programming</span>
         <span>Visual Studio</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/glut.html' |  relative_url }}">View Project</a>
     </div>
   </div>
       <!-- Arcade -->
@@ -118,8 +117,10 @@ title: "Projects"
       <p>A prototype project focused on mobile development that would have ad-free gameplay.</p>
       <div class="project-tags">
         <span>C#</span>
+        <span>Mobile</span>
         <span>Unity</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/arcade.html' |  relative_url }}">View Project</a>
     </div>
   </div>
       <!-- Endless Dodge -->
@@ -130,8 +131,11 @@ title: "Projects"
       <p>This was a game developed for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack.</p>
       <div class="project-tags">
         <span>C#</span>
+        <span>Arcade Gameplay</span>
+        <span>Endless</span>
         <span>Unity</span>
       </div>
+      <a class="hero-button" href="{{ '/pages/GameJams/endlessDodge.html' |  relative_url }}">View Project</a>
     </div>
   </div>
 </div>
