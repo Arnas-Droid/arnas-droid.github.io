@@ -22,7 +22,7 @@ title: Home
         <span>C++</span>
         <span>DirectX 11 / 12</span>
         <span>Rendering Engine</span>
-        <span>Real-time graphics</span>
+        <span>Real-Time Graphics</span>
         <span>Performance Optimisation</span>
       </div>
       <a class="hero-button" href="{{ '/pages/hyperion.html' |  relative_url }}">View Project</a>
