@@ -89,27 +89,22 @@ title: "Low-Level Platform Optimisation"
   <p>This project looked at low-level optimisation techniques such as memory management, timing optimisations and porting over to PS5. A custom memory manager system was implemented to track memory allocations, this included an allocation tracker, object creation and destruction, and a memory pool to reduce allocation overhead by reusing pre-allocated memory. Performance improvements were achieved through spatial partitioning, which split the scene and reduced collision checks. Finally, a multithreaded system was applied to this that allowed the regions of the scene to be checked at the same time.</p>
 </section>
 
-
   <!-- Key project features -->
 <h3>Key Features</h3>
 <section class="features">
     <div class="feature-card">
-        <img src="/assets/Icons/MemoryManagement.jpg" alt="Memory Manager">
         <h3>Memory Manager</h3>
         <p>Custom memory allocation tracking, object lifecycle control, and memory pooling to reduce allocation overhead.</p>
     </div>
     <div class="feature-card">
-        <img src="/assets/Icons/MemoryManagement.jpg" alt="Spatial Partitioning">
         <h3>Spatial Partitioning</h3>
         <p>Reduced collision checks by dividing the scene into regions.</p>
     </div>
     <div class="feature-card">
-        <img src="/assets/Icons/MemoryManagement.jpg" alt="Multithreading">
         <h3>Multithreading</h3>
         <p>Processed spatial regions in parallel to improve performance.</p>
     </div>
     <div class="feature-card">
-        <img src="/assets/Icons/MemoryManagement.jpg" alt="PS5 Optimisation">
         <h3>PS5 Optimisation</h3>
         <p>Explored low-level optimisation techniques for PS5.</p>
     </div>
