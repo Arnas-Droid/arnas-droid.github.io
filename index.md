@@ -54,21 +54,6 @@ title: Home
         <a class="hero-button" href="{{ '/pages/gelosEngine.html' |  relative_url }}">View Project</a>
       </div>
     </div>
-      <!-- Advanced Graphics -->
-   <div class="project-card">
-      <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
-      <div class="project-info">
-        <h2>Advanced Graphics</h2>
-        <p>A real-time DirectX 11 graphics project explores real-time rendering techniques like render-to-texture (RTT), custom shader workflows, and pipeline optimisation.</p>
-        <div class="project-tags">
-          <span>C++</span>
-          <span>Graphics Programming</span>
-          <span>DirectX 11</span>
-          <span>RenderDoc</span>
-        </div>
-        <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
-      </div>
-    </div>
       <!-- Low Level Optimisation  -->
     <div class="project-card">
       <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
@@ -82,6 +67,21 @@ title: Home
           <span>Optimisation</span>
         </div>
         <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
+      </div>
+    </div>
+      <!-- Advanced Graphics -->
+    <div class="project-card">
+      <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
+      <div class="project-info">
+        <h2>Advanced Graphics</h2>
+        <p>A real-time DirectX 11 graphics project explores real-time rendering techniques like render-to-texture (RTT), custom shader workflows, and pipeline optimisation.</p>
+        <div class="project-tags">
+          <span>C++</span>
+          <span>Graphics Programming</span>
+          <span>DirectX 11</span>
+          <span>RenderDoc</span>
+        </div>
+        <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
       </div>
     </div>
   </div>

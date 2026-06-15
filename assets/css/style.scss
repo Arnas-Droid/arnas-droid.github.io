@@ -577,3 +577,36 @@ p.view, small, .tags, .date{
   transform: translateY(-2px);
   background: #eaeaea;
 }
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    border: 1px solid #00ff41;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0, 255, 65, 0.03);
+}
+
+.feature-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}

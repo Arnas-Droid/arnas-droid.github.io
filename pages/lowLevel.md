@@ -98,17 +98,36 @@ title: "Low-Level Platform Optimisation"
     <p>- Explored low-level optimisation techniques for the PS5.</p>
   </section>
 
+  <!-- Key project features -->
+<section class="features">
+    <div class="feature-card">
+        <img src="/assets/Icons/MemoryManagement.png" alt="Memory Manager">
+        <h3>Memory Manager</h3>
+        <p>Custom memory allocation tracking, object lifecycle control, and memory pooling to reduce allocation overhead.</p>
+    </div>
+    <div class="feature-card">
+        <img src="/assets/Icons/MemoryManagement.png" alt="Spatial Partitioning">
+        <h3>Spatial Partitioning</h3>
+        <p>Reduced collision checks by dividing the scene into regions.</p>
+    </div>
+    <div class="feature-card">
+        <img src="/assets/Icons/MemoryManagement.png" alt="Multithreading">
+        <h3>Multithreading</h3>
+        <p>Processed spatial regions in parallel to improve performance.</p>
+    </div>
+    <div class="feature-card">
+        <img src="/assets/Icons/MemoryManagement.png" alt="PS5 Optimisation">
+        <h3>PS5 Optimisation</h3>
+        <p>Explored low-level optimisation techniques for PS5.</p>
+    </div>
+</section>
+
 <script>
   let slideIndex = 1;
   showSlides(slideIndex);
 
-  function plusSlides(n) {
-  showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+  function plusSlides(n) { showSlides(slideIndex += n); }
+  function currentSlide(n) { showSlides(slideIndex = n); }
 
   function showSlides(n) {
     let i;
