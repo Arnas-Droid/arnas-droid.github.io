@@ -87,22 +87,29 @@ title: Home
   </div>
 </div>
 
-<!-- Other Projects -->
-<h1 style="text-align:center;">Game Jams</h1>
-<div class="project-grid">
+  <!-- Game Jam Projects -->
+<div class="featured-section">
+  <div class="featured-header">
+        <!-- Title -->
+    <h1 class="section-title">Game Jam Projects</h1>
+        <!-- Button -->
+      <a href="{{ '/pages/projects.html' | relative_url }}" class="hero-button">View all projects -></a>
+  </div>
+  <div class="project-grid featured-grid">
       <!-- Endless Dodge -->
-  <div class="project-card">
-    <a href="{{ '/pages/GameJams/endlessDodge.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
-    <div class="project-info">
-      <h2>Endless Dodge</h2>
-      <p>This was a game developed in 5 hours for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack. The goal is to survive as long as possible.</p>
-      <div class="project-tags">
-        <span>C#</span>
-        <span>Arcade Gameplay</span>
-        <span>Endless</span>
-        <span>Unity</span>
+    <div class="project-card">
+      <a href="{{ '/pages/GameJams/endlessDodge.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
+      <div class="project-info">
+        <h2>Endless Dodge</h2>
+        <p>This was a game developed in 5 hours for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack. The goal is to survive as long as possible.</p>
+        <div class="project-tags">
+          <span>C#</span>
+          <span>Arcade Gameplay</span>
+          <span>Endless</span>
+          <span>Unity</span>
+        </div>
+        <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
       </div>
-      <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
     </div>
   </div>
 </div>
