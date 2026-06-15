@@ -66,7 +66,8 @@ In contrast, the STB library seemed to be the perfect solution for the scope of 
 
 <a id="STBExample">4</a>: ocornut (2023). Image Loading and Displaying Examples. [online] GitHub. Available at: https://github.com/ocornut/imgui/wiki/Image-Loading-and-Displaying-Examples/3fc5ed67ff0546b8119f534bbcd05fbedc355698.   
 
-<a id="MonoGameTexture2D">5</a>: Monogame.net. (2026). Class Texture2D | MonoGame. [online] Available at: https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html#Microsoft_Xna_Framework_Graphics_Texture2D_FromStream_Microsoft_Xna_Framework_Graphics_GraphicsDevice_Stream_.
+<a id="MonoGameTexture2D">5</a>: 
+Monogame.net. (2026). Class Texture2D | MonoGame. [online] Available at: https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html#Microsoft_Xna_Framework_Graphics_Texture2D_FromStream_Microsoft_Xna_Framework_Graphics_GraphicsDevice_Stream_.
 
 <a id="MonoGameSprite">6</a>: Monogame.net. (2026). Chapter 08: The Sprite Class | MonoGame. [online] Available at: https://docs.monogame.net/articles/tutorials/building_2d_games/08_the_sprite_class/index.html. 
 
