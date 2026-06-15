@@ -610,3 +610,38 @@ p.view, small, .tags, .date{
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
+.social-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.social-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.social-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #111;
+    border: 1px solid #00ff41;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: #00ff41;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: rgba(0, 255, 65, 0.1);
+}
