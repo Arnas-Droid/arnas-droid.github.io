@@ -58,7 +58,7 @@ title: Home
     <div class="project-card">
       <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
       <div class="project-info">
-        <h2>Low Level Optimisation (Page in development)</h2>
+        <h2>Low Level Optimisation</h2>
         <p>A performance-focused project looking at low-level optimisations like memory management, multithreading and spatial partitioning.</p>
         <div class="project-tags">
           <span>C++</span>
