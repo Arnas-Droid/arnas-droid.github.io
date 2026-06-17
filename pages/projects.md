@@ -9,7 +9,7 @@ title: "Projects"
   <div class="project-card">
     <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
     <div class="project-info">
-      <h2>Gelos Engine (Page in development)</h2>
+      <h2>Gelos Engine</h2>
       <p>A custom engine project that focused on real-time rendering systems, game engine architecture and porting to other platforms.</p>
       <div class="project-tags">
         <span>C++</span>
@@ -39,7 +39,7 @@ title: "Projects"
   <div class="project-card">
     <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level"></a>
     <div class="project-info">
-      <h2>Low Level Optimisation (Page in development)</h2>
+      <h2>Low Level Optimisation</h2>
       <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
       <div class="project-tags">
         <span>C++</span>

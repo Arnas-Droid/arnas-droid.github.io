@@ -1,0 +1,57 @@
+// Activating it https://emscripten.org/docs/getting_started/downloads.html
+1. Clone the sdk 
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+
+2. Install it
+emsdk install latest
+
+3. Activate it
+emsdk activate latest
+
+// Running it
+1. Checks if the initial emscripten is there
+cd C:\Users\theComputer\emsdk // An example
+
+cd C:\Users\apuid\emsdk // My use case
+emsdk_env.bat
+emcc --version
+
+2. Go to file path for main
+cd "C:\Users\theComputer\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox" // An example
+
+cd "C:\Users\apuid\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox" // My use case
+
+3. Build the files https://emscripten.org/docs/porting/files/packaging_files.html
+emcc main.cpp -o index.html -s USE_WEBGL2=1 -s FULL_ES3=1 // Blank
+emcc main.cpp -o index.html -s USE_WEBGL2=1 -s FULL_ES3=1 --preload-file smile.png // Preload files
+
+4. Go to web
+python -m http.server
+http://localhost:8000/
+
+5. All the way (Once everything works)
+5.1 Home
+cd C:\Users\apuid\emsdk
+emsdk_env.bat
+emcc --version
+cd "C:\Users\apuid\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp TextureManager_web.cpp -o index.html -s USE_WEBGL2=1 -s FULL_ES3=1 -s ALLOW_MEMORY_GROWTH=1 -sASSERTIONS=2 --preload-file smile.png
+python -m http.server
+
+5.2 University
+cd C:\Users\p012089n\emsdk
+emsdk_env.bat
+emcc --version
+cd "C:\Users\p012089n\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp -o index.html -s USE_WEBGL2=1 -s FULL_ES3=1 -s ALLOW_MEMORY_GROWTH=1 -sASSERTIONS=2 --preload-file smile.png
+python -m http.server
+
+// Extra debugging (don't publish debug build)
+5.3 Debugging
+cd C:\Users\p012089n\emsdk
+emsdk_env.bat
+emcc --version
+cd "C:\Users\p012089n\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp -o index.html -sASSERTIONS=2 -sSAFE_HEAP=1 -sSTACK_OVERFLOW_CHECK=2 -gsource-map --preload-file smile.png
+python -m http.server

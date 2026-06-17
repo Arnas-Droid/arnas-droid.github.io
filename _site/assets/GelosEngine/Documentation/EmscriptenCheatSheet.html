@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Emscripten Web Build Cheat Sheet | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Emscripten Web Build Cheat Sheet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio" />
+<meta property="og:description" content="Portfolio" />
+<link rel="canonical" href="http://localhost:4000/assets/GelosEngine/Documentation/EmscriptenCheatSheet.html" />
+<meta property="og:url" content="http://localhost:4000/assets/GelosEngine/Documentation/EmscriptenCheatSheet.html" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Emscripten Web Build Cheat Sheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Portfolio","headline":"Emscripten Web Build Cheat Sheet","url":"http://localhost:4000/assets/GelosEngine/Documentation/EmscriptenCheatSheet.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="emscripten-web-build-cheat-sheet">Emscripten Web Build Cheat Sheet</h1>
+<p><strong>Author:</strong> Arnas</p>
+<h2 id="1-one-time-setup">1. One-Time Setup</h2>
+<h3 id="clone-sdk">Clone SDK</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/emscripten-core/emsdk.git
+<span class="nb">cd </span>emsdk
+</code></pre></div></div>
+<h3 id="clone-sdk-1">Clone SDK</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emsdk <span class="nb">install </span>latest
+</code></pre></div></div>
+<h3 id="activate-latest-version">Activate Latest Version</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emsdk <span class="nb">install </span>latest
+</code></pre></div></div>
+
+<h2 id="2-start-emscripten">2. Start Emscripten</h2>
+<h3 id="home">Home</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>C:<span class="se">\U</span>sers<span class="se">\a</span>puid<span class="se">\e</span>msdk
+</code></pre></div></div>
+<h3 id="university">University</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>C:<span class="se">\U</span>sers<span class="se">\p</span>012089n<span class="se">\e</span>msdk
+</code></pre></div></div>
+<h3 id="activate-enviroment">Activate Enviroment</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emsdk_env.bat
+</code></pre></div></div>
+<h3 id="verify-installation">Verify Installation</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emcc <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h2 id="3-open-project">3. Open Project</h2>
+<h3 id="home-1">Home</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\a</span><span class="s2">puid</span><span class="se">\D</span><span class="s2">ocuments</span><span class="se">\G</span><span class="s2">itHub</span><span class="se">\g</span><span class="s2">dev60020-25-cross-platform-framework-this-team-is-an-xbox</span><span class="se">\C</span><span class="s2">PED This Team is an Xbox</span><span class="se">\C</span><span class="s2">PED This Team is an Xbox"</span>
+</code></pre></div></div>
+<h3 id="university-1">University</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\p</span><span class="s2">012089n</span><span class="se">\D</span><span class="s2">ocuments</span><span class="se">\G</span><span class="s2">itHub</span><span class="se">\g</span><span class="s2">dev60020-25-cross-platform-framework-this-team-is-an-xbox</span><span class="se">\C</span><span class="s2">PED This Team is an Xbox</span><span class="se">\C</span><span class="s2">PED This Team is an Xbox"</span>
+</code></pre></div></div>
+
+<h2 id="4-basic-builds">4. Basic Builds</h2>
+<h3 id="blank-webgl2-build">Blank WebGL2 Build</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emcc main.cpp <span class="nt">-o</span> index.html <span class="nt">-s</span> <span class="nv">USE_WEBGL2</span><span class="o">=</span>1 <span class="nt">-s</span> <span class="nv">FULL_ES3</span><span class="o">=</span>1
+</code></pre></div></div>
+
+<h3 id="build-with-assets">Build With Assets</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emcc main.cpp <span class="nt">-o</span> index.html <span class="nt">-s</span> <span class="nv">USE_WEBGL2</span><span class="o">=</span>1 <span class="nt">-s</span> <span class="nv">FULL_ES3</span><span class="o">=</span>1 <span class="nt">--preload-file</span> smile.png
+</code></pre></div></div>
+
+<h2 id="5-full-project-build">5. Full Project Build</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp <span class="nt">-o</span> index.html <span class="nt">-s</span> <span class="nv">USE_WEBGL2</span><span class="o">=</span>1 <span class="nt">-s</span> <span class="nv">FULL_ES3</span><span class="o">=</span>1 <span class="nt">-s</span> <span class="nv">ALLOW_MEMORY_GROWTH</span><span class="o">=</span>1 <span class="nt">-sASSERTIONS</span><span class="o">=</span>2 <span class="nt">--preload-file</span> smile.png
+</code></pre></div></div>
+
+<h2 id="6-debug-build">6. Debug Build</h2>
+<h3 id="dont-publish-debug-build">Don’t publish debug build</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp <span class="nt">-o</span> index.html <span class="nt">-sASSERTIONS</span><span class="o">=</span>2 <span class="nt">-sSAFE_HEAP</span><span class="o">=</span>1 <span class="nt">-sSTACK_OVERFLOW_CHECK</span><span class="o">=</span>2 <span class="nt">-gsource-map</span> <span class="nt">--preload-file</span> smile.png
+</code></pre></div></div>
+
+<h2 id="7-run-local-server">7. Run Local Server</h2>
+<h3 id="start-server">Start Server</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> http.server
+</code></pre></div></div>
+<h3 id="open-browser">Open Browser</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8000/
+</code></pre></div></div>
+
+<h2 id="8-common-flags">8. Common Flags</h2>
+<p>| Flag                      | Description               |
+|—————————|—————————|
+| -s USE_WEBGL2=1           | Enable WebGL2             |
+| -s FULL_ES3=1             | Enable OpenGL ES3 support |
+| -s ASSERTIONS=2           | Runtime assertions        | 
+| -s SAFE_HEAP=1            | Memory debugging          |
+| -s STACK_OVERFLOW_CHECK=2 | Stack protection          | 
+| -s ALLOW_MEMORY_GROWTH=1  | Dynamic memory growth     |</p>
+
+<p><a href="/assets/GelosEngine/Documentation/WebPortImplementation.html">&lt;- Back to Web Port</a></p>
+
+<p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>

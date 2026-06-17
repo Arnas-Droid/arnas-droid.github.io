@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Volume Bound Volumetric Lighting | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Volume Bound Volumetric Lighting" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio" />
+<meta property="og:description" content="Portfolio" />
+<link rel="canonical" href="http://localhost:4000/assets/Hyperion/Documentation/Renderer/VolumetricLighting.html" />
+<meta property="og:url" content="http://localhost:4000/assets/Hyperion/Documentation/Renderer/VolumetricLighting.html" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Volume Bound Volumetric Lighting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Portfolio","headline":"Volume Bound Volumetric Lighting","url":"http://localhost:4000/assets/Hyperion/Documentation/Renderer/VolumetricLighting.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="volume-bound-volumetric-lighting">Volume Bound Volumetric Lighting</h1>
+<p><strong>Author:</strong> Arnas</p>
+
+<h2 id="overview">Overview</h2>
+<p>The volumetric lighting system is a post processing pass that ray marches through participting media volumes.</p>
+
+<h2 id="supported-volume-types">Supported volume types</h2>
+<ul>
+  <li>Sphere.</li>
+  <li>Box.</li>
+  <li>Cone.</li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">float3</span> <span class="n">GetRayDir</span><span class="p">(</span><span class="n">float2</span> <span class="n">uv</span><span class="p">,</span> <span class="n">float4x4</span> <span class="n">invView</span><span class="p">,</span> <span class="n">float4x4</span> <span class="n">invProjection</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="err">'</span><span class="n">uv</span><span class="err">'</span> <span class="o">=</span> <span class="n">Screen</span> <span class="n">UV</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">invView</span><span class="err">'</span> <span class="o">=</span> <span class="n">Inverse</span> <span class="n">camera</span> <span class="n">view</span> <span class="n">matrix</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">invProjection</span><span class="err">'</span> <span class="o">=</span> <span class="n">Inverse</span> <span class="n">camera</span> <span class="n">projection</span> <span class="n">matrix</span><span class="p">.</span>
+</code></pre></div></div>
+<p>This function reconstructs world space ray direction from screen UV coordinates. Used for volumetric raymarching.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">float3</span> <span class="n">WorldPosReconstruction</span><span class="p">(</span><span class="n">float2</span> <span class="n">uv</span><span class="p">,</span> <span class="kt">float</span> <span class="n">depth</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="err">'</span><span class="n">uv</span><span class="err">'</span> <span class="o">=</span> <span class="n">Screen</span> <span class="n">UV</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">depth</span><span class="err">'</span> <span class="o">=</span> <span class="n">Depth</span> <span class="n">buffer</span> <span class="n">value</span> <span class="n">at</span> <span class="n">that</span> <span class="n">pixel</span><span class="p">.</span>
+</code></pre></div></div>
+<p>This function reconstructs world space position from screen UV coordiantes and depth buffer. Used for volumetric raymarching.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">float3</span> <span class="n">WorldPosReconstruction</span><span class="p">(</span><span class="n">float2</span> <span class="n">uv</span><span class="p">,</span> <span class="kt">float</span> <span class="n">depth</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="err">'</span><span class="n">uv</span><span class="err">'</span> <span class="o">=</span> <span class="n">Screen</span> <span class="n">UV</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">depth</span><span class="err">'</span> <span class="o">=</span> <span class="n">Depth</span> <span class="n">buffer</span> <span class="n">value</span> <span class="n">at</span> <span class="n">that</span> <span class="n">pixel</span><span class="p">.</span>
+</code></pre></div></div>
+<p>This function reconstructs world space position from screen UV coordiantes and depth buffer. Used for volumetric raymarching.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="n">hash31</span><span class="p">(</span><span class="n">float3</span> <span class="n">p</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="sc">'p'</span> <span class="o">=</span> <span class="mi">3</span><span class="n">D</span> <span class="n">input</span> <span class="n">position</span><span class="p">.</span>
+</code></pre></div></div>
+<p>This function generates pseudo-radom value from a 3D position. Used for avoiding uniform lighting.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">OcclusionTest</span><span class="p">(</span><span class="n">float3</span> <span class="n">worldPos</span><span class="p">,</span> <span class="n">float4x4</span> <span class="n">viewProjection</span><span class="p">,</span> <span class="n">Texture2D</span> <span class="n">depthTex</span><span class="p">,</span> <span class="n">SamplerState</span> <span class="n">samplerState</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="err">'</span><span class="n">worldPos</span><span class="err">'</span> <span class="o">=</span> <span class="n">World</span> <span class="n">position</span> <span class="k">for</span> <span class="n">testing</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">viewProjection</span><span class="err">'</span> <span class="o">=</span> <span class="n">Camera</span> <span class="n">view</span> <span class="n">projection</span> <span class="n">matrix</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">depthTex</span><span class="err">'</span> <span class="o">=</span> <span class="n">Scene</span> <span class="n">depth</span> <span class="n">buffer</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">samplerState</span><span class="err">'</span> <span class="o">=</span> <span class="n">Sampler</span> <span class="k">for</span> <span class="n">depth</span> <span class="n">texture</span><span class="p">.</span>
+
+</code></pre></div></div>
+<p>This function checks whether a world space position is hiddent behind scene geometry from the camera. Used to prevent volumetric lighting from rendering through walls and objects.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="n">ShadowTest</span><span class="p">(</span><span class="n">float3</span> <span class="n">worldPos</span><span class="p">)</span> 
+
+<span class="o">-</span> <span class="err">'</span><span class="n">worldPos</span><span class="err">'</span> <span class="o">=</span> <span class="n">World</span> <span class="n">position</span> <span class="k">for</span> <span class="n">testing</span><span class="p">.</span>
+
+</code></pre></div></div>
+<p>This function checks whether the world position point is lit or in shadow from the light source.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">RayVolumeIntersect</span><span class="p">(</span><span class="n">float3</span> <span class="n">rayOrigin</span><span class="p">,</span> <span class="n">float3</span> <span class="n">rayDir</span><span class="p">,</span> <span class="n">LightVolume</span> <span class="n">volume</span><span class="p">,</span> <span class="n">out</span> <span class="kt">float</span> <span class="n">rayEnter</span><span class="p">,</span> <span class="n">out</span> <span class="kt">float</span> <span class="n">rayExit</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="err">'</span><span class="n">rayOrigin</span><span class="err">'</span> <span class="o">=</span> <span class="n">Starting</span> <span class="n">point</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ray</span> <span class="p">(</span><span class="n">camera</span> <span class="n">position</span><span class="p">).</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">rayDir</span><span class="err">'</span> <span class="o">=</span> <span class="n">Direction</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ray</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">volume</span><span class="err">'</span> <span class="o">=</span> <span class="n">Tyoe</span> <span class="n">of</span> <span class="n">volume</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">rayEnter</span><span class="err">'</span> <span class="o">=</span> <span class="n">Distance</span> <span class="n">at</span> <span class="n">where</span> <span class="n">the</span> <span class="n">ray</span> <span class="n">enters</span> <span class="n">the</span> <span class="n">volume</span><span class="p">.</span>
+<span class="o">-</span> <span class="err">'</span><span class="n">rayExit</span><span class="err">'</span> <span class="o">=</span> <span class="n">Distance</span> <span class="n">at</span> <span class="n">where</span> <span class="n">the</span> <span class="n">ray</span> <span class="n">exits</span> <span class="n">the</span> <span class="n">volume</span><span class="p">.</span>
+
+</code></pre></div></div>
+<p>This function checks where the camera passes through a light volume and calculates where it enters and exits said volume. Used to limit where volumetric lighting apears to specefic areas.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="n">GetDensity</span><span class="p">(</span><span class="n">LightVolume</span> <span class="n">volume</span><span class="p">,</span> <span class="n">float3</span> <span class="n">worldPos</span><span class="p">,</span> <span class="n">float3</span> <span class="n">rayDir</span><span class="p">,</span> <span class="kt">float</span> <span class="n">time</span><span class="p">)</span>
+
+<span class="err">'</span><span class="n">volume</span><span class="err">'</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">like</span> <span class="n">its</span> <span class="n">shape</span><span class="p">,</span> <span class="n">size</span> <span class="n">and</span> <span class="n">strength</span><span class="p">.</span>
+<span class="err">'</span><span class="n">worldPos</span><span class="err">'</span> <span class="o">=</span> <span class="n">The</span> <span class="n">position</span> <span class="n">it</span> <span class="n">is</span> <span class="n">in</span> <span class="n">world</span> <span class="n">space</span><span class="p">.</span>
+<span class="err">'</span><span class="n">rayDir</span><span class="err">'</span> <span class="o">=</span> <span class="n">The</span> <span class="n">camera</span> <span class="n">ray</span> <span class="n">direction</span><span class="p">.</span>
+<span class="err">'</span><span class="n">time</span><span class="err">'</span> <span class="o">=</span> <span class="n">Used</span> <span class="n">to</span> <span class="n">animate</span> <span class="n">noise</span> <span class="n">over</span> <span class="n">time</span><span class="p">.</span>
+</code></pre></div></div>
+<p>This function decides how dense the volume is at the specefic point in space. It is used to control how much light is visable while the ray marches through a participating volume.</p>
+
+<p><a href="/assets/Hyperion/Documentation/Renderer/Renderer.html">&lt;– Go Back</a></p>
+
+<p><a href="/assets/Hyperion/Documentation/Overview.html">&lt;– Go Back Fully</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>

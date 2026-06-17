@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Artefact Functions (Not Finished) | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Artefact Functions (Not Finished)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio" />
+<meta property="og:description" content="Portfolio" />
+<link rel="canonical" href="http://localhost:4000/assets/GelosEngine/Documentation/ArtefactFunctions.html" />
+<meta property="og:url" content="http://localhost:4000/assets/GelosEngine/Documentation/ArtefactFunctions.html" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Artefact Functions (Not Finished)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Portfolio","headline":"Artefact Functions (Not Finished)","url":"http://localhost:4000/assets/GelosEngine/Documentation/ArtefactFunctions.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="artefact-functions-not-finished">Artefact Functions (Not Finished)</h1>
+<p><strong>Author:</strong> Arnas</p>
+<h2 id="directx-11-implementation">DirectX 11 Implementation</h2>
+<p>Functions:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">CreateDeviceAndContext</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Used to create the device and device context. Use m_d3dDevice and m_immediateContext if needed or the get functions to get them in other classes.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">CreateSwapChainAndBuffers</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Used to create the swap chain and buffers like back buffer, depth, and depth stencil to render to the screen. Plus a constant buffer for later. While also setting them all.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">CreateViewport</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Used to create and set the viewport using the client rect dimensions instead of the constants to ensure alignment.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">CreateShadersAndInput</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Used to create the shaders like the vertex shader and pixel shader. Plus, the input layout. Currently it has positions and texture coordinates (uv). Vertex shader passes along the world, view, projection constant buffers for the positions. While passes texture coordinates directly. Pixel shader gets the texture and outputs it.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">CreateVertexIndexBuffers</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Used to create the basic vertex and index buffers for a quad. This includes the positions and texture coordinates.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">InitialiseVariables</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Some of the variables that are set to include vertex, index and input buffers with the sprite renderer getting created and loaded with one texture. This can be changed later, but should have variables that are consistent throughout the program. Last note we need to figure out how the editor should handle new textures getting added on runtime.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ID3D11Device</span><span class="o">*</span> <span class="nf">GetDevice</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_d3dDevice</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>Returns device.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ID3D11DeviceContext</span><span class="o">*</span> <span class="nf">GetDeviceContext</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_immediateContext</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>Returns device context.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">deltaTime</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GameObject</span><span class="o">*&gt;&amp;</span> <span class="n">AllObjects</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Order of operations are render the ImGui interface, update the camera, update the constant buffer, clear the back buffer, set shaders, draw sprites.</p>
+
+<p>All the functions except the last four are to be used to set up the pipeline for DirectX 11. The reason for having two devices, two device contexts and two swap chains is to use newer features of DX11. While it creates itself it goes in order of newest feature level for the hardware and goes down if it can’t be created.</p>
+
+<h2 id="sprite-renderer-original">Sprite Renderer (Original)</h2>
+<p>Functions:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SpriteRenderer</span><span class="p">(</span><span class="n">ID3D11Device</span><span class="o">*</span> <span class="n">d3dDevice</span><span class="p">,</span> <span class="n">ID3D11DeviceContext</span><span class="o">*</span> <span class="n">deviceContext</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Sprite renderer constructor gives the device and device context from renderer for storing to create resources.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">~</span><span class="n">SpriteRenderer</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Sprite renderer destructor releases all shader resource views and sets pointers to nullptr.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HRESULT</span> <span class="nf">LoadSpriteFromTexture</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filePath</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Loads files like .png, .jpeg, .bmp, .tga, .gifs, and more to a texture that can be used to apply into the quad.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">DrawSprite</span><span class="p">(</span><span class="kt">int</span> <span class="n">textureID</span><span class="p">);</span>
+</code></pre></div></div>
+<p>This gets the texture ID to create a temporary shader resource view and bind it for the pixel shader. Finally, it draws the quad with the applied texture.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ID3D11ShaderResourceView</span><span class="o">*</span> <span class="nf">GetSpriteID</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_sprites</span><span class="p">[</span><span class="n">id</span><span class="p">];</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>Returns a pointer to the shader resource view from the given ID.</p>
+
+<p>Currently the sprite renderer can be used to load 2D textures from files like .png, .jpeg and more. This then can be used to draw them given an ID on a quad. Currently tested to work with 32x32 images and only single images since it doesn’t work like a spreadsheet, which would be the next step.</p>
+
+<p>[How to load textures] https://github.com/ocornut/imgui/wiki/Image-Loading-and-Displaying-Examples#example-for-directx11-users</p>
+
+<h2 id="multipass-renderer-original">Multipass Renderer (Original)</h2>
+<p>Functions:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SetSritePass</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">DrawObject</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SetLightPass</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">DrawLight</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SetShadowPass</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">DrawShadow</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SetFinalPass</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">DrawFullscreen</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Note: I didn’t do the logic for the polymorthic render, but I was the one that added the passes after the orginal set sprite pass and draw functions.</p>
+
+<p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>

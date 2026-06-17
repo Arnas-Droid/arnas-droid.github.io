@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lighting and Shadows | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Lighting and Shadows" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio" />
+<meta property="og:description" content="Portfolio" />
+<link rel="canonical" href="http://localhost:4000/assets/GelosEngine/Documentation/LightingAndShadows.html" />
+<meta property="og:url" content="http://localhost:4000/assets/GelosEngine/Documentation/LightingAndShadows.html" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lighting and Shadows" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Portfolio","headline":"Lighting and Shadows","url":"http://localhost:4000/assets/GelosEngine/Documentation/LightingAndShadows.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="lighting-and-shadows">Lighting and Shadows</h1>
+<p><strong>Author:</strong> Arnas</p>
+<h2 id="lighting">Lighting</h2>
+<h3 id="introduction">Introduction</h3>
+<p>This section will look at justifying why the lighting system was made the way it was. Initially the lighting system was implemented as a simple point light model and was created primarily for the shadow generation. This approach used a linear falloff approximation that is similar to what is in Real-Time Rendering <sup><a href="#RealTimeRendering">1</a></sup>, where light intensity decreases with distance from the source. Additionally, lighting calculations were done per object in the shader, which made it fast and suitable for the initial purposes.</p>
+
+<p>However, this showed several limitations, like the light only affecting the objects directly and not being visible to the scene. This meant light would not be seen unless the objects interacted directly. It also didn’t have other light types like spot light and directional light.</p>
+
+<h3 id="multi-pass-rendering">Multi Pass Rendering</h3>
+<p>To resolve these issues, the lighting system was reworked to use multi-pass rendering. This changed the lighting system from per-object calculations to a full-screen lighting pass that affects the entire rendered scene. Separating the scene into geometry rendering and light pass aligns with common real-time rendering techniques, where lighting is applied through screen space after the scene is rendered. Engines like Godot also apply a full-screen pass rather than applying lights in the scene pass <sup><a href="#GodotRenderingPasses">2</a></sup>.</p>
+
+<p>A full-screen triangle was used instead of a quad for the pass. This reduces unnecessary vertex processing and eliminates interpolation along triangle edges, making it more efficient than rendering two triangles <sup><a href="#FullscreenOptimisation">3</a></sup> <sup><a href="#GDCTriangle">4</a></sup>. Finally, a full-screen final pass combines all light contributions and outputs the result to the back buffer. Directional light is also applied in this stage as global light, ensuring there is a uniform light across the scene.</p>
+
+<h3 id="light-types">Light Types</h3>
+<p>To create a more complete lighting system, three primary light types were implemented. With point, spot and directional being widely reconised as common ones <sup><a href="#RealTimeRendering">1</a></sup> <sup><a href="#UnityLightTypes">5</a></sup>:</p>
+<ul>
+  <li>Point light emits light that goes off in all directions from a single positon (light position). The exisiting implementation was the same as it was efficent and suitable for our 2D engine.</li>
+  <li>Spot lights emit light within a cone-shaped region defined by positon, direction and cone angle <sup><a href="#SpotLight">6</a></sup>.</li>
+  <li>Directional light presented a global light that would affect the scene uniformly at an infinite distance. This was applied during the final full-screen pass, as it doesn’t depend on the light distance to an object <sup><a href="#DirectionalLight">7</a></sup>.</li>
+</ul>
+
+<p>While physically based accurate models such as inverse-square falloff are commonly used in 3D rendering <sup><a href="#RealTimeRendering">1</a></sup>, this was not needed in our 2D engine due to performance and visual considerations. Inverse-square falloff causes light intensity to decrease rapidly as the distance increases, this method produces more realistic lighting behaviour based on physical light attenuation. However, in our 2D engine, this causes lights to become visually ineffective at short distances and reduces readability within the scene. Instead, a simplified linear-style falloff approximation was used, which provided more consistent brightness and artistic control while remaining computationally inexpensive.</p>
+
+<h3 id="light-parameters">Light Parameters</h3>
+<p>The lighting system was designed with a simplified set of parameters, inspired by those used in game engines such as Unity <sup><a href="#UnityLightProperties">8</a></sup>. These include light position, light direction, light colour, light enabled, light type, light radius and light intensity. These are all used one way or another through the different light types and allow the user to customise how they want to.</p>
+
+<h3 id="limitations">Limitations</h3>
+<p>The current implementation introduced additional performance costs due to using multiple rendering passes, particularly as the lights increased. This reflects a known trade-off in real-time rendering, where increased visual quality often comes with an addition of performance <sup><a href="#RealTimeRendering">1</a></sup>. Additionally, blending between lights and shadows passes required blend states <sup><a href="#BlendState">9</a></sup>, and incorrect configuration would lead to visual artefacts.</p>
+
+<h3 id="reflection">Reflection</h3>
+<p>Moving from object-based lighting to multi-pass rendering improved how lighting was implemented. Since now lighting consistently is applied across the scene and supports multiple light types. However, this did increase complexity and added performance costs.</p>
+
+<p>The interaction between lighting and shadows was equally important, as inaccuracies in lighting affect shadow accuracy, which highlights the need for both systems to be closely integrated. The current implementation is a solid base for our 2D engine, with clear areas for improvement in shadow creation, depth-aware occlusion and physically accurate soft shadow approximation. In particular the current implementation of shadows renders them individually from the scene depth during the final pass, which results in inaccurate overlap with the scene geometry. Additionally, soft shadows rely on approximation techniques rather than physically based sampling, limiting the realism of the scene despite improved visual quality.</p>
+
+<h2 id="shadows">Shadows</h2>
+<h3 id="introduction-1">Introduction</h3>
+<p>This section will show how silhouette edge extrusion, a geometric technique, was used for creating shadows from the object edges. To do the shadows, it was done primarily through Scott Lembcke <sup><a href="#HardShadows">10</a></sup> <sup><a href="#SoftShadows">11</a></sup>, who demonstrates an efficient method in generating hard shadows and soft shadows using edge projection. This method prioritises the performance of geometric solutions over more complex physically based approaches. It can be seen in industry practices, where real-time systems often try to balance the visual fidelity against the computational cost that comes from working with shadows <sup><a href="#CastingShadows">12</a></sup>.</p>
+
+<h3 id="pipeline">Pipeline</h3>
+<p>The shadow generation is done first on the CPU, where object geometry is transformed into world space and tested to see if it is the silhouette edge. This involved testing each edge against the light source using the cross product. Then on the GPU it would get extruded on the vertex shader, and using different variations of calculations on the pixel shader would output the shadow.</p>
+
+<p><a href="../Resources/Images/ShadowCPUToGPU.png"><img src="../Resources/Images/ShadowCPUToGPU.png" width="200" /></a></p>
+
+<h3 id="implementaion">Implementaion</h3>
+<h4 id="silhouette-edge-detection">Silhouette Edge Detection</h4>
+<p>A silhouette edge would be identified through the cross product before being sent to the constant buffer:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Uses cross product to see if its facing the light</span>
+<span class="kt">float</span> <span class="n">crossProduct</span> <span class="o">=</span> <span class="p">(</span><span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeB</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeA</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">lightPos</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeA</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeB</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeA</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">lightPos</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">worldHardShadows</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">EdgeA</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">crossProduct</span> <span class="o">&gt;=</span> <span class="mf">0.0001</span><span class="n">f</span><span class="p">)</span> <span class="c1">// Has a bias</span>
+<span class="p">{</span>
+    <span class="c1">// Build up the shadow</span>
+    <span class="c1">// Send shadow to constant buffer</span>
+    <span class="c1">// Draw</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>If the edge is facing away from the light, then it would be sent through to create the shadow. This is similar to what Scott Lembcke <sup><a href="#HardShadows">10</a></sup> does for his geometric extrusion method and avoids the need for normal calculations, improving the efficiency.</p>
+
+<h4 id="shadow-extrusion">Shadow Extrusion</h4>
+<p>Once the silhouette edge is identified, they are extruded from the light source (light position) to form the shadow geometry:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">float3</span> <span class="n">finalPos</span> <span class="o">=</span> <span class="n">edgePoint</span> <span class="o">+</span> <span class="n">direction</span> <span class="o">*</span> <span class="n">input</span><span class="p">.</span><span class="n">TexCoord</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="n">f</span><span class="p">;</span>
+</code></pre></div></div>
+<p>This produces a quad for each silhouette edge, efficiently approximating a 2D shadow volume through geometric extrusion. However, the current implementation uses a finite extrusion distance, and this tends to cause visible artefacts when the objects are too close to the light source.</p>
+
+<p>A better solution to this would involve using infinite projection through homogeneous coordinates, a technique discussed by Scott Lembcke <sup><a href="#HardShadows">10</a></sup> and in the shadow volume literature <sup><a href="#CastingShadows">12</a></sup>. The current implementation uses a fixed extrusion distance, meaning that the shadows won’t render after a certain length. This can produce visual artefacts if the objects are positioned too close to the light source or when the extrusion distance becomes insufficient for the scene.</p>
+
+<p>Using homogeneous coordinates allows shadow geometry to be projected infinitely by manipulating the clip space w component during the initial vertex transformations. This would prevent visible shadow termination and produce more stable shadows without requiring a large extrusion distance. However, this was not implemented due to an increase in mathematical complexity involved in correctly integrating infinite projection while also accounting for the project time constraints.</p>
+
+<h3 id="shadow-models">Shadow Models</h3>
+<p>To evaluate visual and performance trade-offs for the engine, four shadow models were implemented:</p>
+<details>
+<summary>View shadow preview (Can click pictures)</summary>
+
+| Shadow Type    | Preview                                          | Analysis | 
+|----------------|--------------------------------------------------|----------|
+| Hard Shadows   | <a href="../Resources/Images/SM_HardShadow.png"><img src="../Resources/Images/SM_HardShadow.png" width="200" /></a> | Solid black silhouettes are fast to do computationally but unrealistic for most scenarios. | 
+| Hard Shadows + | <a href="../Resources/Images/SM_HardShadowPlus.png"><img src="../Resources/Images/SM_HardShadowPlus.png" width="200" /></a> | Improves upon the previous version by adding a fake gradient but still only achieves limited realism since it's an approximation. | 
+| Soft Shadows   | <a href="../Resources/Images/SM_SoftShadow.png"><img src="../Resources/Images/SM_SoftShadow.png" width="200" /></a> | This offers more realistic shadows and accounts for the light radius, while also having two different versions. | 
+| Soft Shadows + | <a href="../Resources/Images/SM_SoftShadowPlus.png"><img src="../Resources/Images/SM_SoftShadowPlus.png" width="200" /></a> | An attempt at achieving soft shadows and the most accurate one to the blog, but due to depth testing failing, it doesn't look as good as intended. |
+</details>
+
+<p>These variations are set in the engine as different types to highlight a key challenge when it comes to real-time rendering, which is achieving visually convincing soft shadows without significant computational overhead. As seen in academic and industry research, soft shadows require approximation techniques due to their complexity <sup><a href="#CastingShadows">12</a></sup> <sup><a href="#AccurateApproximation">13</a></sup>.</p>
+
+<h3 id="limitations-and-future-work">Limitations and Future Work</h3>
+<p>While the created shadow system worked efficiently for hard shadows, several limitations were identified for soft shadows:</p>
+<ul>
+  <li>Finite extrusion distance results in inaccurate shadows near the light source.</li>
+  <li>Convex geometry is not applicable due to a focus on simple shapes like a quad.</li>
+  <li>The shadows currently don’t support depth-based occlusion and are composited in the final full-screen pass without scene depth comparison. As a result, shadows always render over scene geometry regardless of spatial relationships.</li>
+  <li>While soft shadow artefacts are mostly fixed, the method for it mostly relies on approximations rather than physical accuracy.</li>
+</ul>
+
+<p>These limitations reflect challenges in real-time shadow rendering. In particular, achieving realistic soft shadows requires more advanced techniques, such as multiple sampling or screen space filtering <sup><a href="#AccurateApproximation">13</a></sup>.</p>
+
+<p>Future work would focus on:</p>
+<ul>
+  <li>Implementing infinite projection using homogeneous coordinates to remove shadow clipping artefacts.</li>
+  <li>Supporting convex geometry for more complex shadow casters.</li>
+  <li>Improving depth-tested occlusion so shadows interact correctly with scene geometry.</li>
+</ul>
+
+<h3 id="reflection-1">Reflection</h3>
+<p>The implementation shows how geometric shadow extrusion is efficient for our 2D engine. The method demonstrates results that scale well with simple scenes, making it suitable for stylised games <sup><a href="#HardShadows">10</a></sup>. However, attempts at doing soft shadows revealed fundamental limitations of approximation-based systems. While geometric methods are efficient, they lack the flexibility to accurate physical model lights <sup><a href="#SoftShadows">11</a></sup>. Additions like light radius, while not the original intention of soft shadows, were added as the team preferred the improved visual appearance of it, demonstrating that artistic direction takes priority over physical correctness.</p>
+
+<p>A key limitation was identified due to lack of depth testing for occlusion, where shadows are always rendered over the scene in the final draw pass. This highlights the limitation in the rendering pipeline more than the shadows themselves <sup><a href="#CastingShadows">12</a></sup>. Future improvements could look at exploring hybrid techniques that integrate geometric and screen space methods, which are more common to modern rendering practices. As noted in real-time shadow research <sup><a href="#CastingShadows">12</a></sup>, no single shadow algorithm is able to efficiently handle all lighting scenarios. Requiring a need for hybrid methods to balance quality and performance.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>This project implemented both a 2D lighting and shadow system, exploring different methods to lighting and geometric-based shadows for real-time rendering. The lighting system allowed visual control but introduced additional complexity in blending and performance. While the shadow system demonstrated that silhouette edge extrusion is an efficient method for generating hard shadows, it struggles to scale with more realistic soft shadow models. The interaction between the engine lighting and shadow systems was important due to lighting impacting how shadows correctly work.</p>
+
+<p>Together, these systems highlight a fundamental challenge within real-time rendering, which is balancing performance, visual fidelity and implementation complexity. While the current implementation achieves a goal for simple and styled rendering, future work should focus on integrating more advanced techniques. Such as hybrid shadow methods and improved light-to-shadow interaction. Overall, this project gave a strong foundation for future development and reflects modern rendering practices seen in industry applications and academic research.</p>
+
+<h2 id="references">References:</h2>
+<p><a id="RealTimeRendering">1</a>: Akenine-Moller, T. et al. (2018) Real-time rendering. Fourth edition. Boca Raton: CRC Press.</p>
+
+<p><a id="GodotRenderingPasses">2</a>: Godot Engine documentation. (n.d.). 2D lights and shadows. [online] Available at: https://docs.godotengine.org/en/stable/tutorials/2d/2d_lights_and_shadows.html.</p>
+
+<p><a id="FullscreenOptimisation">3</a>: Blog, C.G. (2021). Optimizing Triangles for a Full-screen Pass. [online] Chris’ Graphics Blog. Available at: https://wallisc.github.io/rendering/2021/04/18/Fullscreen-Pass.html.</p>
+
+<p><a id="GDCTriangle">4</a>: Gdcvault.com. (2026). Advanced Visual Effects with DirectX 11: Vertex Shader Tricks - New Ways to Use the Vertex Shader to Improve Performance. [online] Available at: https://gdcvault.com/play/1020624/Advanced-Visual-Effects-with-DirectX.</p>
+
+<p><a id="UnityLightTypes">5</a>: Unity Technologies (2018). Types of light - Unity Manual. [online] Unity3d.com. Available at: https://docs.unity3d.com/kr/2018.3/Manual/Lighting.html.</p>
+
+<p><a id="SpotLight">6</a>: www.braynzarsoft.net. (n.d.). 21. Spotlights - Braynzar Soft. [online] Available at: https://www.braynzarsoft.net/viewtutorial/q16390-21-spotlights.</p>
+
+<p><a id="DirectionalLight">7</a>: Educative: Interactive Courses for Software Developers. (n.d.). What is Lambert’s cosine law? [online] Available at: https://www.educative.io/answers/what-is-lamberts-cosine-law.</p>
+
+<p><a id="UnityLightProperties">8</a>: Unity Technologies (2018). Types of light - Unity Manual. [online] Unity3d.com. Available at: https://docs.unity3d.com/kr/2018.3/Manual/Lighting.html.</p>
+
+<p><a id="BlendState">9</a>: stevewhims (2024). D3D11_BLEND_DESC (d3d11.h) - Win32 apps. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/windows/win32/api/d3d11/ns-d3d11-d3d11_blend_desc.</p>
+
+<p><a id="HardShadows">10</a>: slembcke.net. (2021). 2D Lighting with Hard Shadows. [online] Available at: https://www.slembcke.net/blog/SuperFastHardShadows/.</p>
+
+<p><a id="SoftShadows">11</a>: slembcke.net. (2021). 2D Lighting with Soft Shadows. [online] Available at: https://www.slembcke.net/blog/SuperFastSoftShadows/.</p>
+
+<p><a id="CastingShadows">12</a>: Elmar Eisemann, Ulf Assarsson, Michael Schwarz, and Michael Wimmer. 2009. Casting Shadows in Real Time. In ACM SIGGRAPH ASIA 2009 Courses (SIGGRAPH ASIA ‘09). Association for Computing Machinery, New York, NY, USA, Article 21.</p>
+
+<p><a id="AccurateApproximation">13</a>: Zerari, A.E.M., Azri, N., Meadi, M.N., Babahenini, M.C. (2023). Accurate approximation of soft shadows for real-time rendering. Revue d’Intelligence Artificielle, Vol. 37, No. 6, pp. 1493-1502.</p>
+
+<p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>

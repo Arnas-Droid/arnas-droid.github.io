@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DirectX 11 Rendering Implementation | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="DirectX 11 Rendering Implementation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio" />
+<meta property="og:description" content="Portfolio" />
+<link rel="canonical" href="http://localhost:4000/assets/GelosEngine/Documentation/DirectX11Implementation.html" />
+<meta property="og:url" content="http://localhost:4000/assets/GelosEngine/Documentation/DirectX11Implementation.html" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DirectX 11 Rendering Implementation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Portfolio","headline":"DirectX 11 Rendering Implementation","url":"http://localhost:4000/assets/GelosEngine/Documentation/DirectX11Implementation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="directx-11-rendering-implementation">DirectX 11 Rendering Implementation</h1>
+<p><strong>Author:</strong> Arnas</p>
+<h2 id="introduction">Introduction</h2>
+<p>This section goes into the implementation of the DirectX 11 rendering backend and explains its use within the engine as the primary development renderer. The overall abstraction of the renderer was designed by another team member using a polymorphic base renderer and integrated the DirectX 11 renderer that I created into that system. The renderer architecture allows for different graphics backends to be implemented, like the PS5 (Prospero) and the web port (OpenGL 3/Emscripten). Within this, it allows different graphics APIs to maintain their own platform-specific implementations while sharing a common rendering interface.</p>
+
+<h2 id="initialisation-error-handling-and-debugging">Initialisation, Error Handling and Debugging</h2>
+<p>The implementation of DirectX 11 has several initialisations happening at the start of the program, like the device, device context, swap chain, buffers and other necessities. These are done through several separate functions that are called in sequence. However, exposing these functions introduces risks of incorrect usage if they fail. A more robust design is calling it all within a single initialisation function that correctly calls the order and reduces the chances of failure. This can be seen as the limitation of the current implementation and can be seen being discussed in common engine design practices <sup><a href="#Architecture">1</a></sup>.</p>
+
+<p>Error handling is done through HRESULT values following the function name. While this is good for the debugging stages of the engine, it does expose API-specific details outside of the renderer and assumes that the individual knows DirectX error codes <sup><a href="#ErrorHandling">2</a></sup>. A better approach to this would be through converting these into engine-level error handling, such as booleans to return within a log system to maintain abstraction and help with usability. Debugging within the renderer is handled through simple message box outputs <sup><a href="#MessageBox">3</a></sup>. While this is good at identifying failures during the development of the engine, it is not scalable. A more robust design would integrate HRESULT into a dedicated engine logging system rather than relying on message boxes.</p>
+
+<h2 id="device-configuration-and-buffer-managment">Device Configuration and Buffer Managment</h2>
+<p>The renderer prioritises hardware drivers as the main configuration for performance, with fallback support to the Windows Advanced Rasterisation Platform (WARP), a software-based implementation of DirectX, if the hardware implementation is unavailable <sup><a href="#DriverConfiguration">4</a></sup>.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D3D_DRIVER_TYPE</span> <span class="n">driverTypes</span><span class="p">[]</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="n">D3D_DRIVER_TYPE_HARDWARE</span><span class="p">,</span>
+    <span class="n">D3D_DRIVER_TYPE_WARP</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Feature levels are configured to support Shader Model 5, this is done to allow modern rendering functionality like advanced lighting and flexible shader behaviour <sup><a href="#ShaderModel">5</a></sup>. Furthermore, the renderer attempts to create the highest support feature level before falling back to lower supported versions.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D3D_FEATURE_LEVEL</span> <span class="n">featureLevels</span><span class="p">[]</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="n">D3D_FEATURE_LEVEL_11_1</span><span class="p">,</span>
+    <span class="n">D3D_FEATURE_LEVEL_11_0</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>The swap chain is responsible for presenting rendered frames and managing back buffer resources, and the creation depends on the device to ensure compatibility. An attempt at dynamic buffer resizing was attempted, like handling resolution/window size changes <sup><a href="#SwapchainResize">6</a></sup>. However, due to time constraints, this feature wasn’t fully completed. Despite that, it does highlight how necessary it is to have in rendering systems since a proper swap chain resize is required to support window resizing and different resolutions.</p>
+
+<p>During buffer and their description initialisation, memory was cleared through ZeroMemory to ensure that fields were set to known default states before assignment. This prevented undefined behaviour caused by uninitialised data when creating DirectX resources <sup><a href="#ZeroMemory">7</a></sup>. However, this legacy C-style memory handling was later improved to do C++ value initialisation.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D3D11_BUFFER_DESC</span> <span class="n">constantBufferDesc</span> <span class="o">=</span> <span class="p">{};</span>
+</code></pre></div></div>
+<p>This does the same result while improving readability and type safety, as value initialisation ensures the buffers are set to well-defined states and reduces risks of uninitialised data <sup><a href="#ValueInitialisation">8</a></sup>. It also reduces the errors that occur when manually clearing memory.</p>
+
+<h2 id="reflection">Reflection</h2>
+<p>Since DirectX 11 was integrated into the engine through an abstracted renderer design. It could allow other rendering implementations like PS5 and web rendering backends while sharing a common interface. However, upon completion, a number of limitations were discovered. Dynamic swap chain resizing was not present, error handling revealed specific DirectX information outside of the renderer, and initialisation ordering was not completely contained. Furthermore, rather than an engine logging system, a number of debugging implementations were done, like message boxes. Despite the limitations, the implementation is a strong foundation for understanding rendering pipeline setup, GPU resource management, and backend integration within a low-level engine.</p>
+
+<h2 id="references">References</h2>
+<p><a id="Architecture">1</a>: Gregory, J. (2018). Game Engine Architecture, Third Edition. CRC Press.</p>
+
+<p><a id="ErrorHandling">2</a>: stevewhims (2021). Error Handling in COM (Get Started with Win32 and C++) - Win32 apps. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/windows/win32/learnwin32/error-handling-in-com.</p>
+
+<p><a id="MessageBox">3</a>: jwmsft (2023). MessageBoxW function (winuser.h) - Win32 apps. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messageboxw.</p>
+
+<p><a id="DriverConfiguration">4</a>: stevewhims (2024). D3D_DRIVER_TYPE (d3dcommon.h) - Win32 apps. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/windows/win32/api/d3dcommon/ne-d3dcommon-d3d_driver_type.</p>
+
+<p><a id="ShaderModel">5</a>: stevewhims (2020). Shader Model 5 - Win32 apps. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/d3d11-graphics-reference-sm5.</p>
+
+<p><a id="SwapchainResize">6</a>: Anti049 (2014). Change resolution in DirectX 11. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/27301550/change-resolution-in-directx-11.</p>
+
+<p><a id="ZeroMemory">7</a>: Microsoft.com. (2018). ZeroMemory macro (Windows). [online] Available at: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa366920(v=vs.85).</p>
+
+<p><a id="ValueInitialisation">8</a>: Anon, (n.d.). Available at: https://en.cppreference.com/cpp/language/value_initialization.</p>
+
+<p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>
