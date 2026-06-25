@@ -22,7 +22,7 @@ cd C:\Users\apuid\emsdk
 ```
 ### University
 ```bash
-cd C:\Users\p012089n\emsdk
+cd C:\Users\username\emsdk
 ```
 ### Activate Enviroment
 ```bash
@@ -40,7 +40,7 @@ cd "C:\Users\apuid\Documents\GitHub\gdev60020-25-cross-platform-framework-this-t
 ```
 ### University
 ```bash
-cd "C:\Users\p012089n\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+cd "C:\Users\username\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
 ```
 
 ## 4. Basic Builds

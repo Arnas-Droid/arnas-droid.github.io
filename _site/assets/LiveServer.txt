@@ -1,0 +1,25 @@
+1. Install Ruby
+I choose "Ruby+Devkit 3.2.11-1 (x64)" since it matched my jekyll version
+Once downloaded install everything from MSYS2 development toolchain
+
+2. Verify everthing is good in command prompt
+ruby -v
+gem -v
+bundle -v
+
+3. Create a gemfile if it doesn't exist (no extension)
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+
+4. Install jekyll
+bundle install
+
+5. Once everything works start local server
+cd C:\Users\apuid\Documents\GitHub\Portfolio
+bundle exec jekyll serve
+
+http://127.0.0.1:4000
+
+Note: This hasn't been tested apart from my personal workstation and some file path won't match your needs.

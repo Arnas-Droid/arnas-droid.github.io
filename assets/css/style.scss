@@ -227,7 +227,7 @@ p.view, small, .tags, .date{
 .tech-title {
   text-align: left;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   color: #b5e853;
   letter-spacing: 1px;
 }
@@ -397,123 +397,7 @@ p.view, small, .tags, .date{
   }
 }
 
-/* Hero card */
-.hero-card {
-  position: relative;
-  overflow: hidden;
-  height: auto; 
-  width: 100%;
-  border-radius: 16px;
-  min-height: 0; 
-}
 
-.hero-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 45%,
-    rgba(0,0,0,0.2) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.hero-content {
-  width: min(650px, 90vw);
-  margin-left: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0;;
-}
-
-.hero-badge {
-  display: inline-block;
-  font-size: 12px;
-  letter-spacing: 2px;
-  padding: 6px 10px;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-  width: fit-content;
-}
-
-.hero-title {
-  font-size: 144px;
-  margin: 0;
-}
-
-.hero-subtitle {
-  font-size: 20px;
-  font-weight: 300;
-  margin: 3px 0 6px;
-  color: #cccccc;
-}
-
-.hero-desc {
-  max-width: 520px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #dddddd;
-  margin-bottom: 20px;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.hero-tags span {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
-  width: fit-content;
-  transition: 0.2s ease;
-}
-
-.hero-button:hover {
-  transform: translateY(-2px);
-  background: #eaeaea;
-}
 
 .featured-section {
   max-width: 1300px;
@@ -645,3 +529,126 @@ p.view, small, .tags, .date{
 .dropdown-content a:hover {
     background: rgba(0, 255, 65, 0.1);
 }
+
+
+/* Hero card */
+/* Front page project */
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  height: auto; 
+  width: 100%;
+  border-radius: 16px;
+  min-height: 0; 
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.55) 45%,
+    rgba(0,0,0,0.2) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  width: min(650px, 90vw);
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.hero-title {
+  font-size: 144px;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 3px 0 6px;
+  color: #cccccc;
+}
+
+.hero-desc {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.hero-tags span {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+  transition: 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  background: #eaeaea;
+}
+
+/* Hero card */
+/* Front page project */

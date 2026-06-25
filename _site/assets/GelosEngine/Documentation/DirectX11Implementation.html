@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0acb00bb92139e7ff0c9bef20276c665b4a68349">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup theme-color -->
@@ -55,9 +55,8 @@
 
         <section id="downloads">
           <a href="/" class="btn">🏠 Home</a>
-          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
           <a href="/pages/projects.html" class="btn">📁 All Projects</a>
-          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
           <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
 
           <details class="social-dropdown">
@@ -74,7 +73,14 @@
 
     <div class="container">
       <section id="main_content">
-        <h1 id="directx-11-rendering-implementation">DirectX 11 Rendering Implementation</h1>
+        <small></small>
+<h1>DirectX 11 Rendering Implementation</h1>
+
+<p class="view">by </p>
+
+
+
+<h1 id="directx-11-rendering-implementation">DirectX 11 Rendering Implementation</h1>
 <p><strong>Author:</strong> Arnas</p>
 <h2 id="introduction">Introduction</h2>
 <p>This section goes into the implementation of the DirectX 11 rendering backend and explains its use within the engine as the primary development renderer. The overall abstraction of the renderer was designed by another team member using a polymorphic base renderer and integrated the DirectX 11 renderer that I created into that system. The renderer architecture allows for different graphics backends to be implemented, like the PS5 (Prospero) and the web port (OpenGL 3/Emscripten). Within this, it allows different graphics APIs to maintain their own platform-specific implementations while sharing a common rendering interface.</p>
@@ -128,6 +134,8 @@
 <p><a id="ValueInitialisation">8</a>: Anon, (n.d.). Available at: https://en.cppreference.com/cpp/language/value_initialization.</p>
 
 <p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+
 
       </section>
     </div>

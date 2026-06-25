@@ -40,18 +40,18 @@ emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp Tex
 python -m http.server
 
 5.2 University
-cd C:\Users\p012089n\emsdk
+cd C:\Users\username\emsdk
 emsdk_env.bat
 emcc --version
-cd "C:\Users\p012089n\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+cd "C:\Users\username\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
 emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp -o index.html -s USE_WEBGL2=1 -s FULL_ES3=1 -s ALLOW_MEMORY_GROWTH=1 -sASSERTIONS=2 --preload-file smile.png
 python -m http.server
 
 // Extra debugging (don't publish debug build)
 5.3 Debugging
-cd C:\Users\p012089n\emsdk
+cd C:\Users\username\emsdk
 emsdk_env.bat
 emcc --version
-cd "C:\Users\p012089n\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
+cd "C:\Users\username\Documents\GitHub\gdev60020-25-cross-platform-framework-this-team-is-an-xbox\CPED This Team is an Xbox\CPED This Team is an Xbox"
 emcc main.cpp GameEngine.cpp GameObject.cpp BaseRenderer.cpp WebRenderer.cpp RendererTypes_web.cpp -o index.html -sASSERTIONS=2 -sSAFE_HEAP=1 -sSTACK_OVERFLOW_CHECK=2 -gsource-map --preload-file smile.png
 python -m http.server

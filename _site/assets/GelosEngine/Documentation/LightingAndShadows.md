@@ -37,7 +37,11 @@ This section will show how silhouette edge extrusion, a geometric technique, was
 ### Pipeline
 The shadow generation is done first on the CPU, where object geometry is transformed into world space and tested to see if it is the silhouette edge. This involved testing each edge against the light source using the cross product. Then on the GPU it would get extruded on the vertex shader, and using different variations of calculations on the pixel shader would output the shadow.
 
-<a href="../Resources/Images/ShadowCPUToGPU.png"><img src="../Resources/Images/ShadowCPUToGPU.png" width="200"></a>
+<p align="center">
+    <a href="../Resources/Images/ShadowCPUToGPU.png"><img src="../Resources/Images/ShadowCPUToGPU.png" width="200"></a>
+    <br>
+    <em>Figure 1: Shows shadow pipeline structure (Figure is clickable).</em>
+</p>
 
 ### Implementaion
 #### Silhouette Edge Detection
@@ -68,8 +72,6 @@ Using homogeneous coordinates allows shadow geometry to be projected infinitely 
 
 ### Shadow Models
 To evaluate visual and performance trade-offs for the engine, four shadow models were implemented:
-<details>
-<summary>View shadow preview (Can click pictures)</summary>
 
 | Shadow Type    | Preview                                          | Analysis | 
 |----------------|--------------------------------------------------|----------|
@@ -77,7 +79,6 @@ To evaluate visual and performance trade-offs for the engine, four shadow models
 | Hard Shadows + | <a href="../Resources/Images/SM_HardShadowPlus.png"><img src="../Resources/Images/SM_HardShadowPlus.png" width="200"></a> | Improves upon the previous version by adding a fake gradient but still only achieves limited realism since it's an approximation. | 
 | Soft Shadows   | <a href="../Resources/Images/SM_SoftShadow.png"><img src="../Resources/Images/SM_SoftShadow.png" width="200"></a> | This offers more realistic shadows and accounts for the light radius, while also having two different versions. | 
 | Soft Shadows + | <a href="../Resources/Images/SM_SoftShadowPlus.png"><img src="../Resources/Images/SM_SoftShadowPlus.png" width="200"></a> | An attempt at achieving soft shadows and the most accurate one to the blog, but due to depth testing failing, it doesn't look as good as intended. |
-</details>
 
 These variations are set in the engine as different types to highlight a key challenge when it comes to real-time rendering, which is achieving visually convincing soft shadows without significant computational overhead. As seen in academic and industry research, soft shadows require approximation techniques due to their complexity <sup>[12](#CastingShadows)</sup> <sup>[13](#AccurateApproximation)</sup>.
 

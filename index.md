@@ -9,7 +9,7 @@ title: Home
 <div class="hero-card">
   <!-- Background image -->
   <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
-    <img src="{{ '/assets/Hyperion/HyperionVolumetricFog.png' | relative_url }}" alt="Hyperion Fog">
+    <img src="{{ '/assets/Hyperion/VolumetricFogClear.png' | relative_url }}" alt="Hyperion Fog">
   </a>
   <!-- Overlay -->
   <div class="hero-overlay">
@@ -17,7 +17,7 @@ title: Home
       <div class="hero-badge">⭐ BEST PROJECT</div>
       <h2 class="hero-title">Hyperion</h2>
       <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-      <p class="hero-desc">A rebuilt real-time volumetric lighting system that features engine architecture and volume-bound volumetric lighting for light scattering effects like volumetric fog.</p>
+      <p class="hero-desc">A custom real-time volumetric lighting system focused on volume-bound volumetric fog, light scattering, and modern architecture in DirectX 11/12.</p>
       <div class="hero-tags">
         <span>C++</span>
         <span>DirectX 11 / 12</span>

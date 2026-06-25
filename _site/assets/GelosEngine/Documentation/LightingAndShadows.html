@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0acb00bb92139e7ff0c9bef20276c665b4a68349">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup theme-color -->
@@ -55,9 +55,8 @@
 
         <section id="downloads">
           <a href="/" class="btn">🏠 Home</a>
-          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
           <a href="/pages/projects.html" class="btn">📁 All Projects</a>
-          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
           <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
 
           <details class="social-dropdown">
@@ -74,7 +73,14 @@
 
     <div class="container">
       <section id="main_content">
-        <h1 id="lighting-and-shadows">Lighting and Shadows</h1>
+        <small></small>
+<h1>Lighting and Shadows</h1>
+
+<p class="view">by </p>
+
+
+
+<h1 id="lighting-and-shadows">Lighting and Shadows</h1>
 <p><strong>Author:</strong> Arnas</p>
 <h2 id="lighting">Lighting</h2>
 <h3 id="introduction">Introduction</h3>
@@ -115,7 +121,11 @@
 <h3 id="pipeline">Pipeline</h3>
 <p>The shadow generation is done first on the CPU, where object geometry is transformed into world space and tested to see if it is the silhouette edge. This involved testing each edge against the light source using the cross product. Then on the GPU it would get extruded on the vertex shader, and using different variations of calculations on the pixel shader would output the shadow.</p>
 
-<p><a href="../Resources/Images/ShadowCPUToGPU.png"><img src="../Resources/Images/ShadowCPUToGPU.png" width="200" /></a></p>
+<p align="center">
+    <a href="../Resources/Images/ShadowCPUToGPU.png"><img src="../Resources/Images/ShadowCPUToGPU.png" width="200" /></a>
+    <br />
+    <em>Figure 1: Shows shadow pipeline structure (Figure is clickable).</em>
+</p>
 
 <h3 id="implementaion">Implementaion</h3>
 <h4 id="silhouette-edge-detection">Silhouette Edge Detection</h4>
@@ -144,16 +154,38 @@
 
 <h3 id="shadow-models">Shadow Models</h3>
 <p>To evaluate visual and performance trade-offs for the engine, four shadow models were implemented:</p>
-<details>
-<summary>View shadow preview (Can click pictures)</summary>
 
-| Shadow Type    | Preview                                          | Analysis | 
-|----------------|--------------------------------------------------|----------|
-| Hard Shadows   | <a href="../Resources/Images/SM_HardShadow.png"><img src="../Resources/Images/SM_HardShadow.png" width="200" /></a> | Solid black silhouettes are fast to do computationally but unrealistic for most scenarios. | 
-| Hard Shadows + | <a href="../Resources/Images/SM_HardShadowPlus.png"><img src="../Resources/Images/SM_HardShadowPlus.png" width="200" /></a> | Improves upon the previous version by adding a fake gradient but still only achieves limited realism since it's an approximation. | 
-| Soft Shadows   | <a href="../Resources/Images/SM_SoftShadow.png"><img src="../Resources/Images/SM_SoftShadow.png" width="200" /></a> | This offers more realistic shadows and accounts for the light radius, while also having two different versions. | 
-| Soft Shadows + | <a href="../Resources/Images/SM_SoftShadowPlus.png"><img src="../Resources/Images/SM_SoftShadowPlus.png" width="200" /></a> | An attempt at achieving soft shadows and the most accurate one to the blog, but due to depth testing failing, it doesn't look as good as intended. |
-</details>
+<table>
+  <thead>
+    <tr>
+      <th>Shadow Type</th>
+      <th>Preview</th>
+      <th>Analysis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hard Shadows</td>
+      <td><a href="../Resources/Images/SM_HardShadow.png"><img src="../Resources/Images/SM_HardShadow.png" width="200" /></a></td>
+      <td>Solid black silhouettes are fast to do computationally but unrealistic for most scenarios.</td>
+    </tr>
+    <tr>
+      <td>Hard Shadows +</td>
+      <td><a href="../Resources/Images/SM_HardShadowPlus.png"><img src="../Resources/Images/SM_HardShadowPlus.png" width="200" /></a></td>
+      <td>Improves upon the previous version by adding a fake gradient but still only achieves limited realism since it’s an approximation.</td>
+    </tr>
+    <tr>
+      <td>Soft Shadows</td>
+      <td><a href="../Resources/Images/SM_SoftShadow.png"><img src="../Resources/Images/SM_SoftShadow.png" width="200" /></a></td>
+      <td>This offers more realistic shadows and accounts for the light radius, while also having two different versions.</td>
+    </tr>
+    <tr>
+      <td>Soft Shadows +</td>
+      <td><a href="../Resources/Images/SM_SoftShadowPlus.png"><img src="../Resources/Images/SM_SoftShadowPlus.png" width="200" /></a></td>
+      <td>An attempt at achieving soft shadows and the most accurate one to the blog, but due to depth testing failing, it doesn’t look as good as intended.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>These variations are set in the engine as different types to highlight a key challenge when it comes to real-time rendering, which is achieving visually convincing soft shadows without significant computational overhead. As seen in academic and industry research, soft shadows require approximation techniques due to their complexity <sup><a href="#CastingShadows">12</a></sup> <sup><a href="#AccurateApproximation">13</a></sup>.</p>
 
@@ -213,6 +245,8 @@
 <p><a id="AccurateApproximation">13</a>: Zerari, A.E.M., Azri, N., Meadi, M.N., Babahenini, M.C. (2023). Accurate approximation of soft shadows for real-time rendering. Revue d’Intelligence Artificielle, Vol. 37, No. 6, pp. 1493-1502.</p>
 
 <p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+
 
       </section>
     </div>

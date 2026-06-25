@@ -7,14 +7,16 @@ layout: default
 
 <p class="view">by {{ page.author | default: site.author }}</p>
 
-{{content}}
-
 {% if page.tags %}
-  <small>
-    tags:
-    <em>{{ page.tags | join: "</em> - <em>" }}</em>
-  </small>
+  <div class="project-tags">
+    <small>Tags:</small>
+    {% for tag in page.tags %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
 {% endif %}
+
+{{content}}
 
 {% if page.slideshow %}
   <script src="/assets/js/slideshow.js"></script>

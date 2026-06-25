@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0acb00bb92139e7ff0c9bef20276c665b4a68349">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup theme-color -->
@@ -55,9 +55,8 @@
 
         <section id="downloads">
           <a href="/" class="btn">🏠 Home</a>
-          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
           <a href="/pages/projects.html" class="btn">📁 All Projects</a>
-          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
           <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
 
           <details class="social-dropdown">
@@ -74,7 +73,14 @@
 
     <div class="container">
       <section id="main_content">
-        <h1 id="texture-loader">Texture Loader</h1>
+        <small></small>
+<h1>Texture Loader</h1>
+
+<p class="view">by </p>
+
+
+
+<h1 id="texture-loader">Texture Loader</h1>
 <p><strong>Author:</strong> Arnas</p>
 <h2 id="research">Research</h2>
 <p>When creating the texture loader, there are a couple of good libraries that would work well when creating the sprites for the game objects. This includes DDSTextureLoader <sup><a href="#DDSTextureLoader">1</a></sup>, WICTextureLoader <sup><a href="#WICTextureLoader">2</a></sup>, and STB <sup><a href="#STB">3</a></sup>, based on their performance, format support and cross-platform development. DDSTextureLoader works well for the Windows side of the engine and game due to being compatible with DirectX. A key benefit is supporting textures stored in the GPU-ready formats such as block-compressed DDS files, meaning that the data from the textures can be uploaded to the GPU with minimal processing at runtime. This reduces overhead and improves performance. However, this relies on the DDS file format, which is closely integrated with DirectX, and while efficient, it introduces an additional need for asset conversion. This reduces cross-platform compatibility for non-Windows platforms or different graphic APIs.</p>
@@ -141,7 +147,8 @@
 <p><a id="STBExample">4</a>: ocornut (2023). Image Loading and Displaying Examples. [online] GitHub. Available at: https://github.com/ocornut/imgui/wiki/Image-Loading-and-Displaying-Examples/3fc5ed67ff0546b8119f534bbcd05fbedc355698.</p>
 
 <p><a id="MonoGameTexture2D">5</a>: 
-Monogame.net. (2026). Class Texture2D | MonoGame. [online] Available at: https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html#Microsoft_Xna_Framework_Graphics_Texture2D_FromStream_Microsoft_Xna_Framework_Graphics_GraphicsDevice_Stream_.</p>
+Monogame.net. (2026). Class Texture2D | MonoGame. [online] Available at: https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html#Microsoft_Xna
+<em>Framework_Graphics_Texture2D_FromStream_Microsoft_Xna_Framework_Graphics_GraphicsDevice_Stream</em>.</p>
 
 <p><a id="MonoGameSprite">6</a>: 
 Monogame.net. (2026). Chapter 08: The Sprite Class | MonoGame. [online] Available at: https://docs.monogame.net/articles/tutorials/building_2d_games/08_the_sprite_class/index.html.</p>
@@ -150,6 +157,8 @@ Monogame.net. (2026). Chapter 08: The Sprite Class | MonoGame. [online] Availabl
 Monogame.net. (2026). Drawing a Sprite | MonoGame. [online] Available at: https://docs.monogame.net/articles/getting_to_know/howto/graphics/HowTo_Draw_A_Sprite.html.</p>
 
 <p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+
 
       </section>
     </div>

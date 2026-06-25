@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=a3981c17085ba257520cbcfeb09756727e6b6dea">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0acb00bb92139e7ff0c9bef20276c665b4a68349">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup theme-color -->
@@ -55,9 +55,8 @@
 
         <section id="downloads">
           <a href="/" class="btn">🏠 Home</a>
-          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Projects</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
           <a href="/pages/projects.html" class="btn">📁 All Projects</a>
-          <a href="/assets/CV.pdf" class="btn" target="_blank">📄 CV</a>
           <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
 
           <details class="social-dropdown">
@@ -74,7 +73,14 @@
 
     <div class="container">
       <section id="main_content">
-        <h1 id="web-port-rendering-implementation">Web Port Rendering Implementation</h1>
+        <small></small>
+<h1>Web Port Rendering Implementation</h1>
+
+<p class="view">by </p>
+
+
+
+<h1 id="web-port-rendering-implementation">Web Port Rendering Implementation</h1>
 <p><strong>Author:</strong> Arnas</p>
 <h2 id="introduction">Introduction</h2>
 <p>This section will go over the implementation of the web rendering backend using Emscripten and WebGL 2. The goal was to integrate the web port into the engine rendering pipeline, enabling it to run inside the browser while maintaining similar rendering behaviour to the Windows implementation (base implementation). The renderer reused the engine’s abstracted layer already developed by another member for DirectX 11 and Prospero (PS5), allowing platform-specific behaviour to be implemented while still maintaining shared engine systems. Initially WebGPU was considered to be done through Google’s Dawn due to its modern graphic features and debugging support <a href="#DawnGoogle">1</a>&lt;/sup&gt;. However, due to time constraints and additional complexity that comes from integrating WebGPU into the existing engine, Emscripten and WebGL 2 were selected <a href="#Emscripten">2</a>&lt;/sup&gt;. This allowed the engine to be compiled in C++ for WebAssembly while still supporting programmable shaders and framebuffer operations through OpenGL ES.</p>
@@ -149,6 +155,8 @@
 <p><a id="WebCamera">9</a>: learnopengl.com. (n.d.). LearnOpenGL - Camera. [online] Available at: https://learnopengl.com/Getting-started/Camera.</p>
 
 <p><a href="/assets/GelosEngine/GraphicsOverview.html">&lt;- Back to Overview</a></p>
+
+
 
       </section>
     </div>
