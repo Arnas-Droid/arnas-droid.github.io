@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=f7fba1d05fa30addb334fb66cb6de9e6903cef82">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>My First Game Jam (Working on blog) | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="My First Game Jam (Working on blog)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Graphics Programmer Portfolio" />
+<meta property="og:description" content="Graphics Programmer Portfolio" />
+<link rel="canonical" href="http://localhost:4000/blogs/2026-07-14-MyFirstGameJam/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2026-07-14-MyFirstGameJam/" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-14T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="My First Game Jam (Working on blog)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-07-14T00:00:00+01:00","datePublished":"2026-07-14T00:00:00+01:00","description":"Graphics Programmer Portfolio","headline":"My First Game Jam (Working on blog)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2026-07-14-MyFirstGameJam/"},"url":"http://localhost:4000/blogs/2026-07-14-MyFirstGameJam/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Graphics Programmer Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+
+          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>14 July 2026</small>
+<h1>My First Game Jam (Working on blog)</h1>
+
+<p class="view">by </p>
+
+
+  <div class="blog">
+    <span class="date">Date Published: July 14, 2026</span>
+  </div>
+
+
+
+  <div class="project-tags">
+    <small>Tags:</small>
+    
+      <span>C#</span>
+    
+      <span>Arcade Gameplay</span>
+    
+      <span>Endless</span>
+    
+      <span>Unity</span>
+    
+  </div>
+
+
+<p>/* <a href="/blogs/" class="btn">📰 All Blogs</a> */</p>
+<h3 id="overview">Overview</h3>
+<p>While I have attempted at doing game jams before they never fully worked out and this was my first one where I was able to plan, implement and publish on time. Only finding about it the same day and with 5 hours to do it. Thankfully while I couldn’t plan too much, I was able to think of an idea while I was taking care of other responsibilities in the morning. An idea of a game where you dodge enemies while they attack the player isn’t unique fundamentally, but with limited time it worked perfectly at doing this specific game jam.</p>
+
+<h3 id="plans">Plans</h3>
+<p align="center">
+    <a href="Plans.png">
+        <img src="Plans.png" width="max" />
+    </a>
+    <br />
+    <em>Figure 1: Showing the initial plans with links to resources. (Figure is clickable).</em>
+</p>
+
+<h3 id="movement">Movement</h3>
+<p>Taking the list as priority, I needed to have movement done for both player and enemies. This isn’t a new concept but wanted to quickly look into possible options for 2D movement in Unity and while the input system would’ve been a better modern alternative, in the end I stuck with the classic of getting an inputs raw axis.  A guide by Stuart goes into a simple 2D movement system<sup><a href="#2DMovement">1</a></sup> and doesn’t seem any different from what I had done before.</p>
+
+<p>When it came to enemy movement since it was about targeting the player, the built in Vector2 function MoveTowards was perfect. This allowed the enemy position to move towards the player position using in game ticks and that was if the enemy wasn’t too close to the player. On the other hand, if they were then a coroutine called dash towards would start. Inside it was mostly the same with the enemy waiting a bit before dashing and dying, later improvements to this was changing colours and adding score upon death.</p>
+<p align="center">
+    <a href="EnemyMovement.png">
+        <img src="EnemyMovement.png" width="max" />
+    </a>
+    <br />
+    <em>Figure 2: Showing the enemy's update and logic for movement based decision. (Figure is clickable).</em>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" valign="middle" style="width: 40%;">
+      <a href="EnemyColours.png">
+        <img src="EnemyColours.png" style="width: 100%; max-height: 200px; object-fit: contain;" />
+      </a>
+    </td>
+    <td align="center" valign="middle" style="width: 60%;">
+      <a href="Enemy.gif">
+        <img src="Enemy.gif" style="width: 100%; max-height: 200px; object-fit: contain;" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <br />
+      <em>Figure 3: This is the enemy waiting and switching between colours. (Figure is clickable).</em>
+    </td>
+  </tr>
+</table>
+
+<h3 id="collisions">Collisions</h3>
+
+<h3 id="visuals">Visuals</h3>
+
+<h3>Entry</h3>
+<p>This was the summited entry I did for gamebridge 2026 game jam.</p>
+<iframe frameborder="0" src="https://itch.io/embed/4657786?bg_color=505050&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=505050" width="552" height="167"><a href="https://arnas-code.itch.io/endless-dodge">Endless Dodge by Arnas-Code</a></iframe>
+
+<h3 id="references">References</h3>
+<p><a id="2DMovement">1</a>: Stuart’s Pixel Games. (2018). How To Do 2D Top-Down Movement – Unity C#. [online] Available at: https://stuartspixelgames.com/2018/06/24/simple-2d-top-down-movement-unity-c/.</p>
+
+      </section>
+    </div>
+  </body>
+</html>
