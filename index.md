@@ -98,7 +98,7 @@ title: Home
   <div class="project-grid featured-grid">
       <!-- Endless Dodge -->
     <div class="project-card">
-      <a href="{{ '/pages/GameJams/endlessDodge.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
+      <a href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
       <div class="project-info">
         <h2>Endless Dodge</h2>
         <p>This was a game developed in 5 hours for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack. The goal is to survive as long as possible.</p>
@@ -108,7 +108,8 @@ title: Home
           <span>Endless</span>
           <span>Unity</span>
         </div>
-        <a class="hero-button" href="{{ '/pages/GameJams/endlessDodge.html' |  relative_url }}">View Project</a>
+        <a class="hero-button" href="https://arnas-code.itch.io/endless-dodge">View Game</a>
+        <a class="hero-button" href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' |  relative_url }}">View Blog</a>
       </div>
     </div>
   </div>
