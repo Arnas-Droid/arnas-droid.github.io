@@ -82,7 +82,7 @@ slideshow: true
 <!-- Overview -->
 <section class="project-content">
   <h3>Overview</h3>
-  <p>Originally this project was my final year project, which looked at creating realistic and optimised volumetric lighting/fog. However, at the time, due to many hurdles, it couldn't be completed to the expected standard. Since finishing university I have rebuilt the artefact from the ground up, taking a step up at the time from archiecture of the framework, object loder, texture manager and more. Once that was set up volumetric lighting from reimplmented from the previous work, with improvements and the best version being volume bound volumetric lighting. This allows effects like volumetric fog, "particles" and more to appear.</p>
+  <p>This project looks at creating realistic and optimised volumetric lighting/fog. Fully built up from the ground up from the architecture of the framework, object loader, texture manager and much more. Works best with volume-bound volumetric lighting, which allows cities to be encased in volumetric fog and particle lights in a showroom. Currently looking into compute shaders.</p>
 </section>
 
 <!-- Next Steps -->
