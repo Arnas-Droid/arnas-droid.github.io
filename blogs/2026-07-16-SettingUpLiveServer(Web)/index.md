@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Setting up Live Server (Web)"
-date: ????/??/??
+date: 2026/07/16
 tags:
   - C#
   - Arcade Gameplay
