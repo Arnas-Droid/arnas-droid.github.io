@@ -67,7 +67,7 @@ title: "Projects"
   </div>
     <!-- Real-time Graphics --> 
   <div class="project-card">
-    <a href="{{ '/pages/witchForest.html' | relative_url }}"><img src="{{ '/assets/Witch/WitchForestMain.png' | relative_url }}" alt="Witch Forest"></a>
+    <a href="{{ '/pages/WitchForest/index.html' | relative_url }}"><img src="{{ '/pages/WitchForest/MainScene(Wireframe).png' | relative_url }}" alt="Witch Forest"></a>
     <div class="project-info">
       <h2>Witch Forest</h2>
       <p>A real-time DirectX 11 graphics project that focused on custom shaders, lighting and a scene graph hierarchy for transforms.</p>
@@ -77,7 +77,7 @@ title: "Projects"
         <span>Graphics Programming</span>
         <span>Shaders</span>
       </div>
-      <a class="hero-button" href="{{ '/pages/witchForest.html' |  relative_url }}">View Project</a>
+      <a class="hero-button" href="{{ '/pages/WitchForest/index.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Bespoke (Evercade) -->
@@ -110,23 +110,9 @@ title: "Projects"
       <a class="hero-button" href="{{ '/pages/glut.html' |  relative_url }}">View Project</a>
     </div>
   </div>
-      <!-- Arcade -->
-  <div class="project-card">
-    <a href="{{ '/pages/arcade.html' | relative_url }}"><img src="{{ '/assets/Arcade/ArcadeGameplay.png' | relative_url }}" alt="Arcade Games"></a>
-    <div class="project-info">
-      <h2>Arcade Games</h2>
-      <p>A prototype project focused on mobile development that would have ad-free gameplay.</p>
-      <div class="project-tags">
-        <span>C#</span>
-        <span>Mobile</span>
-        <span>Unity</span>
-      </div>
-      <a class="hero-button" href="{{ '/pages/arcade.html' |  relative_url }}">View Project</a>
-    </div>
-  </div>
       <!-- Endless Dodge -->
   <div class="project-card">
-    <a href="{{ '/pages/GameJams/endlessDodge.html' | relative_url }}"><img src="{{ '/assets/GameJams/EndlessDodge/EndlessDodgeMenu.png' | relative_url }}" alt="Endless Dodge"></a>
+    <a href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' | relative_url }}"><img src="{{ '/blogs/2026-07-15-MyFirstGameJam/MainMenu.png' | relative_url }}" alt="Endless Dodge"></a>
     <div class="project-info">
       <h2>Endless Dodge</h2>
       <p>This was a game developed for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack.</p>
@@ -136,7 +122,16 @@ title: "Projects"
         <span>Endless</span>
         <span>Unity</span>
       </div>
-      <a class="hero-button" href="{{ '/pages/GameJams/endlessDodge.html' |  relative_url }}">View Project</a>
+      <table align="left">
+        <tr>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="https://arnas-code.itch.io/endless-dodge">View Game</a>
+          </td>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' |  relative_url }}">View Blog</a>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>
