@@ -56,7 +56,7 @@ title: Home
     </div>
       <!-- Low Level Optimisation  -->
     <div class="project-card">
-      <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
+      <a href="{{ '/pages/LowLevel/index.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
       <div class="project-info">
         <h2>Low Level Optimisation</h2>
         <p>A performance-focused project looking at low-level optimisations like memory management, multithreading and spatial partitioning.</p>
@@ -66,7 +66,7 @@ title: Home
           <span>Multithreading</span>
           <span>Optimisation</span>
         </div>
-        <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
+        <a class="hero-button" href="{{ '/pages/LowLevel/index.html' |  relative_url }}">View Project</a>
       </div>
     </div>
       <!-- Advanced Graphics -->

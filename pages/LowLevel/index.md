@@ -86,7 +86,7 @@ slideshow: true
 <!-- Key project features -->
 <h3>Key Features</h3>
 <section class="features">
-    <div class="feature-card">
+    <div class="feature-card" onclick="location.href='#memorytracker'">
       <h3>Memory Manager</h3>
       <p>Custom memory allocation tracking, object lifecycle control, and memory pooling to reduce allocation overhead.</p>
     </div>
@@ -107,15 +107,52 @@ slideshow: true
 <!-- Technical Breakdown -->
 <h3>Technical Breakdown</h3>
 
-<section class="project-content">
+<section class="project-content" id="memorytracker">
   <h4>Memory Manager (Memory Allocation Tracker)</h4>
   <p>A custom memory tracking system was implemented to monitor object allocations at runtime. This was done through multiple tracker instances like box, sphere, and global (all objects), where each tracked their respective object type. The trackers managed their total allocation and deallocations of which objects were still using memory at runtime.</p>
+  <table align="center">
+    <tr>
+      <td align="center" valign="middle" style="width: 50%;">
+        <a href="MemoryTracker.png"> <img src="MemoryTracker.png" style="width: 100%; max-height: 400px; object-fit: contain;"> </a>
+      </td>
+      <td align="center" valign="middle" style="width: 50%;">
+        <a href="MemoryTrackerAllocation.png"> <img src="MemoryTrackerAllocation.png" style="width: 100%; max-height: 400px; object-fit: contain;"> </a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <br>
+        <em>The first code shows what is inside the tracker class and some functions of it. While the second piece shows the trackers getting   their own allocation of memory through malloc. (Figures are clickable)</em>
+      </td>
+    </tr>
+  </table>
 
   <h4>Memory Manager (Erase Objects)</h4>
   <p>Objects were removed through the object's collider that was closest to the screen cursor upon getting clicked and removed from the all object vector. Initially there were threading issues when using "std::vector::erase"; however, by adding synchronisation to ensure all threads complete their tasks before deleting an object, this prevents race conditions from happening and any dangling pointers that would come.</p>
+  <p align="center">
+    <a href="EraseObjects.png"> <img src="EraseObjects.png" width=max> </a>
+    <br>
+    <em>This shows of the code that I talking about from above. (Figure is clickable).</em>
+  </p>
 
   <h4>Memory Manager (Performance Timer)</h4>
   <p>A simple timing profiler was added through "std::chrono" to measure the execution time of physics and the multithreaded systems. Data was accumulated over 60 frames to provide a more stable performance comparison between tests.</p>
+  <table align="center">
+    <tr>
+      <td align="center" valign="middle" style="width: 50%;">
+        <a href="TimerUse.png"> <img src="TimerUse.png" style="width: 100%; max-height: 400px; object-fit: contain;"> </a>
+      </td>
+      <td align="center" valign="middle" style="width: 50%;">
+        <a href="TimerUse.png"> <img src="TimerUse.png" style="width: 100%; max-height: 400px; object-fit: contain;"> </a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <br>
+        <em></em>
+      </td>
+    </tr>
+  </table>
 
   <h4>Memory Manager (Memory Pool)</h4>
   <p>To reduce runtime allocation overhead and avoid heap fragmentation, a memory pool was implemented to preallocate memory for game objects at runtime. Instead of allocating memory dynamically per object, objects are instead constructed using placement new from preloaded memory blocks within the memory pool. This system allowed memory to be reused from the pool and destroyed objects, enabling new objects to be created without repeated heap allocations.</p>

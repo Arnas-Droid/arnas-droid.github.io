@@ -20,6 +20,21 @@ title: "Projects"
       <a class="hero-button" href="{{ '/pages/gelosEngine.html' |  relative_url }}">View Project</a>
     </div>
   </div>
+    <!-- Low Level Optimisation -->
+  <div class="project-card">
+    <a href="{{ '/pages/LowLevel/index.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level"></a>
+    <div class="project-info">
+      <h2>Low Level Optimisation</h2>
+      <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
+      <div class="project-tags">
+        <span>C++</span>
+        <span>Performance</span>
+        <span>Multithreading</span>
+        <span>Optimisation</span>
+      </div>
+      <a class="hero-button" href="{{ '/pages/LowLevel/index.html' |  relative_url }}">View Project</a>
+    </div>
+  </div>
     <!-- Advanced Graphics -->
   <div class="project-card">
     <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
@@ -33,21 +48,6 @@ title: "Projects"
         <span>RenderDoc</span>
       </div>
       <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
-    </div>
-  </div>
-    <!-- Low Level Optimisation -->
-  <div class="project-card">
-    <a href="{{ '/pages/lowLevel.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}" alt="Low Level"></a>
-    <div class="project-info">
-      <h2>Low Level Optimisation</h2>
-      <p>A performance project that focused on low-level optimisations like memory management, spatial partitioning and multithreading.</p>
-      <div class="project-tags">
-        <span>C++</span>
-        <span>Performance</span>
-        <span>Multithreading</span>
-        <span>Optimisation</span>
-      </div>
-      <a class="hero-button" href="{{ '/pages/lowLevel.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Junior Collab (Echoes) -->

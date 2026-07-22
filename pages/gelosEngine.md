@@ -82,6 +82,19 @@ slideshow: true
   <a href="{{ '/assets/GelosEngine/GraphicsOverview.html' | relative_url }}" class="btn">📋 Documentation</a>
 </section>
 
+<!-- Key project features -->
+<h3>Key Features</h3>
+<section class="features">
+    <div class="feature-card">
+      <h3>Graphic Backends</h3>
+      <p>The main graphic backend for this project was DirectX 11, with a full port to PS5 and partial port to the web.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Lighting and Shadows</h3>
+      <p>Can have up to 16 lights while maintaining 60+ fps. With three light types: point, spot and direction. And four shadow types: hard shadows, hard shadows+, soft shadows and soft shadows+.</p>
+    </div>
+</section>
+
 <section class="project-content">
   <h3>Web Port Verison</h3>
   <h5>Note: This doesn't represent the newest state of the engine or what capabilities it has. This was an attempt at porting it over for the web within three days.</h5>
