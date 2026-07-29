@@ -3,7 +3,30 @@ layout: default
 title: Home
 ---
 
-<body>
+<div class="tech-card about-card">
+  <div class="tech-text">
+      <!-- About Me -->
+    <p>Hello, my name is Arnas. I work as a game developer and have a particular interest in real-time simulations and graphics programming. Apart from programming, I'm really interested in video games, physical collecting and drifting.</p>
+    <p><strong>Programming Languages:</strong></p>
+    <ul>
+      <li>c++</li>
+      <li>c#</li>
+      <li>Visual programming (Unreal blueprints)</li>
+    </ul>
+    <p><strong>Tools and Frameworks:</strong></p>
+    <ul>
+      <li>Visual Studio & VS Code</li>
+      <li>Unreal Engine 4 & 5</li>
+      <li>Unity</li>
+      <li>SDL and SFML</li>
+      <li>Github Desktop</li>
+      <li>Profiling (RenderDoc and Unity's Profiler)</li>
+    </ul>
+  </div>
+  <div class="tech-image">
+    <img src="{{ site.baseurl }}/assets/ArnasPic_v2.jpg" alt="Arnas Pic">
+  </div>
+</div>
 
 <!-- Hero Project -->
 <div class="hero-card">
@@ -39,6 +62,30 @@ title: Home
       <a href="{{ '/pages/projects.html' | relative_url }}" class="hero-button">View all projects -></a>
   </div>
   <div class="project-grid featured-grid">
+      <!-- Pulse Drive -->
+    <div class="project-card">
+      <a href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}"><img src="{{ '/blogs/2026-07-29-GMTKGameJam2026/GameplayCover.png' | relative_url }}" alt="Pulse Drive Cover Image"></a>
+      <div class="project-info">
+        <h2>Pulse Drive</h2>
+        <p>Created for GTMK gam jam 2026 and worked mostly on the graphics (shaders, particles and more) with a minor role in scripting.</p>
+        <div class="project-tags">
+          <span>C#</span>
+          <span>Shaders</span>
+          <span>Web</span>
+          <span>Unity</span>
+        </div>
+        <table align="left">
+        <tr>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="https://arnas-code.itch.io/pulsedrive">View Game</a>
+          </td>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' |  relative_url }}">View Blog</a>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
       <!-- Gelos Engine -->
     <div class="project-card">
       <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
@@ -69,58 +116,5 @@ title: Home
         <a class="hero-button" href="{{ '/pages/LowLevel/index.html' |  relative_url }}">View Project</a>
       </div>
     </div>
-      <!-- Advanced Graphics -->
-    <div class="project-card">
-      <a href="{{ '/pages/advancedGraphics.html' | relative_url }}"><img src="{{ '/assets/AdvancedGraphics/AdvancedGraphicsStandard.png' | relative_url }}" alt="Advanced Graphics"></a>
-      <div class="project-info">
-        <h2>Advanced Graphics</h2>
-        <p>A real-time DirectX 11 graphics project explores real-time rendering techniques like render-to-texture (RTT), custom shader workflows, and pipeline optimisation.</p>
-        <div class="project-tags">
-          <span>C++</span>
-          <span>Graphics Programming</span>
-          <span>DirectX 11</span>
-          <span>RenderDoc</span>
-        </div>
-        <a class="hero-button" href="{{ '/pages/advancedGraphics.html' |  relative_url }}">View Project</a>
-      </div>
-    </div>
   </div>
 </div>
-
-  <!-- Game Jam Projects -->
-<div class="featured-section">
-  <div class="featured-header">
-        <!-- Title -->
-    <h1 class="section-title">Game Jam Projects</h1>
-        <!-- Button -->
-      <a href="{{ '/pages/projects.html' | relative_url }}" class="hero-button">View all projects -></a>
-  </div>
-  <div class="project-grid featured-grid">
-      <!-- Endless Dodge -->
-    <div class="project-card">
-      <a href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' | relative_url }}"><img src="{{ '/blogs/2026-07-15-MyFirstGameJam/MainMenu.png' | relative_url }}" alt="Endless Dodge"></a>
-      <div class="project-info">
-        <h2>Endless Dodge</h2>
-        <p>This was a game developed in 5 hours for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack. The goal is to survive as long as possible.</p>
-        <div class="project-tags">
-          <span>C#</span>
-          <span>Arcade Gameplay</span>
-          <span>Endless</span>
-          <span>Unity</span>
-        </div>
-        <table align="center">
-          <tr>
-            <td align="center" valign="middle" style="width: 50%;">
-            <a class="hero-button" href="https://arnas-code.itch.io/endless-dodge">View Game</a>
-            </td>
-            <td align="center" valign="middle" style="width: 50%;">
-            <a class="hero-button" href="{{ '/blogs/2026-07-15-MyFirstGameJam/index.html' |  relative_url }}">View Blog</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body> 

@@ -113,6 +113,8 @@ a { color: #63c0f5; text-shadow: 0 0 5px rgba(104, 182, 255, 0.5); }
 /* Global Overrides */
 p.view, small { display: none; }
 
+/* h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif;
+} */
 /* Left side image */
 .project-image { position: absolute; inset: 0; }
 

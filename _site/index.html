@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=dcd089f5594bad9b09bdc5d54bfa0a6b571bd09b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e93c70535037625fa226b5f3e85db996a4971cc0">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup theme-color -->
@@ -58,7 +58,6 @@
           <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
           <a href="/pages/projects.html" class="btn">📁 All Projects</a>
           <a href="/blogs/" class="btn">📰 All Blogs</a>
-          <a href="/pages/aboutMe.html" class="btn">👤 About Me</a>
 
           <details class="social-dropdown">
           <summary class="btn">🔗 Contact</summary>
@@ -74,7 +73,30 @@
 
     <div class="container">
       <section id="main_content">
-        <body>
+        <div class="tech-card about-card">
+  <div class="tech-text">
+      <!-- About Me -->
+    <p>Hello, my name is Arnas. I work as a game developer and have a particular interest in real-time simulations and graphics programming. Apart from programming, I'm really interested in video games, physical collecting and drifting.</p>
+    <p><strong>Programming Languages:</strong></p>
+    <ul>
+      <li>c++</li>
+      <li>c#</li>
+      <li>Visual programming (Unreal blueprints)</li>
+    </ul>
+    <p><strong>Tools and Frameworks:</strong></p>
+    <ul>
+      <li>Visual Studio &amp; VS Code</li>
+      <li>Unreal Engine 4 &amp; 5</li>
+      <li>Unity</li>
+      <li>SDL and SFML</li>
+      <li>Github Desktop</li>
+      <li>Profiling (RenderDoc and Unity's Profiler)</li>
+    </ul>
+  </div>
+  <div class="tech-image">
+    <img src="/assets/ArnasPic_v2.jpg" alt="Arnas Pic" />
+  </div>
+</div>
 
 <!-- Hero Project -->
 <div class="hero-card">
@@ -101,7 +123,7 @@
   </div>
 </div>
 
-  <!-- Featured Projects -->
+<p><!-- Featured Projects --></p>
 <div class="featured-section">
   <div class="featured-header">
         <!-- Title -->
@@ -110,6 +132,30 @@
       <a href="/pages/projects.html" class="hero-button">View all projects -&gt;</a>
   </div>
   <div class="project-grid featured-grid">
+      <!-- Pulse Drive -->
+    <div class="project-card">
+      <a href="/blogs/2026-07-29-GMTKGameJam2026/index.html"><img src="/blogs/2026-07-29-GMTKGameJam2026/GameplayCover.png" alt="Pulse Drive Cover Image" /></a>
+      <div class="project-info">
+        <h2>Pulse Drive</h2>
+        <p>Created for GTMK gam jam 2026 and worked mostly on the graphics (shaders, particles and more) with a minor role in scripting.</p>
+        <div class="project-tags">
+          <span>C#</span>
+          <span>Shaders</span>
+          <span>Web</span>
+          <span>Unity</span>
+        </div>
+        <table align="left">
+        <tr>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="https://arnas-code.itch.io/pulsedrive">View Game</a>
+          </td>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="/blogs/2026-07-29-GMTKGameJam2026/index.html">View Blog</a>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
       <!-- Gelos Engine -->
     <div class="project-card">
       <a href="/pages/gelosEngine.html"><img src="/assets/SmileEngine/SmileEngineShadows.png" alt="Gelos Engine" /></a>
@@ -140,61 +186,8 @@
         <a class="hero-button" href="/pages/LowLevel/index.html">View Project</a>
       </div>
     </div>
-      <!-- Advanced Graphics -->
-    <div class="project-card">
-      <a href="/pages/advancedGraphics.html"><img src="/assets/AdvancedGraphics/AdvancedGraphicsStandard.png" alt="Advanced Graphics" /></a>
-      <div class="project-info">
-        <h2>Advanced Graphics</h2>
-        <p>A real-time DirectX 11 graphics project explores real-time rendering techniques like render-to-texture (RTT), custom shader workflows, and pipeline optimisation.</p>
-        <div class="project-tags">
-          <span>C++</span>
-          <span>Graphics Programming</span>
-          <span>DirectX 11</span>
-          <span>RenderDoc</span>
-        </div>
-        <a class="hero-button" href="/pages/advancedGraphics.html">View Project</a>
-      </div>
-    </div>
   </div>
 </div>
-
-  <!-- Game Jam Projects -->
-<div class="featured-section">
-  <div class="featured-header">
-        <!-- Title -->
-    <h1 class="section-title">Game Jam Projects</h1>
-        <!-- Button -->
-      <a href="/pages/projects.html" class="hero-button">View all projects -&gt;</a>
-  </div>
-  <div class="project-grid featured-grid">
-      <!-- Endless Dodge -->
-    <div class="project-card">
-      <a href="/blogs/2026-07-15-MyFirstGameJam/index.html"><img src="/blogs/2026-07-15-MyFirstGameJam/MainMenu.png" alt="Endless Dodge" /></a>
-      <div class="project-info">
-        <h2>Endless Dodge</h2>
-        <p>This was a game developed in 5 hours for the GameBridge 2026 game jam, which was a top-down arcade survival game where enemies lock onto your position and attack. The goal is to survive as long as possible.</p>
-        <div class="project-tags">
-          <span>C#</span>
-          <span>Arcade Gameplay</span>
-          <span>Endless</span>
-          <span>Unity</span>
-        </div>
-        <table align="center">
-          <tr>
-            <td align="center" valign="middle" style="width: 50%;">
-            <a class="hero-button" href="https://arnas-code.itch.io/endless-dodge">View Game</a>
-            </td>
-            <td align="center" valign="middle" style="width: 50%;">
-            <a class="hero-button" href="/blogs/2026-07-15-MyFirstGameJam/index.html">View Blog</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
 
       </section>
     </div>

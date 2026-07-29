@@ -5,6 +5,30 @@ title: "Projects"
 
 <body> 
 <div class="project-grid">
+      <!-- Pulse Drive -->
+    <div class="project-card">
+      <a href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}"><img src="{{ '/blogs/2026-07-29-GMTKGameJam2026/GameplayCover.png' | relative_url }}" alt="Pulse Drive Cover Image"></a>
+      <div class="project-info">
+        <h2>Pulse Drive</h2>
+        <p>Created for GTMK gam jam 2026 and worked mostly on the graphics (shaders, particles and more) with a minor role in scripting.</p>
+        <div class="project-tags">
+          <span>C#</span>
+          <span>Shaders</span>
+          <span>Web</span>
+          <span>Unity</span>
+        </div>
+        <table align="left">
+        <tr>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="https://arnas-code.itch.io/pulsedrive">View Game</a>
+          </td>
+          <td align="left" valign="middle" style="width: 50%;">
+          <a class="hero-button" href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' |  relative_url }}">View Blog</a>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
     <!-- Gelos Engine -->
   <div class="project-card">
     <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' | relative_url }}" alt="Gelos Engine"></a>
