@@ -2,6 +2,7 @@
 layout: blog
 title: "GMTK Game Jam 2026"
 date: 2026/07/29
+time: 5
 tags:
   - C#
   - Racing
@@ -161,3 +162,5 @@ Available at: [https://learn.unity.com/tutorial/post-processing-effects-chromati
 
 <a id="FakeFog">11.</a> Vanmillion Studios. Vertical Volumetric Fog in Unity : Hypercasual Game Development in Unity 6. [online] 
 Available at: [https://www.youtube.com/watch?v=-s7_l3TXWPM](https://www.youtube.com/watch?v=-s7_l3TXWPM).
+
+---

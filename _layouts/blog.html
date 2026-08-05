@@ -4,7 +4,11 @@ layout: default
 
 {% if page.date %}
   <div class="blog">
-    <span class="date">Date Published: {{ page.date | date: "%B %d, %Y" }}</span>
+    <span class="date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
+    <span class="date">• {{ page.time}} minutes to read</span>
+    {% if page.date2 %}
+      <span class="date">• Last Updated: {{ page.date2 | date: "%B %d, %Y" }}</span>
+    {% endif %}
   </div>
 {% endif %}
 
@@ -20,3 +24,11 @@ layout: default
 {% endif %}
 
 {{content}}
+
+<script src="https://utteranc.es/client.js"
+        repo="arnas-droid/arnas-droid.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>

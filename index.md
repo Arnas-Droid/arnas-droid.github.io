@@ -9,8 +9,8 @@ title: Home
     <p>Hello, my name is Arnas. I work as a game developer and have a particular interest in real-time simulations and graphics programming. Apart from programming, I'm really interested in video games, physical collecting and drifting.</p>
     <p><strong>Programming Languages:</strong></p>
     <ul>
-      <li>c++</li>
-      <li>c#</li>
+      <li>C++</li>
+      <li>C#</li>
       <li>Visual programming (Unreal blueprints)</li>
     </ul>
     <p><strong>Tools and Frameworks:</strong></p>
@@ -31,9 +31,14 @@ title: Home
 <!-- Hero Project -->
 <div class="hero-card">
   <!-- Background image -->
+  <picture>
   <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
-    <img src="{{ '/assets/Hyperion/VolumetricFogClear.png' | relative_url }}" alt="Hyperion Fog">
+    <img src="{{ '/assets/Hyperion/HyperionVolumetricFogGif.gif' | relative_url }}" 
+      alt="Hyperion Fog"
+      loading="eager"
+      decoding="async">
   </a>
+  </picture>
   <!-- Overlay -->
   <div class="hero-overlay">
     <div class="hero-content">

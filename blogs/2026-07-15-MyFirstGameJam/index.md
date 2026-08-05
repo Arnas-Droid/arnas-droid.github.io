@@ -2,6 +2,7 @@
 layout: blog
 title: "My First Game Jam"
 date: 2026/07/15
+time: 4
 tags:
   - C#
   - Arcade Gameplay
@@ -117,3 +118,5 @@ There was still a lot I wanted to do even with the limited time like adding more
 <a id="Scoring">3</a>: Unity Learn. (2026). Add a scoring system. [online] Available at: https://learn.unity.com/course/2d-beginner-game-sprite-flight/tutorial/add-a-scoring-system?version=6.0.
 
 <a id="Music">4</a>: itch.io. (2026). Free Action Arcade Music Pack – Neon Pulse. [online] Available at: https://soma-animus.itch.io/arcade-music-pack-neon-pulse.
+
+---
