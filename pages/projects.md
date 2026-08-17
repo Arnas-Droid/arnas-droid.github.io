@@ -76,7 +76,7 @@ title: "Projects"
   </div>
     <!-- Junior Collab (Echoes) -->
   <div class="project-card">
-    <a href="{{ '/pages/echoes.html' | relative_url }}"><img src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu"></a>
+    <a href="{{ '/pages/Echoes/index.html' | relative_url }}"><img src="{{ '/assets/Echoes/EchoesMainMenu.png' | relative_url }}" alt="Echoes Of Imagination Main Menu"></a>
     <div class="project-info">
       <h2>Echoes Of Imagination</h2>
       <p>A tile-based puzzle game with a multidisciplinary team that focused on gameplay programming.</p>
@@ -86,7 +86,7 @@ title: "Projects"
         <span>Gameplay Programming</span>
         <span>Team Project</span>
       </div>
-      <a class="hero-button" href="{{ '/pages/echoes.html' |  relative_url }}">View Project</a>
+      <a class="hero-button" href="{{ '/pages/Echoes/index.html' |  relative_url }}">View Project</a>
     </div>
   </div>
     <!-- Real-time Graphics --> 
