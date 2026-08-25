@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fa5cf3c657c772e86ec3a6bdc4b8064fd499f7e4">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setting up a local Server (Web) | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Setting up a local Server (Web)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Graphics Programmer Portfolio" />
+<meta property="og:description" content="Graphics Programmer Portfolio" />
+<link rel="canonical" href="http://localhost:4000/blogs/2026-08-25-SettingUpLocalServer(Web)/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2026-08-25-SettingUpLocalServer(Web)/" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setting up a local Server (Web)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-08-25T00:00:00+01:00","datePublished":"2026-08-25T00:00:00+01:00","description":"Graphics Programmer Portfolio","headline":"Setting up a local Server (Web)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2026-08-25-SettingUpLocalServer(Web)/"},"url":"http://localhost:4000/blogs/2026-08-25-SettingUpLocalServer(Web)/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Arnas Puidokas</h1>
+        </a>
+        <h2>Graphics Programmer Portfolio</h2>
+
+        <section id="downloads">
+          <a href="/" class="btn">🏠 Home</a>
+          <a href="/pages/hyperion.html" class="btn btn-primary">⭐ Best Project</a>
+          <a href="/pages/projects.html" class="btn">📁 All Projects</a>
+          <a href="/blogs/" class="btn">📰 All Blogs</a>
+
+          <details class="social-dropdown">
+          <summary class="btn">🔗 Contact</summary>
+            <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+              <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+            </div>
+          </details>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        
+  <div class="blog">
+    <span class="date">Published: August 25, 2026</span>
+    <span class="date">• 2 minutes to read</span>
+    
+  </div>
+
+
+<h1>Setting up a local Server (Web)</h1>
+
+
+  <div class="project-tags">
+    <small>Tags:</small>
+    
+      <span>Ruby</span>
+    
+      <span>Jekyll</span>
+    
+      <span>GitHub Pages</span>
+    
+      <span>Web Development</span>
+    
+  </div>
+
+
+<h1 id="overview">Overview</h1>
+<p>This is a simplified guide to setting up a local development server when working with Jekyll on GitHub. My scenario was for my portfolio, but there are other uses cases that this would helpful with. Normally when working with Jekyll on GitHub it tends to be a slow workflow due the page needing to be rebuilt and deployed every time you commit anything. Setting up a local development server solves all of that where you can see live changes on the web upon saving instead of committing.</p>
+
+<hr />
+<h1 id="the-worflow">The worflow</h1>
+<h2 id="1-install-ruby">1. Install Ruby</h2>
+<p>First if Ruby isn’t installed go to <a href="https://rubyinstaller.org/downloads/">ruby installer</a> this was where I first tried the newest possible version, but it wasn’t compatible with my Jekyll version. Instead, I choose “Ruby+Devkit 3.2.11-1 (x64)” since it had better compatibility and once everything was downloaded a prompt come came to install from several options. For this I choose MSYS2 development toolchain.</p>
+
+<h2 id="2-verify">2. Verify</h2>
+<p>Once that is done it is good time to check if everything is installed properly by putting this command in your command prompt.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+gem -v
+bundle -v
+</code></pre></div></div>
+
+<h2 id="3-gemfile">3. Gemfile</h2>
+<p>You might also need to create a ‘Gemfile’ in your files if you don’t have one already and remember it doesn’t have an extension like most files. If you want to see more, you can read it here: <a href="https://guides.rubygems.org">ruby gems guides</a>. The second line in the ‘Gemfile’ might not be necessary to you if you’re not using GitHub’s supported Jekyll themes.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+</code></pre></div></div>
+
+<h2 id="4-install-jekyll">4. Install Jekyll</h2>
+<p>Next if you don’t have Jekyll installed you run this command in your command prompt.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<h2 id="5-start-local-server">5. Start local server</h2>
+<p>Once everything is good and you saw no errors in your way run this command in your command prompt as a test.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd C:\Users\apuid\Documents\GitHub\Portfolio
+bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>Or alternatively you can run this command in your command prompt if you want the browser to automatically refresh upon saving.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd C:\Users\apuid\Documents\GitHub\Portfolio
+bundle exec jekyll serve --livereload
+</code></pre></div></div>
+
+<p>The Ip address for the local server page: http://127.0.0.1:4000</p>
+
+<p>Notes: This hasn’t been tested apart from my personal workstation and some file paths won’t match your needs. This guide also won’t match to everybody’s needs but could work in similar scenarios to mine.</p>
+
+<hr />
+<p><a href="LiveServer.txt">Text file I used while researching</a>.</p>
+
+<hr />
+
+
+<script src="https://utteranc.es/client.js"
+        repo="arnas-droid/arnas-droid.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+      </section>
+    </div>
+  </body>
+</html>

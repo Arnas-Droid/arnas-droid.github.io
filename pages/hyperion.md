@@ -82,13 +82,13 @@ slideshow: true
 <!-- Overview -->
 <section class="project-content">
   <h3>Overview</h3>
-  <p>This project looks at creating realistic and optimised volumetric lighting/fog. Fully built up from the ground up from the architecture of the framework, object loader, texture manager and much more. Works best with volume-bound volumetric lighting, which allows cities to be encased in volumetric fog and particle lights in a showroom. Currently looking into compute shaders.</p>
+  <p>This project looks at creating realistic and optimised volumetric lighting/fog. Fully built up from the ground up from the architecture of the framework, object loader, texture manager and much more. Works best with volume-bound volumetric lighting, which allows cities to be encased in volumetric fog and particle lights in a showroom. Currently looking into DirectX 12.</p>
 </section>
 
 <!-- Next Steps -->
 <h2 class="tech-title">Next Steps</h2>
 
-- Compute shaders.
+- DirectX 12.
 - Documentation.
 
 <!-- Documentation -->
