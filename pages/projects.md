@@ -128,7 +128,7 @@ title: // Projects
           <span>Shaders</span>
         </div>
         <div class="project-buttons">
-          <a class="project-button"href="{{ '/pages/WitchForest/index.html' | relative_url }}">VIEW PROJECT</a>
+          <a class="project-button" href="{{ '/pages/WitchForest/index.html' | relative_url }}">VIEW PROJECT</a>
         </div>
       </div>
     </article>
