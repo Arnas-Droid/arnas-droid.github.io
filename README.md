@@ -1,1 +1,1 @@
-
+This is my ongoing portfolio, which showcases my projects and goes into detail about what they are. It is forever changing, with support for web browsers and mobile.

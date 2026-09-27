@@ -58,4 +58,8 @@ Notes: This hasn't been tested apart from my personal workstation and some file 
 ---
 [Text file I used while researching](LiveServer.txt).
 
----
+<!-- Back -->
+<section class="project-content">
+  <a href="{{ '/' | relative_url }}" class="project-button"> ← BACK TO HOME </a>
+  <a href="{{ '/blogs/' | relative_url }}" class="project-button"> ← BACK TO BLOGS </a>
+</section>

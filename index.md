@@ -1,51 +1,39 @@
 ---
 layout: default
-title: Home
+title: // Home
 ---
 
-<div class="tech-card about-card">
-  <div class="tech-text">
-      <!-- About Me -->
-    <p>Hello, my name is Arnas. I work as a game developer and have a particular interest in real-time simulations and graphics programming. Apart from programming, I'm really interested in video games, physical collecting and drifting.</p>
-    <p><strong>Programming Languages:</strong></p>
-    <ul>
-      <li>C++</li>
-      <li>C#</li>
-      <li>Visual programming (Unreal blueprints)</li>
-    </ul>
-    <p><strong>Tools and Frameworks:</strong></p>
-    <ul>
-      <li>Visual Studio & VS Code</li>
-      <li>Unreal Engine 4 & 5</li>
-      <li>Unity</li>
-      <li>SDL and SFML</li>
-      <li>Github Desktop</li>
-      <li>Profiling (RenderDoc and Unity's Profiler)</li>
-    </ul>
+<!-- About Me -->
+<section class="about-section">
+  <h2 class="about-title">// ABOUT ME</h2>
+  <div class="about-content">
+    <div class="about-image"> <div id="hobby-label" class="hobby-label">ARNAS PUIDOKAS</div> <img id="hobby-image" src="{{ site.baseurl }}/assets/ArnasPicture.jpg" alt="Arnas Puidokas"> </div>
+      <div class="about-text">
+      <h2>BEYOND THE CODE.</h2>
+        <p>Hello, my name is <span class="hobby-link" data-image="{{ site.baseurl }}/assets/ArnasPicture.jpg" data-title="ARNAS PUIDOKAS"> Arnas</span>. I work as a game developer with a particular interest in graphics programming and porting.</p>
+        <p> Apart from programming, I'm really interested in <span class="hobby-link" data-image="{{ site.baseurl }}/assets/CurrentGame.png" data-title="FINAL FANTASY XVI"> video games</span>, <span class="hobby-link" data-image="{{ site.baseurl }}/assets/PhysicalCollection.jpg" data-title="ZZZ BANGBOO FIGURE"> physical collecting</span> and <span class="hobby-link" data-image="{{ site.baseurl }}/assets/PhotoVideo.jpg" data-title="SHOT ON PS VITA"> amateur photography/videography</span>.</p>
+      <h3>PROGRAMMING</h3>
+        <p>C++ &nbsp;&nbsp; C# &nbsp;&nbsp; Unreal Blueprints</p>
+      <h3>TOOLS</h3>
+        <p>Visual Studio &nbsp;&nbsp; VS Code &nbsp;&nbsp; Unity &nbsp;&nbsp; Unreal Engine &nbsp;&nbsp; DirectX &nbsp;&nbsp; RenderDoc</p>
+    </div>
   </div>
-  <div class="tech-image">
-    <img src="{{ site.baseurl }}/assets/ArnasPic_v2.jpg" alt="Arnas Pic">
-  </div>
-</div>
+</section>
+
+<script src="{{ '/assets/js/hobbies.js' | relative_url }}"></script>
 
 <!-- Hero Project -->
-<div class="hero-card">
-  <!-- Background image -->
-  <picture>
-  <a class="hero-image" href="{{ '/pages/hyperion.html' | relative_url }}">
-    <img src="{{ '/assets/Hyperion/HyperionVolumetricFogGif.gif' | relative_url }}" 
-      alt="Hyperion Fog"
-      loading="eager"
-      decoding="async">
-  </a>
-  </picture>
-  <!-- Overlay -->
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <div class="hero-badge">⭐ BEST PROJECT</div>
-      <h2 class="hero-title">Hyperion</h2>
-      <h3 class="hero-subtitle">Real-time Volumetric Lighting System</h3>
-      <p class="hero-desc">A custom real-time volumetric lighting system focused on volume-bound volumetric fog, light scattering, and modern architecture in DirectX 11/12.</p>
+<section class="hero-section">
+  <h2 class="featured-title">// BEST PROJECT</h2>
+  <div class="hero-content">
+    <div class="hero-image">
+      <a href="{{ '/pages/Hyperion/index.html' | relative_url }}"> <img src="{{ '/pages/Hyperion/HyperionVolumetricFogGif.gif' | relative_url }}" alt="Hyperion Gif" loading="eager" decoding="async"> </a>
+    </div>
+    <div class="hero-info">
+      <div class="hero-label"></div>
+      <h2>HYPERION</h2>
+        <p class="hero-subtitle"> Real-time Volumetric Lighting System </p>
+        <p class="hero-desc"> A custom real-time volumetric lighting system focused on volume-bound volumetric fog, light scattering, and modern architecture in DirectX 11/12. </p>
       <div class="hero-tags">
         <span>C++</span>
         <span>DirectX 11 / 12</span>
@@ -53,47 +41,39 @@ title: Home
         <span>Real-Time Graphics</span>
         <span>Performance Optimisation</span>
       </div>
-      <a class="hero-button" href="{{ '/pages/hyperion.html' |  relative_url }}">View Project</a>
+      <a class="hero-button" href="{{ '/pages/Hyperion/index.html' | relative_url }}"> VIEW PROJECT → </a>
     </div>
   </div>
-</div>
+</section>
 
-  <!-- Featured Projects -->
-<div class="featured-section">
+<!-- Featured Projects -->
+<section class="featured-section">
   <div class="featured-header">
-        <!-- Title -->
-    <h1 class="section-title">Featured Projects</h1>
-        <!-- Button -->
-      <a href="{{ '/pages/projects.html' | relative_url }}" class="hero-button">View all projects -></a>
+    <h2 class="featured-title">// FEATURED PROJECTS</h2>
+    <a href="{{ '/pages/projects.html' | relative_url }}" class="featured-link"> VIEW ALL PROJECTS → </a>
   </div>
   <div class="project-grid featured-grid">
-      <!-- Pulse Drive -->
-    <div class="project-card">
-      <a href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}"><img src="{{ '/blogs/2026-07-29-GMTKGameJam2026/GameplayCover.png' | relative_url }}" alt="Pulse Drive Cover Image"></a>
+    <!-- Pulse Drive -->
+    <article class="project-card">
+      <a href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}" class="project-image"> <img src="{{ '/blogs/2026-07-29-GMTKGameJam2026/GameplayCover.png' | relative_url }}" alt="Pulse Drive"> </a>
       <div class="project-info">
         <h2>Pulse Drive</h2>
-        <p>Created for GTMK gam jam 2026 and worked mostly on the graphics (shaders, particles and more) with a minor role in scripting.</p>
+        <p> Created for GMTK Game Jam 2026. I worked mostly on the graphics, including shaders and particles, with a minor role in scripting.</p>
         <div class="project-tags">
           <span>C#</span>
           <span>Shaders</span>
           <span>Web</span>
           <span>Unity</span>
         </div>
-        <table align="left">
-        <tr>
-          <td align="left" valign="middle" style="width: 50%;">
-          <a class="hero-button" href="https://arnas-code.itch.io/pulsedrive">View Game</a>
-          </td>
-          <td align="left" valign="middle" style="width: 50%;">
-          <a class="hero-button" href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' |  relative_url }}">View Blog</a>
-          </td>
-        </tr>
-      </table>
+        <div class="project-buttons">
+          <a class="project-button" href="https://arnas-code.itch.io/pulsedrive"> VIEW GAME → </a>
+          <a class="project-button" href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}"> VIEW BLOG → </a>
+        </div>
       </div>
-    </div>
-      <!-- Gelos Engine -->
-    <div class="project-card">
-      <a href="{{ '/pages/gelosEngine.html' | relative_url }}"><img src="{{ '/assets/SmileEngine/SmileEngineShadows.png' |   relative_url }}" alt="Gelos Engine"></a>
+    </article>
+    <!-- Gelos Engine -->
+    <article class="project-card">
+      <a href="{{ '/pages/GelosEngine/index.html' | relative_url }}" class="project-image"> <img src="{{ '/pages/GelosEngine/EngineShadows.png' | relative_url }}" alt="Gelos Engine"> </a>
       <div class="project-info">
         <h2>Gelos Engine</h2>
         <p>A custom engine project built around game engine architecture, porting to other platforms, and low-level rendering systems.</p>
@@ -103,12 +83,14 @@ title: Home
           <span>Porting</span>
           <span>Team Project</span>
         </div>
-        <a class="hero-button" href="{{ '/pages/gelosEngine.html' |  relative_url }}">View Project</a>
+        <div class="project-buttons">
+          <a class="project-button" href="{{ '/pages/GelosEngine/index.html' | relative_url }}"> VIEW PROJECT → </a>
+        </div>
       </div>
-    </div>
-      <!-- Low Level Optimisation  -->
-    <div class="project-card">
-      <a href="{{ '/pages/LowLevel/index.html' | relative_url }}"><img src="{{ '/assets/LowLevel/LowLevelMainImage.png' | relative_url }}"  alt="Low Level"></a>
+    </article>
+    <!-- Low Level Optimisation -->
+    <article class="project-card">
+      <a href="{{ '/pages/LowLevel/index.html' | relative_url }}" class="project-image"> <img src="{{ '/pages/LowLevel/Bouncing.png' | relative_url }}" alt="Low Level Optimisation"> </a>
       <div class="project-info">
         <h2>Low Level Optimisation</h2>
         <p>A performance-focused project looking at low-level optimisations like memory management, multithreading and spatial partitioning.</p>
@@ -118,8 +100,10 @@ title: Home
           <span>Multithreading</span>
           <span>Optimisation</span>
         </div>
-        <a class="hero-button" href="{{ '/pages/LowLevel/index.html' |  relative_url }}">View Project</a>
+        <div class="project-buttons">
+          <a class="project-button" href="{{ '/pages/LowLevel/index.html' | relative_url }}"> VIEW PROJECT →</a>
+        </div>
       </div>
-    </div>
+    </article>
   </div>
-</div>
+</section>

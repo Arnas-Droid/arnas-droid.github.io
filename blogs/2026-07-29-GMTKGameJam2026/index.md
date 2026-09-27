@@ -163,4 +163,8 @@ Available at: [https://learn.unity.com/tutorial/post-processing-effects-chromati
 <a id="FakeFog">11.</a> Vanmillion Studios. Vertical Volumetric Fog in Unity : Hypercasual Game Development in Unity 6. [online] 
 Available at: [https://www.youtube.com/watch?v=-s7_l3TXWPM](https://www.youtube.com/watch?v=-s7_l3TXWPM).
 
----
+<!-- Back -->
+<section class="project-content">
+  <a href="{{ '/' | relative_url }}" class="project-button"> ← BACK TO HOME </a>
+  <a href="{{ '/blogs/' | relative_url }}" class="project-button"> ← BACK TO BLOGS </a>
+</section>

@@ -119,4 +119,8 @@ There was still a lot I wanted to do even with the limited time like adding more
 
 <a id="Music">4</a>: itch.io. (2026). Free Action Arcade Music Pack – Neon Pulse. [online] Available at: https://soma-animus.itch.io/arcade-music-pack-neon-pulse.
 
----
+<!-- Back -->
+<section class="project-content">
+  <a href="{{ '/' | relative_url }}" class="project-button"> ← BACK TO HOME </a>
+  <a href="{{ '/blogs/' | relative_url }}" class="project-button"> ← BACK TO BLOGS </a>
+</section>

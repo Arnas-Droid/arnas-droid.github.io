@@ -23,3 +23,6 @@ bundle exec jekyll serve
 http://127.0.0.1:4000
 
 Note: This hasn't been tested apart from my personal workstation and some file path won't match your needs.
+
+cd /d C:\Users\apuid\Documents\GitHub\arnas-droid.github.io
+bundle exec jekyll serve
