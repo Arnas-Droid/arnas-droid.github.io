@@ -154,8 +154,8 @@ title: // Projects
     </article>
     <!-- Glut -->
     <article class="project-card">
-      <a class="project-image" href="{{ '/pages/GLUT/index.html' | relative_url }}">
-        <img src="{{ '/pages/GLUT/GLUTMainImage.png' | relative_url }}"
+      <a class="project-image" href="{{ '/pages/Glut/index.html' | relative_url }}">
+        <img src="{{ '/pages/Glut/GLUTMainImage.png' | relative_url }}"
           alt="Glut">
       </a>
       <div class="project-info">
