@@ -13,7 +13,7 @@ permalink: /blogs/
     <!-- Local Development Server -->
     <article class="blog-card">
       <div class="blog-info">
-        <div class="blog-meta">JULY 29, 2026 · 2 MINUTES TO READ</div>
+        <div class="blog-meta">AUGUST 25, 2026 · 2 MINUTES TO READ</div>
         <h2>Setting up a local development server for Web</h2>
         <div class="blog-tags">
           <span>Ruby</span>
@@ -43,7 +43,7 @@ permalink: /blogs/
     <!-- My First Game Jam -->
     <article class="blog-card">
       <div class="blog-info">
-        <div class="blog-meta">JULY 29, 2026 · 5 MINUTES TO READ</div>
+        <div class="blog-meta">JULY 15, 2026 · 4 MINUTES TO READ</div>
         <h2>My First Game Jam</h2>
         <div class="blog-tags">
           <span>C#</span>
