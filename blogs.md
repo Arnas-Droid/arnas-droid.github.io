@@ -1,15 +1,27 @@
 ---
-layout: default
-title: // Blogs
+layout: blog
+title: // BLOG POSTS
 permalink: /blogs/
 ---
 
 <section class="blogs-section">
-  <div class="blogs-header">
-    <h2>// BLOG POSTS</h2>
-  </div>
   <h3 class="blogs-year">2026</h3>
   <div class="blog-list">
+    <!-- Hyperion - Initial Start -->
+    <article class="blog-card">
+      <div class="blog-info">
+        <div class="blog-meta">NOVEMBER 19, 2026 · 7 MINUTES TO READ</div>
+        <h2>Dev Blog #1 - Hyperion: Initial Start</h2>
+        <div class="blog-tags">
+          <span>C++</span>
+          <span>DirectX 11</span>
+          <span>Graphics Programming</span>
+          <span>Engine Development</span>
+        </div>
+        <p>An introduction to Hyperion and my initial steps in setting up the project.</p>
+        <a class="blog-button" href="{{ '/blogs/Hyperion/2026-11-19-InitialStart/index.html' | relative_url }}">READ DEV BLOG →</a>
+      </div>
+    </article>
     <!-- Local Development Server -->
     <article class="blog-card">
       <div class="blog-info">
@@ -56,4 +68,9 @@ permalink: /blogs/
       </div>
     </article>
   </div>
+
+<!-- Back Navigation -->
+<section class="article-terminal-navigation">
+    <a href="{{ '/' | relative_url }}" class="project-button">← BACK TO HOME</a>
+</section>
 </section>

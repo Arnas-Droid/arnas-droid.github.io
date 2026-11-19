@@ -42,6 +42,7 @@ title: // Home
         <span>Performance Optimisation</span>
       </div>
       <a class="hero-button" href="{{ '/pages/Hyperion/index.html' | relative_url }}"> VIEW PROJECT → </a>
+      <a class="project-button" href="{{ '/blogs/Hyperion/2026-11-19-InitialStart/index.html' | relative_url }}"> VIEW BLOG → </a>
     </div>
   </div>
 </section>

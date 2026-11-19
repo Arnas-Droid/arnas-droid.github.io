@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/style.css?v=672a75575808c5c844d51d92e8308daff202deff">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>// Dev Blog #1 - Hyperion: Initial Start | Arnas Puidokas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="// Dev Blog #1 - Hyperion: Initial Start" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An introduction to Hyperion and its initial steps in setting up the project." />
+<meta property="og:description" content="An introduction to Hyperion and its initial steps in setting up the project." />
+<link rel="canonical" href="http://localhost:4000/blogs/Hyperion/2026-11-19-InitialStart/" />
+<meta property="og:url" content="http://localhost:4000/blogs/Hyperion/2026-11-19-InitialStart/" />
+<meta property="og:site_name" content="Arnas Puidokas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="// Dev Blog #1 - Hyperion: Initial Start" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-11-19T00:00:00+00:00","datePublished":"2026-11-19T00:00:00+00:00","description":"An introduction to Hyperion and its initial steps in setting up the project.","headline":"// Dev Blog #1 - Hyperion: Initial Start","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/Hyperion/2026-11-19-InitialStart/"},"url":"http://localhost:4000/blogs/Hyperion/2026-11-19-InitialStart/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <a id="a-title" href="/">
+      <h1>Arnas Puidokas</h1>
+    </a>
+
+    <h2>Graphics Programmer Portfolio</h2>
+
+    <section id="downloads">
+      <a href="/" class="nav-button">🏠 Home</a>
+      <a href="/pages/Hyperion/index.html" class="nav-button">⭐ Best Project</a>
+      <a href="/pages/projects.html" class="nav-button"> 📁 All Projects</a>
+      <a href="/blogs/" class="nav-button">📰 All Blogs</a>
+
+      <details class="social-dropdown">
+        <summary class="nav-button">🔗 Contact</summary>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/arnas-puidokas/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/Arnas-Droid" target="_blank">GitHub</a>
+          <a href="https://arnas-code.itch.io" target="_blank">Itch</a>
+        </div>
+      </details>
+    </section>
+  </div>
+</header>
+
+    <div class="container">
+      <section id="main_content">
+        <article class="article-terminal">
+
+  <div class="article-terminal-bar">
+    <span class="article-terminal-dots">
+      <i></i><i></i><i></i>
+    </span>
+    <span>DEVELOPMENT BLOG</span>
+  </div>
+
+  <div class="article-terminal-body">
+
+    <header class="article-terminal-header">
+
+      <h1>// Dev Blog #1 - Hyperion: Initial Start</h1>
+
+      
+        <p class="article-terminal-description">
+          An introduction to Hyperion and its initial steps in setting up the project.
+        </p>
+      
+
+      <div class="article-terminal-info">
+        
+          <span>19.11.2026</span>
+        
+
+        
+          <span>7 MIN READ</span>
+        
+      </div>
+
+      
+        <div class="article-terminal-tags">
+          
+            <span>C++</span>
+          
+            <span>DirectX 11</span>
+          
+            <span>Graphics Programming</span>
+          
+            <span>Engine Development</span>
+          
+        </div>
+      
+
+    </header>
+
+    <div class="article-terminal-content">
+      <h2 id="introduction">Introduction</h2>
+<p>This will be the first development blog of my personal project Hyperion. The goal of these development blogs is to document my thought process when working on the created systems, and challenges encountered along the way.</p>
+
+<hr class="article-divider" />
+
+<h2 id="initial-goal-change">Initial Goal Change</h2>
+<p>Initially the goal of the project was to present a volumetric lighting system at GradEx, which is a showcase of student works my university hosts every year to industry people. However, as I developing in preparation for the showcase, this project felt perfect to upkeep my skills across multiple areas of programming, with graphics and engine being the primary focus.</p>
+
+<hr class="article-divider" />
+
+<h2 id="initial-steps">Initial Steps</h2>
+<p>While I already had a project based on volumetric lighting in place, it needed a lot of work to be presentable for GradEx, and to that I restarted the project from scratch. Main reason being there was a lot of conflict while working on the project previously, this was due to using a preexisting framework and building the volumetric lighting system on top when that wasn’t the intended purpose of the framework.</p>
+
+<p><br /></p>
+
+<h3 id="windows-creation-and-directx-11-setup">Windows Creation and DirectX 11 Setup</h3>
+<p>To do this task I had around two weeks to build up a framework from scratch and make an entirely new volumetric lighting system. To begin I took this step by step with a window creation using Chris Hecker’s guide<sup><a href="#CreatingAWindow">[1]</a></sup> from 2013. Followed by setting up DirectX 11 as the engine’s main graphics API due to my experiences with it, and potential for other graphics APIs to be set up down the line.</p>
+
+<p>Originally, it would be set to just return the DirectX 11 renderer, but later on I added an option to choose which graphics API you want.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Application.cpp"</span>
+<span class="n">m_renderer</span> <span class="o">=</span> <span class="n">BaseRenderer</span><span class="o">::</span><span class="n">CreateRendererObject</span><span class="p">();</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">m_renderer</span><span class="o">-&gt;</span><span class="n">Initialise</span><span class="p">(</span><span class="n">windowHandle</span><span class="p">);</span>
+
+<span class="s">"BaseRenderer.cpp"</span>
+<span class="n">BaseRenderer</span><span class="o">*</span> <span class="n">BaseRenderer</span><span class="o">::</span><span class="n">CreateRendererObject</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="n">DX11Renderer</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Application.cpp"</span>
+<span class="n">m_renderer</span> <span class="o">=</span> <span class="n">BaseRenderer</span><span class="o">::</span><span class="n">CreateRendererObject</span><span class="p">(</span><span class="n">BaseRenderer</span><span class="o">::</span><span class="n">API</span><span class="o">::</span><span class="n">DX11</span><span class="p">);</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">m_renderer</span><span class="o">-&gt;</span><span class="n">Initialise</span><span class="p">(</span><span class="n">windowHandle</span><span class="p">);</span>
+
+<span class="s">"BaseRenderer.cpp"</span>
+<span class="n">BaseRenderer</span><span class="o">*</span> <span class="n">BaseRenderer</span><span class="o">::</span><span class="n">CreateRendererObject</span><span class="p">(</span><span class="n">API</span> <span class="n">api</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">api</span> <span class="o">==</span> <span class="n">API</span><span class="o">::</span><span class="n">DX11</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">DX11Renderer</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">api</span> <span class="o">==</span> <span class="n">API</span><span class="o">::</span><span class="n">DX12</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">DX12Renderer</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p align="center">
+    <a href="InitialPopup.png"> <img src="InitialPopup.png" style="width: 100%;" /> </a>
+    <br />
+    <em>Figure 1: This was the result of the initial pop up window with DirectX 11 clearing the screen to a blue colour. (Figure is clickable).</em>
+</p>
+
+<p><br /></p>
+
+<h3 id="imgui-and-object-loader">ImGui and Object Loader</h3>
+<p>Following that I set up more basics like ImGui<sup><a href="#ImGui">[2]</a></sup> so I can interact with the application, an object loader <sup><a href="#ObjectLoading">[3]</a></sup> to load in models, and a DDS texture loader <sup><a href="#DDSTextureLoader">[4]</a></sup> so that those models can be textured. While this wasn’t difficult to do I noticed problems with the texture not matching correctly to the UV texture.</p>
+
+<p align="center">
+    <a href="ObjectLoading.png"> <img src="ObjectLoading.png" style="width: 100%;" /> </a>
+    <br />
+    <em>Figure 2: Had objects loading, but noticed the textures not matching to the UV texture correctly. (Figure is clickable).</em>
+</p>
+
+<p><br /></p>
+
+<h3 id="scene-management">Scene Management</h3>
+<p>Before moving on, I wanted to improve the current scene management of the project, since currently the application would load the game object through Scene, which handled the ownership of any created game objects. Followed by the Renderer creating a DDS texture and applying it to any object on screen.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Application.cpp"</span>
+<span class="n">m_scene</span><span class="o">-&gt;</span><span class="n">LoadGameObjectFromOBJ</span><span class="p">(</span><span class="s">"Assets/cat.obj"</span><span class="p">,</span> <span class="n">m_renderer</span><span class="o">-&gt;</span><span class="n">GetDevice</span><span class="p">());</span>
+
+<span class="s">"DX11Renderer.cpp"</span>
+<span class="n">hr</span> <span class="o">=</span> <span class="n">DirectX</span><span class="o">::</span><span class="n">CreateDDSTextureFromFile</span><span class="p">(</span><span class="n">m_d3dDevice</span><span class="p">,</span> <span class="s">L"Assets</span><span class="se">\\</span><span class="s">Textures</span><span class="se">\\</span><span class="s">catColour.dds"</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">texture</span><span class="p">);</span>
+<span class="n">LogHR</span><span class="p">(</span><span class="s">"CreateDDSTextureFromFile(catColour)"</span><span class="p">,</span> <span class="n">hr</span><span class="p">);</span>
+
+<span class="n">m_immediateContext</span><span class="o">-&gt;</span><span class="n">PSSetShaderResources</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">texture</span><span class="p">);</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p>Instead of doing that, the Scene would still manage the creation and ownership of game objects, while Application would now have access to game objects and the ability to change their properties without owning them, through the raw pointer that was returned.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Application.cpp"</span>
+<span class="n">m_buildings</span> <span class="o">=</span> <span class="n">m_scene</span><span class="o">-&gt;</span><span class="n">LoadGameObjectFromOBJ</span><span class="p">(</span><span class="s">"Assets/Buildings.obj"</span><span class="p">,</span> <span class="n">m_renderer</span><span class="o">-&gt;</span><span class="n">GetDevice</span><span class="p">());</span>
+<span class="n">m_buildings</span><span class="o">-&gt;</span><span class="n">SetPosition</span><span class="p">({</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="n">m_buildings</span><span class="o">-&gt;</span><span class="n">SetRotation</span><span class="p">({</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="n">m_buildings</span><span class="o">-&gt;</span><span class="n">SetScale</span><span class="p">({</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="n">m_buildings</span><span class="o">-&gt;</span><span class="n">GetTexture</span><span class="p">().</span><span class="n">diffuse</span> <span class="o">=</span> <span class="n">m_textureManager</span><span class="o">-&gt;</span><span class="n">LoadTexture</span><span class="p">(</span><span class="s">"Assets</span><span class="se">\\</span><span class="s">Textures</span><span class="se">\\</span><span class="s">buildingDiffuse.dds"</span><span class="p">,</span> <span class="n">m_renderer</span><span class="o">-&gt;</span><span class="n">GetDevice</span><span class="p">());</span>
+
+<span class="s">"Scene.cpp"</span>
+<span class="kt">void</span> <span class="n">Scene</span><span class="o">::</span><span class="n">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">deltaTime</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">gameObject</span> <span class="o">:</span> <span class="n">m_gameObjects</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">gameObject</span><span class="o">-&gt;</span><span class="n">Update</span><span class="p">(</span><span class="n">deltaTime</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>At this stage, I was also able to figure out a fix for the textures not being loaded in correctly. This stems from how different graphic APIs use different texture coordinate origins. By flipping the Y texture coordinates when building the mesh, it fixes that problem.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"MeshLoader.cpp"</span>
+<span class="c1">// Broken for DX11</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+<span class="p">{</span>
+    <span class="n">v</span><span class="p">.</span><span class="n">TexCoord</span> <span class="o">=</span>
+    <span class="p">{</span>
+        <span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">idx</span><span class="p">.</span><span class="n">texcoord_index</span> <span class="o">+</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">idx</span><span class="p">.</span><span class="n">texcoord_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// Fixed</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+<span class="p">{</span>
+    <span class="n">v</span><span class="p">.</span><span class="n">TexCoord</span> <span class="o">=</span>
+    <span class="p">{</span>
+        <span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">idx</span><span class="p">.</span><span class="n">texcoord_index</span> <span class="o">+</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">attrib</span><span class="p">.</span><span class="n">texcoords</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">idx</span><span class="p">.</span><span class="n">texcoord_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="p">};</span>
+
+    <span class="n">v</span><span class="p">.</span><span class="n">TexCoord</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">1.0</span><span class="n">f</span> <span class="o">-</span> <span class="n">v</span><span class="p">.</span><span class="n">TexCoord</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p align="center">
+    <a href="MultipleObjects.png"> <img src="MultipleObjects.png" style="width: 100%;" /> </a>
+    <br />
+    <em>Figure 3: Multiple objects renderered and fixed the problem with textures. (Figure is clickable).</em>
+</p>
+
+<hr class="article-divider" />
+
+<h2 id="whats-next">What’s Next</h2>
+<p>This went over a good portion of my initial steps in creating this project, with only a minor hiccup that caused some time figuring as to why it wasn’t working. My next steps were implementing the volumetric lighting system I previously created while also adding any additional features required to showcase the project in a better light for GradEx.</p>
+
+<hr class="article-divider" />
+
+<h2 id="assets-used">Assets Used</h2>
+<p>Buildings - <a href="https://sketchfab.com/3d-models/low-poly-night-city-building-skyline-b0035b8713b048bb8ddf311ee67c28c8">Link</a></p>
+
+<hr class="article-divider" />
+
+<h2 id="references">References</h2>
+<p><a id="CreatingAWindow">1.</a> Chris Hecker (2013). Lesson 3: Creating a window. [online] DirectXTutorial.com. Available at: <a href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-1-3">http://www.directxtutorial.com/Lesson.aspx?lessonid=9-1-3</a>.</p>
+
+<p><a id="ImGui">2.</a> ocornut (2019). Ocornut/Imgui. [online] GitHub. [online] Available at: <a href="https://github.com/ocornut/imgui">https://github.com/ocornut/imgui</a>.</p>
+
+<p><a id="ObjectLoading">3.</a> GitHub. (2024). Tinyobjloader/tinyobjloader. [online] Available at: <a href="https://github.com/tinyobjloader/tinyobjloader">https://github.com/tinyobjloader/tinyobjloader</a>.</p>
+
+<p><a id="DDSTextureLoader">4.</a> Github.com. (2026). Page restricted. [online] Available at: <a href="https://github.com/microsoft/DirectXTK/wiki/DDSTextureLoader">https://github.com/microsoft/DirectXTK/wiki/DDSTextureLoader</a>.</p>
+
+<hr class="article-divider" />
+
+<!-- Back Navigation -->
+<section class="article-terminal-navigation">
+    <a href="/" class="project-button">← BACK TO HOME</a>
+    <a href="/blogs/" class="project-button">← BACK TO BLOGS</a>
+</section>
+
+    </div>
+    
+  </div>
+</article>
+      </section>
+    </div>
+    
+</body>
+
+</html>

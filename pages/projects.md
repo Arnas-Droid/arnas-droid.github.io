@@ -9,6 +9,25 @@ title: // Projects
     <p>A collection of programming, graphics and game development projects.</p>
   </div>
   <div class="projects-grid">
+    <!-- Hyperion -->
+    <article class="project-card">
+      <a href="{{ '/pages/Hyperion/index.html' | relative_url }}"> <img src="{{ '/pages/Hyperion/HyperionVolumetricFogGif.gif' | relative_url }}" alt="Hyperion Gif" loading="eager" decoding="async"> </a>
+      <div class="project-info">
+        <h2>Hyperion</h2>
+        <p>A custom real-time volumetric lighting system focused on volume-bound volumetric fog, light scattering, and modern architecture in DirectX 11/12.</p>
+        <div class="project-tags">
+          <span>C++</span>
+          <span>DirectX 11 / 12</span>
+          <span>Rendering Engine</span>
+          <span>Real-Time Graphics</span>
+          <span>Performance Optimisation</span>
+        </div>
+        <div class="project-buttons">
+          <a class="project-button" href="{{ '/pages/Hyperion/index.html' | relative_url }}">VIEW PROJECT</a>
+          <a class="project-button" href="{{ '/blogs/Hyperion/2026-11-19-InitialStart/index.html' | relative_url }}"> VIEW BLOG</a>
+        </div>
+      </div>
+    </article>
     <!-- Pulse Drive -->
     <article class="project-card">
       <a class="project-image"  href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}">

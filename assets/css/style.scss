@@ -17,7 +17,8 @@
     13. FEATURE CARDS
     14. CODE BLOCKS
     15. BLOGS 
-    16. DIFFERENT MEDIA
+    16. BLOG
+    17. DIFFERENT MEDIA
 ===============================================*/
 
 /* #region 1. HACKER THEME IMPORT */
@@ -44,6 +45,17 @@ small {
 
 .blog .date {
     display: inline;
+}
+
+a {
+    color: #b5e853;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+    color: #d4ff75;
+    text-shadow: 0 0 6px rgba(181, 232, 83, 0.7);
 }
 
 /* #endregion */
@@ -769,7 +781,126 @@ small {
 
 /* #endregion */
 
-/* #region 16. DIFFERENT MEDIA */
+/* #region 16. BLOG */
+.article-terminal {
+    width: 90%;
+    max-width: 1050px;
+    margin: 45px auto 80px;
+    border: 1px solid #383838;
+    background: #101010;
+} /* Overall main container */
+
+/* Terminal title bar */
+.article-terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 13px;
+    background: #171717;
+    border-bottom: 1px solid #333;
+    color: #888;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+} /* Terminal bar at the top */
+
+.article-terminal-dots {
+    display: flex;
+    gap: 5px;
+} /* Dots */
+
+.article-terminal-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #555;
+} /* Dots */
+ 
+.article-terminal-dots i:first-child {
+    background: #b5e853;
+} /* Dots */
+
+.article-terminal-body {
+    padding: 25px;
+} /* Keeps text from border */
+
+.article-terminal-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+} /* Seperation rule */
+
+.article-terminal-header h1 {
+    margin: 0 0 12px;
+    font-size: 2.2rem;
+} /* Control rule */
+
+.article-terminal-header h1::before {
+    content: none;
+} /* Gets rid of // I addded previously for other purposes only on blog */
+
+.article-terminal-description {
+    margin: 0 0 15px;
+    color: #aaa;
+    font-size: 0.9rem;
+} /* Description */
+
+.article-terminal-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #888;
+    font-size: 0.75rem;
+} /* Date and reading time */
+
+.article-terminal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 13px;
+    color: #b5e853;
+    font-size: 0.75rem;
+} /* Tag appearance on blog */
+
+.article-terminal-content {
+    color: #ccc;
+    line-height: 1.8;
+} /* General rule for content on the blog */
+
+.article-terminal-content img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333;
+} /* Backup rule for images */
+
+.article-terminal-content pre {
+    padding: 15px;
+    overflow-x: auto;
+    background: #171717;
+    border-left: 2px solid #b5e853;
+} /* For code blocks */
+
+.article-terminal-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+} /* Looks better for the exit buttons on a blog */
+
+.article-divider { 
+    border: 0;
+    border-top: 1px solid #383838;
+    margin: 25px 0;
+} /* Used for dividing the page */
+
+.article-terminal-body,
+.article-terminal-header,
+.article-terminal-content {
+    background: #101010;
+} /* Fixes visual problem */
+
+/* #endregion */
+
+/* #region 17. DIFFERENT MEDIA */
 @media (max-width: 768px) {
     .about-section,
     .hero-section,
@@ -877,6 +1008,19 @@ small {
 
     .project-content {
         margin: 60px 0;
+    }
+
+    .article-terminal {
+        width: 94%;
+        margin: 30px auto 60px;
+    }
+
+    .article-terminal-body {
+        padding: 16px;
+    }
+
+    .article-terminal-header h1 {
+        font-size: 1.8rem;
     }
 }
 

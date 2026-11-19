@@ -2,33 +2,50 @@
 layout: default
 ---
 
-{% if page.date %}
-  <div class="blog">
-    <span class="date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
-    <span class="date">• {{ page.time}} minutes to read</span>
-    {% if page.date2 %}
-      <span class="date">• Last Updated: {{ page.date2 | date: "%B %d, %Y" }}</span>
-    {% endif %}
+<article class="article-terminal">
+
+  <div class="article-terminal-bar">
+    <span class="article-terminal-dots">
+      <i></i><i></i><i></i>
+    </span>
+    <span>DEVELOPMENT BLOG</span>
   </div>
-{% endif %}
 
-<h1>{{ page.title }}</h1>
+  <div class="article-terminal-body">
 
-{% if page.tags %}
-  <div class="project-tags">
-    <small>Tags:</small>
-    {% for tag in page.tags %}
-      <span>{{ tag }}</span>
-    {% endfor %}
+    <header class="article-terminal-header">
+
+      <h1>{{ page.title }}</h1>
+
+      {% if page.description %}
+        <p class="article-terminal-description">
+          {{ page.description }}
+        </p>
+      {% endif %}
+
+      <div class="article-terminal-info">
+        {% if page.date %}
+          <span>{{ page.date | date: "%d.%m.%Y" }}</span>
+        {% endif %}
+
+        {% if page.time %}
+          <span>{{ page.time }} MIN READ</span>
+        {% endif %}
+      </div>
+
+      {% if page.tags %}
+        <div class="article-terminal-tags">
+          {% for tag in page.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </header>
+
+    <div class="article-terminal-content">
+      {{ content }}
+    </div>
+    
   </div>
-{% endif %}
-
-{{content}}
-
-<script src="https://utteranc.es/client.js"
-        repo="arnas-droid/arnas-droid.github.io"
-        issue-term="pathname"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
+</article>

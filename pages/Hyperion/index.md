@@ -95,10 +95,17 @@ slideshow: true
   </div>
 </section>
 
+<!-- Blogs -->
+<section class="project-content">
+  <div class="project-section-label">// BLOGS</div>
+  <p>Covers the implementation for the project.</p>
+  <a href="/blogs/Hyperion/2026-11-18-InitialStart/index.html" class="project-button"> VIEW BLOGS → </a>
+</section>
+
 <!-- Documentation -->
 <section class="project-content">
   <div class="project-section-label">// DOCUMENTATION</div>
-  <p>Technical documentation covering the project and its implementation.</p>
+  <p>Technical documentation covering the project (still in progress).</p>
   <a href="Documentation\Overview.html" class="project-button"> VIEW DOCUMENTATION → </a>
 </section>
 
