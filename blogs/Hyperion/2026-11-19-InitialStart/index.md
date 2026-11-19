@@ -146,7 +146,7 @@ if (!attrib.texcoords.empty())
 <p align="center">
     <a href="MultipleObjects.png"> <img src="MultipleObjects.png" style="width: 100%;"> </a>
     <br>
-    <em>Figure 3: Multiple objects renderered and fixed the problem with textures. (Figure is clickable).</em>
+    <em>Figure 3: Multiple objects rendered and fixed the problem with textures. (Figure is clickable).</em>
 </p>
 
 <hr class="article-divider">
