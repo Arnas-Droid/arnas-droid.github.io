@@ -71,7 +71,7 @@ BaseRenderer* BaseRenderer::CreateRendererObject(API api)
 <br>
 
 ### ImGui and Object Loader
-Following that I set up more basics like ImGui<sup>[[2]](#ImGui)</sup> so I can interact with the application, an object loader <sup>[[3]](#ObjectLoading)</sup> to load in models, and a DDS texture loader <sup>[[4]](#DDSTextureLoader)</sup> so that those models can be textured. While this wasn't difficult to do I noticed problems with the texture not matching correctly to the UV texture. 
+Following that I set up more basics like ImGui<sup>[[2]](#ImGui)</sup> so I can interact with the application, an object loader<sup>[[3]](#ObjectLoading)</sup> to load in models, and a DDS texture loader<sup>[[4]](#DDSTextureLoader)</sup> so that those models can be textured. While this wasn't difficult to do I noticed problems with the texture not matching correctly to the UV texture. 
 
 <p align="center">
     <a href="ObjectLoading.png"> <img src="ObjectLoading.png" style="width: 100%;"> </a>
