@@ -13,9 +13,11 @@ title: // Home
         <p>Hello, my name is <span class="hobby-link" data-image="{{ site.baseurl }}/assets/ArnasPicture.jpg" data-title="ARNAS PUIDOKAS"> Arnas</span>. I work as a game developer with a particular interest in graphics programming and porting.</p>
         <p> Apart from programming, I'm really interested in <span class="hobby-link" data-image="{{ site.baseurl }}/assets/CurrentGame.png" data-title="FINAL FANTASY XVI"> video games</span>, <span class="hobby-link" data-image="{{ site.baseurl }}/assets/PhysicalCollection.jpg" data-title="ZZZ BANGBOO FIGURE"> physical collecting</span> and <span class="hobby-link" data-image="{{ site.baseurl }}/assets/PhotoVideo.jpg" data-title="SHOT ON PS VITA"> amateur photography/videography</span>.</p>
       <h3>PROGRAMMING</h3>
-        <p>C++ &nbsp;&nbsp; C# &nbsp;&nbsp; Unreal Blueprints</p>
-      <h3>TOOLS</h3>
-        <p>Visual Studio &nbsp;&nbsp; VS Code &nbsp;&nbsp; Unity &nbsp;&nbsp; Unreal Engine &nbsp;&nbsp; DirectX &nbsp;&nbsp; RenderDoc</p>
+        <p>C++ &nbsp;&nbsp; C# &nbsp;&nbsp; HLSL &nbsp;&nbsp; Unreal Blueprints</p>
+      <h3>GRAPHICS & PORTING</h3>
+        <p>DirectX 11 &nbsp;&nbsp; DirectX 12 &nbsp;&nbsp; OpenGL 3 &nbsp;&nbsp; WebGL 2 &nbsp;&nbsp; PS5 (Prospero)</p>
+      <h3>TOOLS & ENGINES</h3>
+        <p>Visual Studio &nbsp;&nbsp; VS Code &nbsp;&nbsp; RenderDoc &nbsp;&nbsp; Unity &nbsp;&nbsp; Unreal Engine &nbsp;&nbsp; ImGui</p>
     </div>
   </div>
 </section>
