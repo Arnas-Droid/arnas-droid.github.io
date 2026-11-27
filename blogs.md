@@ -19,7 +19,7 @@ permalink: /blogs/
           <span>Engine Development</span>
         </div>
         <p>Implementation of Volumetric Lighting and its challenges.</p>
-        <a class="blog-button" href="{{ '/blogs/Hyperion/2026-11-25-VolumetricLighting/index.html' | relative_url }}">READ DEV BLOG →</a>
+        <a class="blog-button" href="{{ '/blogs/Hyperion/2026-11-27-VolumetricLighting/index.html' | relative_url }}">READ DEV BLOG →</a>
       </div>
     </article>
       <!-- Hyperion - Initial Start -->
