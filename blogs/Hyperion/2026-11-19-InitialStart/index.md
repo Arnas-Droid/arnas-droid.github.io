@@ -172,8 +172,13 @@ Buildings - [Link](https://sketchfab.com/3d-models/low-poly-night-city-building-
 
 <hr class="article-divider">
 
-<!-- Back Navigation -->
-<section class="article-terminal-navigation">
+<!-- Back And Blog Navigation -->
+<section class="article-terminal-navigation split-navigation">
+  <div>
     <a href="{{ '/' | relative_url }}" class="project-button">← BACK TO HOME</a>
     <a href="{{ '/blogs/' | relative_url }}" class="project-button">← BACK TO BLOGS</a>
+  </div>
+  <div>
+    <a href="{{ '/blogs/Hyperion/2026-11-25-VolumetricLighting/index.html' | relative_url }}" class="project-button">BLOG #2 →</a>
+  </div>
 </section>

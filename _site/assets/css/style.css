@@ -125,6 +125,8 @@ a { color: #b5e853; text-decoration: none; transition: color 0.2s ease, text-sha
 
 a:hover { color: #d4ff75; text-shadow: 0 0 6px rgba(181, 232, 83, 0.7); }
 
+.article-content a { overflow-wrap: anywhere; word-break: break-word; white-space: normal; max-width: 100%; }
+
 /* #endregion */
 /* #region 3. TAGS */
 .project-tags, .hero-tags, .blog-tags { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -406,6 +408,8 @@ a:hover { color: #d4ff75; text-shadow: 0 0 6px rgba(181, 232, 83, 0.7); }
 .article-terminal-navigation { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
 
 /* Looks better for the exit buttons on a blog */
+.split-navigation { justify-content: space-between; }
+
 .article-divider { border: 0; border-top: 1px solid #383838; margin: 25px 0; }
 
 /* Used for dividing the page */

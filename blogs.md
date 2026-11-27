@@ -7,7 +7,22 @@ permalink: /blogs/
 <section class="blogs-section">
   <h3 class="blogs-year">2026</h3>
   <div class="blog-list">
-    <!-- Hyperion - Initial Start -->
+      <!-- Hyperion - Volumetric Lighting -->
+    <article class="blog-card">
+      <div class="blog-info">
+        <div class="blog-meta">NOVEMBER 27, 2026 · 13 MINUTES TO READ</div>
+        <h2>Dev Blog #2 - Hyperion: Volumetric Lighting</h2>
+        <div class="blog-tags">
+          <span>C++</span>
+          <span>DirectX 11</span>
+          <span>Graphics Programming</span>
+          <span>Engine Development</span>
+        </div>
+        <p>Implementation of Volumetric Lighting and its challenges.</p>
+        <a class="blog-button" href="{{ '/blogs/Hyperion/2026-11-25-VolumetricLighting/index.html' | relative_url }}">READ DEV BLOG →</a>
+      </div>
+    </article>
+      <!-- Hyperion - Initial Start -->
     <article class="blog-card">
       <div class="blog-info">
         <div class="blog-meta">NOVEMBER 19, 2026 · 7 MINUTES TO READ</div>
@@ -22,7 +37,7 @@ permalink: /blogs/
         <a class="blog-button" href="{{ '/blogs/Hyperion/2026-11-19-InitialStart/index.html' | relative_url }}">READ DEV BLOG →</a>
       </div>
     </article>
-    <!-- Local Development Server -->
+      <!-- Local Development Server -->
     <article class="blog-card">
       <div class="blog-info">
         <div class="blog-meta">AUGUST 25, 2026 · 2 MINUTES TO READ</div>
@@ -37,7 +52,7 @@ permalink: /blogs/
         <a class="blog-button" href="{{ '/blogs/2026-08-25-SettingUpLocalServer(Web)/index.html' | relative_url }}">READ DEV BLOG →</a>
       </div>
     </article>
-    <!-- GMTK Game Jam -->
+      <!-- GMTK Game Jam -->
     <article class="blog-card">
       <div class="blog-info">
         <div class="blog-meta">JULY 29, 2026 · 5 MINUTES TO READ</div>
@@ -52,7 +67,7 @@ permalink: /blogs/
         <a class="blog-button" href="{{ '/blogs/2026-07-29-GMTKGameJam2026/index.html' | relative_url }}">READ DEV BLOG →</a>
       </div>
     </article>
-    <!-- My First Game Jam -->
+      <!-- My First Game Jam -->
     <article class="blog-card">
       <div class="blog-info">
         <div class="blog-meta">JULY 15, 2026 · 4 MINUTES TO READ</div>
